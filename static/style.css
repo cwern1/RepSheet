@@ -41,13 +41,36 @@
 
 [hidden] { display: none !important; }
 
-html, body { height: 100%; }
+/* min-height, not height: at `height: 100%` the body box stops at the viewport
+   while the config column keeps going (100dvh + safe-area padding overflow a
+   phone screen), leaving the document taller than the element painting it. */
+html, body { min-height: 100%; }
 
-html { -webkit-text-size-adjust: 100%; }
+/* One background, on the root element — soft ambient glows, echoing the
+   Sweatdiary hero wash. The root's background *is* the canvas, so it covers the
+   whole screen by definition: past the last element, under the home indicator,
+   into the overscroll. That matters because iOS sizes a `position: fixed` box
+   to the layout viewport, which is *shorter* than the screen (see .workout), so
+   any second full-screen layer with its own background ends in a hard line
+   partway down. Keep this the only page background and there is nothing to
+   misalign against.
+
+   Deliberately no `background-attachment: fixed`, which iOS doesn't implement,
+   and no viewport-unit `background-size`, which draws its own seam one screen
+   down on a page that scrolls. Unattached, the glows are laid out over the
+   whole canvas: they stretch a little on a long page, and nowhere do they
+   stop. */
+html {
+  -webkit-text-size-adjust: 100%;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(50rem 30rem at 15% -5%, var(--glow-a), transparent 60%),
+    radial-gradient(45rem 28rem at 90% 10%, var(--glow-b), transparent 60%),
+    radial-gradient(55rem 32rem at 40% 110%, var(--glow-c), transparent 60%);
+}
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
-  background: var(--bg);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
 }
@@ -60,15 +83,6 @@ button {
 }
 
 /* ---------- Config view ---------- */
-
-/* Soft ambient glows behind both screens, echoing the Sweatdiary hero wash. */
-body {
-  background-image:
-    radial-gradient(50rem 30rem at 15% -5%, var(--glow-a), transparent 60%),
-    radial-gradient(45rem 28rem at 90% 10%, var(--glow-b), transparent 60%),
-    radial-gradient(55rem 32rem at 40% 110%, var(--glow-c), transparent 60%);
-  background-attachment: fixed;
-}
 
 .config {
   display: flex;
@@ -174,18 +188,28 @@ body {
 /* Always-visible CTA: sticks to the bottom of the viewport while the form
    scrolls, so the button (and its loading state) never leaves the screen. */
 .generate-bar {
+  /* One knob for the fade: it is both the top padding and the distance the
+     gradient takes to reach --bg, so the two can't drift apart. Sized as a
+     length rather than a % of the bar, which is what left the old 22% stop
+     finishing *behind* the opaque Customize button — chips scrolling under met
+     its top edge still half-visible, as a hard rectangular seam. */
+  --fade: 3.5rem;
   position: sticky;
   bottom: 0;
-  margin-top: 0.5rem;
   /* Full-bleed to the viewport edges. Inset, the bar's flat --bg fill sits on
      top of the body's ambient glows and its left/right edges read as a stray
      rectangle behind the button. Bleeding it out leaves only the top fade. */
   margin-inline: calc(50% - 50vw);
-  padding: 1.25rem calc(50vw - 50%) calc(1rem + env(safe-area-inset-bottom, 0px));
-  /* Fade completes inside the top padding — below that the bar is solid, so
-     scrolled content never shows through the two buttons. */
-  background: linear-gradient(to bottom, transparent, var(--bg) 22%);
+  padding: var(--fade) calc(50vw - 50%) calc(1rem + env(safe-area-inset-bottom, 0px));
+  /* Fade completes exactly at the Customize button's top edge — below that the
+     bar is solid, so scrolled content never shows through the two buttons. */
+  background: linear-gradient(to bottom, transparent, var(--bg) var(--fade));
 }
+
+/* The fade is paid for out of the last group's bottom margin rather than added
+   to it: the gap above Customize stays what it was, but the whole of it now
+   dissolves instead of only the last few pixels. */
+.config > .group:last-of-type { margin-bottom: 1rem; }
 
 .generate {
   font: inherit;
@@ -353,10 +377,17 @@ body {
 }
 
 /* Minimal legal footer: quiet, out of the visual hierarchy. Sits at the very
-   bottom of the viewport-filling config column, not under the button. */
+   bottom of the viewport-filling config column, not under the button. Config
+   view only: the workout poster carries nothing but the workout. */
 .footer {
   margin-top: auto;
-  padding: 0.75rem 0 calc(0.75rem + env(safe-area-inset-bottom, 0px));
+  /* The generate bar's fill stops at its own bottom edge; the footer picks it
+     up and carries it to the end of the page, safe area included, so the two
+     read as one surface instead of a band with a seam across it. Full-bleed
+     for the same reason the bar is. */
+  margin-inline: calc(50% - 50vw);
+  padding: 0.75rem calc(50vw - 50%) calc(0.75rem + env(safe-area-inset-bottom, 0px));
+  background: var(--bg);
   font-size: 0.75rem;
 }
 
@@ -369,28 +400,16 @@ body {
   .footer a:hover { text-decoration: underline; }
 }
 
-/* The generate bar's fill stops at its own bottom edge. The footer sits
-   directly below it and is transparent, so the body's ambient glow — purple
-   this far down the page — showed through as a band with a hard seam across
-   the full width. Carry the same fill on to the end of the page. Scoped to the
-   config view: the workout view's footer sits on .workout's own opaque
-   background, which already has the glows painted in. */
-.config > .footer {
-  margin-inline: calc(50% - 50vw);
-  padding-inline: calc(50vw - 50%);
-  background: var(--bg);
-}
-
-/* In the workout view the poster's own auto margins center it and push the
-   footer down; a second auto margin here would split the free space and leave
-   the footer floating at half-height. */
-.workout > .footer { margin-top: 0; flex-shrink: 0; }
-
 /* ---------- Generation overlay ---------- */
 
 .overlay {
   position: fixed;
   inset: 0;
+  /* Same short layout viewport as .workout, but this one has to obscure what's
+     behind it, so it can't go transparent — reach past the bottom edge instead
+     and pad the content box back to centre. */
+  bottom: -20vh;
+  padding-bottom: 20vh;
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -448,12 +467,13 @@ body {
 .workout {
   position: fixed;
   inset: 0;
-  /* Opaque layer needs its own copy of the ambient glows. */
-  background:
-    radial-gradient(50rem 30rem at 15% -5%, var(--glow-a), transparent 60%),
-    radial-gradient(45rem 28rem at 90% 10%, var(--glow-b), transparent 60%),
-    radial-gradient(55rem 32rem at 40% 110%, var(--glow-c), transparent 60%),
-    var(--bg);
+  /* No background of its own — the canvas shows through. iOS sizes a fixed box
+     to the layout viewport, which stops short of the bottom of the screen (844
+     of 912 CSS px in the installed app; above the toolbar in Safari). A second
+     opaque copy of the glows therefore ended in a hard line, with the canvas's
+     plain --bg visible below it. The canvas is the one surface that always
+     covers the whole screen, and the config view is hidden while this is open,
+     so there is nothing behind here to hide. */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -644,7 +664,9 @@ body {
   .chips { gap: 0.5rem; }
   .chip { font-size: 0.9rem; padding: 0.6rem 0.95rem; }
   .hint { font-size: 0.75rem; margin-top: 0.5rem; }
-  .generate-bar { padding-top: 0.9rem; }
+  /* Shorter fade, matching the tighter phone rhythm — same trade as above. */
+  .generate-bar { --fade: 2.6rem; }
+  .config > .group:last-of-type { margin-bottom: 0.6rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
