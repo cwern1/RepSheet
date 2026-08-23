@@ -1,0 +1,8 @@
+.venv/
+.venv-workers/
+__pycache__/
+*.pyc
+.wrangler/
+node_modules/
+python_modules/
+.DS_Store

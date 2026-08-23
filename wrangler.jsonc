@@ -1,0 +1,19 @@
+// Repsheet — Cloudflare Worker configuration (IaC: this file fully describes the deployment)
+{
+  "name": "repsheet",
+  "main": "src/entry.py",
+  "compatibility_date": "2026-08-23",
+  "compatibility_flags": ["python_workers"],
+  // Static frontend: served directly from the edge; only /api/* invokes Python.
+  "assets": {
+    "directory": "./static/",
+    "run_worker_first": ["/api/*"]
+  },
+  // Workers AI binding — no API keys anywhere.
+  "ai": {
+    "binding": "AI"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

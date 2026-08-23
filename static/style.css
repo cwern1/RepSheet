@@ -1,0 +1,362 @@
+/* WODGen — Things 3-inspired: quiet surfaces, one blue, system type. */
+
+:root {
+  --bg: #f6f6f8;
+  --surface: #ffffff;
+  --text: #1c1c1e;
+  --text-secondary: #86868b;
+  --hairline: rgba(60, 60, 67, 0.14);
+  --accent: #2f7cf6;
+  --accent-tint: rgba(47, 124, 246, 0.1);
+  --danger: #d64545;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17181a;
+    --surface: #212226;
+    --text: #f2f2f4;
+    --text-secondary: #8e8e93;
+    --hairline: rgba(255, 255, 255, 0.12);
+    --accent: #4d94ff;
+    --accent-tint: rgba(77, 148, 255, 0.14);
+    --danger: #ff6b6b;
+  }
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+[hidden] { display: none !important; }
+
+html, body { height: 100%; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  touch-action: manipulation;       /* no double-tap zoom delay on ↻ etc. */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* ---------- Config view ---------- */
+
+.config {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 9vh, 6rem) 1.5rem 4rem;
+  /* Clear the Dynamic Island / home indicator when running full-screen. */
+  padding-top: calc(clamp(2.5rem, 9vh, 6rem) + env(safe-area-inset-top, 0px));
+  padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
+  text-align: center;
+}
+
+.config-header { margin-bottom: clamp(2.5rem, 6vh, 4rem); }
+
+/* Mirrors the workout view's eyebrow (.w-title) + headline (.w-format) pairing. */
+.eyebrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-secondary);
+}
+
+.config-header h1 {
+  font-size: clamp(2.4rem, 6vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-top: 0.3rem;
+}
+
+.group { margin-bottom: 2.5rem; }
+
+.group-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 0.8rem;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.chip {
+  font: inherit;
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  padding: 0.55rem 1.05rem;
+  border-radius: 12px;
+  border: 1px solid var(--hairline);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.12s ease, border-color 0.12s ease,
+    color 0.12s ease, transform 0.12s ease;
+}
+
+.chip:hover { border-color: var(--accent); color: var(--accent); }
+
+.chip:active { transform: scale(0.97); }
+
+.chip[aria-pressed="true"],
+.chip[aria-checked="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.chip:focus-visible,
+.generate:focus-visible,
+.chrome-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.generate {
+  font: inherit;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  width: 100%;
+  max-width: 24rem;
+  padding: 0.95rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 14px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.12s ease, transform 0.12s ease;
+}
+
+.generate:hover:not(:disabled) { opacity: 0.9; }
+.generate:active:not(:disabled) { transform: scale(0.99); }
+
+.generate:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.generate.loading {
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  50% { opacity: 0.4; }
+}
+
+.error {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--danger);
+}
+
+/* ---------- Workout view ---------- */
+
+.workout {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  animation: appear 0.25s ease-out;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: scale(0.985); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.workout-chrome {
+  position: fixed;
+  /* Below the safe area, not at it — clears iOS's status-bar glass effect. */
+  top: calc(env(safe-area-inset-top, 0px) + 1rem);
+  left: max(1rem, env(safe-area-inset-left, 0px));
+  right: max(1rem, env(safe-area-inset-right, 0px));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 2;
+  pointer-events: none; /* the bar spans the width; only its buttons are targets */
+}
+
+.workout-chrome > * { pointer-events: auto; }
+
+.chrome-group { display: flex; gap: 0.5rem; }
+
+.chrome-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: 1px solid var(--hairline);
+  background: var(--surface);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.chrome-btn svg { width: 1.15rem; height: 1.15rem; }
+
+/* Wake-lock toggle: a labeled pill, tinted while the screen is kept awake. */
+.wake-pill {
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--hairline);
+  background: var(--surface);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.wake-pill[aria-pressed="true"] {
+  background: var(--accent-tint);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Desktop only: chrome fades until hovered. Touch screens have no hover, so
+   controls stay fully visible there. */
+@media (hover: hover) {
+  .chrome-btn, .wake-pill { opacity: 0.45; }
+  .chrome-btn:hover { opacity: 1; color: var(--text); }
+  .wake-pill:hover, .wake-pill[aria-pressed="true"] { opacity: 1; }
+}
+
+.workout-inner {
+  width: 100%;
+  max-width: 72rem;
+  padding: 4rem clamp(1.5rem, 5vw, 4rem);
+  padding-top: calc(4rem + env(safe-area-inset-top, 0px));
+  padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
+  text-align: center;
+  margin: auto;
+}
+
+.w-title {
+  font-size: clamp(0.9rem, 1.6vmin, 1.2rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-secondary);
+}
+
+.w-format {
+  font-size: clamp(1.8rem, 5.2vmin, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-top: 0.4rem;
+}
+
+.w-scheme {
+  font-size: clamp(1.2rem, 3.2vmin, 2.4rem);
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: 0.3rem;
+}
+
+.w-scheme:empty, .w-notes:empty, .w-title:empty { display: none; }
+
+.w-movements {
+  list-style: none;
+  margin: clamp(1.5rem, 4vmin, 3rem) auto 0;
+  display: table;
+  border-collapse: collapse;
+}
+
+.w-movements li {
+  display: table-row;
+}
+
+.w-movements .reps,
+.w-movements .move {
+  display: table-cell;
+  padding: clamp(0.3rem, 1.2vmin, 0.8rem) 0;
+  vertical-align: baseline;
+  font-size: clamp(1.5rem, var(--move-size, 5.5vmin), 5rem);
+  font-weight: 750;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+}
+
+.w-movements .reps {
+  color: var(--accent);
+  text-align: right;
+  padding-right: clamp(0.8rem, 2vmin, 1.5rem);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.w-movements .move { text-align: left; }
+
+.w-movements .load {
+  font-size: 0.55em;
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  margin-left: 0.5em;
+}
+
+.w-notes {
+  margin-top: clamp(1.5rem, 4vmin, 3rem);
+  font-size: clamp(1rem, 2.2vmin, 1.5rem);
+  color: var(--text-secondary);
+}
+
+/* Touch devices: Apple's 44pt minimum target size. */
+@media (pointer: coarse) {
+  .chip { padding: 0.65rem 1.1rem; }
+  .wake-pill { padding: 0.7rem 1.1rem; }
+}
+
+/* Home-Screen app: drop the chrome well below the Liquid Glass zone that iOS
+   draws under the status bar, and lift it off the background. */
+@media (display-mode: standalone) {
+  .workout-chrome { top: calc(env(safe-area-inset-top, 0px) + 2rem); }
+  .chrome-btn, .wake-pill { box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); }
+}
+
+/* Narrow screens (phones): tighter padding and width-driven type so the
+   longest movement row never overflows the viewport. */
+@media (max-width: 600px) {
+  .workout-inner { padding-left: 1rem; padding-right: 1rem; }
+  .w-movements .reps,
+  .w-movements .move {
+    font-size: clamp(1.2rem, 5vw, 2.2rem);
+  }
+  .w-movements .reps { padding-right: 0.8rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

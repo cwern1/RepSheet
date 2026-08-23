@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Repsheet</title>
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f6f8">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17181a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Repsheet">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main id="config-view" class="config">
+    <header class="config-header">
+      <p class="eyebrow">Simple CrossFit-style workout generator</p>
+      <h1>Repsheet</h1>
+    </header>
+
+    <section class="group">
+      <h2 class="group-label">Equipment</h2>
+      <div class="chips" id="equipment-chips" role="group" aria-label="Equipment"></div>
+      <p class="hint">Everything you tick will be used — untick Bodyweight for a gear-only workout.</p>
+    </section>
+
+    <section class="group">
+      <h2 class="group-label">Style</h2>
+      <div class="chips" id="style-chips" role="radiogroup" aria-label="Workout style"></div>
+    </section>
+
+    <section class="group">
+      <h2 class="group-label">Duration</h2>
+      <div class="chips" id="duration-chips" role="radiogroup" aria-label="Target duration"></div>
+      <p class="hint">A rough target.</p>
+    </section>
+
+    <button id="generate-btn" class="generate" type="button">Generate workout</button>
+    <p id="error" class="error" role="alert" hidden></p>
+  </main>
+
+  <section id="workout-view" class="workout" hidden>
+    <div class="workout-chrome">
+      <button id="wake-btn" class="wake-pill" type="button" aria-pressed="true" title="Prevent the screen from locking">Keep awake</button>
+      <div class="chrome-group">
+        <button id="regen-btn" class="chrome-btn" type="button" aria-label="New workout, same setup" title="New workout, same setup">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 4v4.34h-4.34" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button id="close-btn" class="chrome-btn" type="button" aria-label="Back to setup" title="Back to setup">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="workout-inner">
+      <p id="w-title" class="w-title"></p>
+      <h2 id="w-format" class="w-format"></h2>
+      <p id="w-scheme" class="w-scheme"></p>
+      <ol id="w-movements" class="w-movements"></ol>
+      <p id="w-notes" class="w-notes"></p>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
