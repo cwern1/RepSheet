@@ -369,6 +369,18 @@ body {
   .footer a:hover { text-decoration: underline; }
 }
 
+/* The generate bar's fill stops at its own bottom edge. The footer sits
+   directly below it and is transparent, so the body's ambient glow — purple
+   this far down the page — showed through as a band with a hard seam across
+   the full width. Carry the same fill on to the end of the page. Scoped to the
+   config view: the workout view's footer sits on .workout's own opaque
+   background, which already has the glows painted in. */
+.config > .footer {
+  margin-inline: calc(50% - 50vw);
+  padding-inline: calc(50vw - 50%);
+  background: var(--bg);
+}
+
 /* In the workout view the poster's own auto margins center it and push the
    footer down; a second auto margin here would split the free space and leave
    the footer floating at half-height. */
