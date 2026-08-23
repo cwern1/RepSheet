@@ -56,8 +56,5 @@ Deploy:
 uv run pywrangler deploy
 ```
 
-Pushes to `main` also deploy via GitHub Actions (`.github/workflows/deploy.yml`;
-requires the `CLOUDFLARE_API_TOKEN` repo secret).
-
 Cost: Workers AI free tier is 10k neurons/day; a generated workout is a few
 hundred output tokens, so personal use stays comfortably inside it.
