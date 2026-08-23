@@ -215,7 +215,11 @@ button {
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--text-secondary);
+  opacity: 1;
+  transition: opacity 0.25s ease;
 }
+
+.overlay-text.swap { opacity: 0; }
 
 .overlay-dismiss {
   display: none;
@@ -259,6 +263,10 @@ button {
   top: calc(env(safe-area-inset-top, 0px) + 1rem);
   left: max(1rem, env(safe-area-inset-left, 0px));
   right: max(1rem, env(safe-area-inset-right, 0px));
+  /* Hug the content column on wide screens instead of the viewport corners —
+     keeps mouse travel short on desktop. Matches .workout-inner's width. */
+  max-width: 72rem;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
