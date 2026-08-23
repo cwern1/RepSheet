@@ -163,13 +163,17 @@ function showWorkout(w) {
   // Keep-awake re-arms for every workout; turning it off lasts only until the
   // next workout is opened.
   state.keepAwake = true;
-  if (wakeSupported) syncWakeButton();
-  acquireWakeLock();
+  if (wakeSupported) {
+    syncWakeButton();
+    acquireWakeLock();
+    startWakeWatchdog();
+  }
 }
 
 function closeWorkout() {
   $("workout-view").hidden = true;
   $("config-view").hidden = false;
+  stopWakeWatchdog();
   releaseWakeLock();
 }
 
@@ -254,10 +258,13 @@ if (wakeSupported) {
     syncWakeButton();
     state.keepAwake ? acquireWakeLock() : releaseWakeLock();
   });
-  // The browser force-releases the lock when the page is hidden — re-acquire.
+  // The browser force-releases the lock whenever the page loses the screen —
+  // grab it back on every signal that we're front-and-center again.
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "visible") acquireWakeLock();
   });
+  window.addEventListener("pageshow", () => acquireWakeLock());
+  window.addEventListener("focus", () => acquireWakeLock());
 } else {
   $("wake-btn").hidden = true;
 }

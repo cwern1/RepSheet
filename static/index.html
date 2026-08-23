@@ -38,8 +38,9 @@
       <p class="hint">A rough target.</p>
     </section>
 
-    <button id="generate-btn" class="generate" type="button">Generate workout</button>
-    <p id="error" class="error" role="alert" hidden></p>
+    <div class="generate-bar">
+      <button id="generate-btn" class="generate" type="button">Generate workout</button>
+    </div>
   </main>
 
   <section id="workout-view" class="workout" hidden>
@@ -55,13 +56,18 @@
       </div>
     </div>
     <div class="workout-inner">
-      <p id="w-title" class="w-title"></p>
       <h2 id="w-format" class="w-format"></h2>
       <p id="w-scheme" class="w-scheme"></p>
       <ol id="w-movements" class="w-movements"></ol>
       <p id="w-notes" class="w-notes"></p>
     </div>
   </section>
+
+  <div id="overlay" class="overlay" role="status" hidden>
+    <div class="spinner" aria-hidden="true"></div>
+    <p id="overlay-text" class="overlay-text">Building your workout…</p>
+    <p class="overlay-dismiss">Tap anywhere to dismiss</p>
+  </div>
 
   <script src="app.js"></script>
 </body>

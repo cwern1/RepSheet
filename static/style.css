@@ -51,10 +51,10 @@ button {
 .config {
   max-width: 40rem;
   margin: 0 auto;
-  padding: clamp(2.5rem, 9vh, 6rem) 1.5rem 4rem;
-  /* Clear the Dynamic Island / home indicator when running full-screen. */
+  padding: clamp(2.5rem, 9vh, 6rem) 1.5rem 0;
+  /* Clear the Dynamic Island when running full-screen; the sticky generate
+     bar carries the bottom safe-area itself. */
   padding-top: calc(clamp(2.5rem, 9vh, 6rem) + env(safe-area-inset-top, 0px));
-  padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
   text-align: center;
 }
 
@@ -137,6 +137,16 @@ button {
   outline-offset: 2px;
 }
 
+/* Always-visible CTA: sticks to the bottom of the viewport while the form
+   scrolls, so the button (and its loading state) never leaves the screen. */
+.generate-bar {
+  position: sticky;
+  bottom: 0;
+  margin-top: 0.5rem;
+  padding: 1.25rem 0 calc(1rem + env(safe-area-inset-bottom, 0px));
+  background: linear-gradient(to bottom, transparent, var(--bg) 40%);
+}
+
 .generate {
   font: inherit;
   font-size: 1.1rem;
@@ -172,11 +182,58 @@ button {
   50% { opacity: 0.4; }
 }
 
-.error {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  color: var(--danger);
+/* ---------- Generation overlay ---------- */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.1rem;
+  background: color-mix(in srgb, var(--bg) 75%, transparent);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
+
+.spinner {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  border: 3px solid var(--accent-tint);
+  border-top-color: var(--accent);
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.overlay-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.overlay-dismiss {
+  display: none;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.overlay.error .spinner { display: none; }
+
+.overlay.error .overlay-text {
+  color: var(--danger);
+  font-weight: 500;
+  max-width: 26rem;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.overlay.error .overlay-dismiss { display: block; }
 
 /* ---------- Workout view ---------- */
 
@@ -352,6 +409,22 @@ button {
     font-size: clamp(1.2rem, 5vw, 2.2rem);
   }
   .w-movements .reps { padding-right: 0.8rem; }
+}
+
+/* Phones: tighter vertical rhythm so the whole form fits one viewport with
+   the sticky Generate bar. */
+@media (max-width: 640px) {
+  .config {
+    padding-top: calc(clamp(1.5rem, 4vh, 3rem) + env(safe-area-inset-top, 0px));
+  }
+  .config-header { margin-bottom: 1.25rem; }
+  .config-header h1 { font-size: 2rem; }
+  .group { margin-bottom: 1.4rem; }
+  .group-label { margin-bottom: 0.6rem; }
+  .chips { gap: 0.5rem; }
+  .chip { font-size: 0.9rem; padding: 0.6rem 0.95rem; }
+  .hint { font-size: 0.75rem; margin-top: 0.5rem; }
+  .generate-bar { padding-top: 0.9rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

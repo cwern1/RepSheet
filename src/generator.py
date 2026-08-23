@@ -1,7 +1,6 @@
 """Workout generation via the Workers AI binding (gpt-oss-120b, Responses API)."""
 
 import json
-import random
 
 from js import Object
 from pydantic import BaseModel, ValidationError
@@ -21,16 +20,19 @@ EQUIPMENT — hard rules:
   bodyweight WOD.
 - "Bodyweight" appears in the list like any other item. When it is listed,
   program at least one bodyweight movement (burpees, sit-ups, air squats,
-  push-ups, lunges, running) and tag those movements ["Bodyweight"]. When it is
-  NOT listed, program ZERO bodyweight movements — every single movement must
-  use a listed implement.
+  push-ups, lunges) and tag those movements ["Bodyweight"]. When it is NOT
+  listed, program ZERO bodyweight movements — every single movement must use a
+  listed implement.
+- "Running" is likewise its own item. When it is listed, include at least one
+  run (reps as a distance: "200 m", "400 m", "800 m") tagged ["Running"]. When
+  it is NOT listed, never program running.
 - Tag each movement's `equipment` field with the exact item names from the
   athlete's list that it uses.
 - Only program movements that are physically possible with what is listed. There
   is never a squat rack or bench: every barbell movement must start from the
   floor or the hang (no back squats, no bench press). If "Bodyweight" is the
-  only item (or the list is empty), use only floor movements and running — no
-  pull-ups, no hangs.
+  only item (or the list is empty), use only floor movements — no pull-ups,
+  no hangs.
 - Use only well-known, real CrossFit movements. Never invent hybrid movements.
 - Program for a fit amateur: no elite-skill gymnastics (no muscle-ups, no
   handstand push-ups or walks). Pull-ups, dips, and toes-to-bar are fine.
@@ -83,13 +85,6 @@ FORMAT:
   single-arm work → "/arm"); ordinary two-handed movements like wall balls,
   swings, or thrusters get a bare number. "cal" exists only on machines
   (Rower, Assault Bike, Ski Erg) — jump rope work is counted in reps.
-- `title`: a punchy one-or-two-word name in the spirit of classic benchmark WODs
-  ("Grace", "Iron Lungs", "Dead Air"). It must NOT contain the style name, the
-  word "workout", or ANY equipment word — "Sandbag Surge" and "Barbell Burn"
-  are wrong. Never use these overused titles: Forge, Pulse, Furnace, Fury,
-  Iron, Momentum, Sprint, Cyclone, Brute, Surge, Blitz, Burn. The athlete's
-  message includes an inspiration word — let it color the title (theme, mood,
-  or wordplay) without using it verbatim.
 - `notes`: only a rest scheme or one genuinely necessary instruction; otherwise
   null. Never restate the format or duration, and never contradict the
   structure (no pacing claims that don't match the prescribed work).
@@ -106,7 +101,6 @@ class Movement(BaseModel):
 
 
 class Workout(BaseModel):
-    title: str
     format_line: str
     scheme: str | None
     movements: list[Movement]
@@ -185,26 +179,12 @@ async def _request_with_shape_retry(ai, messages: list[dict]) -> Workout:
             raise UpstreamError("The model returned a malformed workout twice")
 
 
-# Per-request title inspiration: breaks the model's habit of converging on the
-# same few names when sampling from an identical prompt.
-TITLE_SEEDS = [
-    "thunderstorm", "furnace room", "last lap", "high tide", "gravel road",
-    "december", "wolf pack", "power outage", "freight train", "heat wave",
-    "quicksand", "avalanche", "second wind", "rust", "jet lag", "wildfire",
-    "undertow", "scrapyard", "monsoon", "vertigo", "moonshot", "flash flood",
-    "tumbleweed", "afterburner", "gridlock", "riptide", "sawdust", "blackout",
-    "switchback", "landslide", "crosswind", "furlough", "magma", "static",
-    "detour", "overtime", "ricochet", "downpour", "turbine", "fault line",
-]
-
-
 async def generate_workout(ai, equipment: list[str], style: str, duration_min: int) -> Workout:
     equipment_text = ", ".join(equipment) if equipment else "none (bodyweight only)"
     user_prompt = (
         f"Equipment available (use ALL of it): {equipment_text}\n"
         f"Style: {style}\n"
-        f"Target duration: about {duration_min} minutes\n"
-        f"Title inspiration word: {random.choice(TITLE_SEEDS)}"
+        f"Target duration: about {duration_min} minutes"
     )
     system = SYSTEM_PROMPT + JSON_INSTRUCTION + json.dumps(Workout.model_json_schema())
     messages = [
