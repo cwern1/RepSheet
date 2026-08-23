@@ -1,6 +1,6 @@
 {
-  "name": "Repsheet",
-  "short_name": "Repsheet",
+  "name": "RepSheet",
+  "short_name": "RepSheet",
   "description": "One workout. No fuss.",
   "start_url": "/",
   "display": "standalone",
