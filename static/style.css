@@ -115,7 +115,11 @@ button {
     color 0.12s ease, transform 0.12s ease;
 }
 
-.chip:hover { border-color: var(--accent); color: var(--accent); }
+/* hover: hover — touch screens emulate a sticky hover on tap, which would
+   leave an accent border on an untapped chip. */
+@media (hover: hover) {
+  .chip:hover { border-color: var(--accent); color: var(--accent); }
+}
 
 .chip:active { transform: scale(0.97); }
 
@@ -150,7 +154,9 @@ button {
   transition: opacity 0.12s ease, transform 0.12s ease;
 }
 
-.generate:hover:not(:disabled) { opacity: 0.9; }
+@media (hover: hover) {
+  .generate:hover:not(:disabled) { opacity: 0.9; }
+}
 .generate:active:not(:disabled) { transform: scale(0.99); }
 
 .generate:disabled {
@@ -263,19 +269,10 @@ button {
   margin: auto;
 }
 
-.w-title {
-  font-size: clamp(0.9rem, 1.6vmin, 1.2rem);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: var(--text-secondary);
-}
-
 .w-format {
   font-size: clamp(1.8rem, 5.2vmin, 4rem);
   font-weight: 800;
   letter-spacing: -0.02em;
-  margin-top: 0.4rem;
 }
 
 .w-scheme {
@@ -285,7 +282,7 @@ button {
   margin-top: 0.3rem;
 }
 
-.w-scheme:empty, .w-notes:empty, .w-title:empty { display: none; }
+.w-scheme:empty, .w-notes:empty { display: none; }
 
 .w-movements {
   list-style: none;
