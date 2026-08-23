@@ -5,11 +5,25 @@ get a WOD in huge type you can read from across the room.
 
 Runs as a single Cloudflare Python Worker: the static frontend is served from
 the edge, and `POST /api/generate` calls Workers AI (gpt-oss-120b via the
-Responses API, low reasoning effort) through the native `env.AI` binding — no
-API keys anywhere. Output is prompted as JSON and validated with Pydantic,
+Responses API, medium reasoning effort) through the native `env.AI` binding —
+no API keys anywhere. Output is prompted as JSON and validated with Pydantic,
 with one retry on malformed shapes.
 
 **Live:** https://repsheet.wodgenerator.workers.dev
+
+## Features
+
+- Equipment chips (incl. Bodyweight and Running as first-class items) — every
+  ticked item is guaranteed to appear, enforced in the prompt and re-checked
+  server-side with one corrective retry; unticked equipment never appears.
+- Styles: AMRAP, For Time, EMOM, Chipper, Intervals — each with a structural
+  blueprint in the prompt (round math, time-honest volume budgets, load rules
+  in kg, hard caps on grinding movements).
+- Full-screen workout view with fit-to-width poster type (shrinks instead of
+  wrapping), screen wake lock while a workout is open ("Keep awake" pill),
+  and a generation overlay with rotating gym-prep messages.
+- Installable on the iOS Home Screen (manifest + touch icons, safe-area
+  aware); light/dark theme follows the system.
 
 ## Layout
 
@@ -17,10 +31,6 @@ with one retry on malformed shapes.
 - `src/entry.py` — Worker entrypoint + FastAPI route for `/api/generate`
 - `src/generator.py` — prompt, JSON schema, Workers AI call, equipment validation
 - `static/` — vanilla HTML/CSS/JS, no build step
-
-Every piece of equipment you tick is guaranteed to appear in the workout —
-enforced in the prompt and re-checked server-side (one corrective retry).
-Malformed model output is retried once before surfacing an error.
 
 ## Develop & deploy
 
@@ -45,6 +55,9 @@ Deploy:
 ```
 uv run pywrangler deploy
 ```
+
+Pushes to `main` also deploy via GitHub Actions (`.github/workflows/deploy.yml`;
+requires the `CLOUDFLARE_API_TOKEN` repo secret).
 
 Cost: Workers AI free tier is 10k neurons/day; a generated workout is a few
 hundred output tokens, so personal use stays comfortably inside it.

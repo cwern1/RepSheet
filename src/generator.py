@@ -43,9 +43,10 @@ EQUIPMENT — hard rules:
   is countable reps, calories, or distance.
 - Slow, grinding movements (Turkish get-ups ≈ 30 s each, heavy carries, GHD
   work, ring dips and ring pull-ups) eat the time budget about 3× faster than
-  cyclical reps — keep their totals SMALL (Turkish get-ups ≤ 3/arm per round
-  and never in a chipper; GHD sit-ups ≤ 50 total; ring dips or pull-ups
-  ≤ 40 total).
+  cyclical reps — keep their totals SMALL. HARD caps for the whole workout,
+  never exceeded (round DOWN when in doubt): Turkish get-ups ≤ 3/arm per
+  round (in a chipper only as the final movement); GHD sit-ups ≤ 50; ring
+  dips ≤ 40; ring pull-ups ≤ 40.
 - Carries (sandbag, dumbbell) are prescribed as a distance ("50 m"), never as
   a rep count.
 

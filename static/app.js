@@ -220,6 +220,7 @@ function showWorkout(w) {
   const size = w.movements.length <= 5 ? "6vmin"
     : w.movements.length <= 7 ? "5vmin" : "4vmin";
   list.style.setProperty("--move-size", size);
+  requestAnimationFrame(fitMovements);
 
   $("config-view").hidden = true;
   $("workout-view").hidden = false;
@@ -232,6 +233,24 @@ function showWorkout(w) {
     startWakeWatchdog();
   }
 }
+
+// Shrink the movement type just enough that the widest row fits on one line —
+// smaller type beats a line break, on any screen size.
+function fitMovements() {
+  const list = $("w-movements");
+  if ($("workout-view").hidden || !list.children.length) return;
+  list.style.setProperty("--fit", 1);
+  const inner = document.querySelector(".workout-inner");
+  const cs = getComputedStyle(inner);
+  const available = inner.clientWidth
+    - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+  const needed = list.scrollWidth;
+  if (needed > available) {
+    list.style.setProperty("--fit", Math.max(0.4, (available / needed) * 0.98));
+  }
+}
+
+window.addEventListener("resize", fitMovements);
 
 function closeWorkout() {
   $("workout-view").hidden = true;
