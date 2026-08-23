@@ -49,6 +49,10 @@ button {
 /* ---------- Config view ---------- */
 
 .config {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh; /* stable against iOS toolbar collapse */
   max-width: 40rem;
   margin: 0 auto;
   padding: clamp(2.5rem, 9vh, 6rem) 1.5rem 0;
@@ -182,8 +186,10 @@ button {
   50% { opacity: 0.4; }
 }
 
-/* Minimal legal footer: quiet, out of the visual hierarchy. */
+/* Minimal legal footer: quiet, out of the visual hierarchy. Sits at the very
+   bottom of the viewport-filling config column, not under the button. */
 .footer {
+  margin-top: auto;
   padding: 0.75rem 0 calc(0.75rem + env(safe-area-inset-bottom, 0px));
   font-size: 0.75rem;
 }
