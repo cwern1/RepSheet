@@ -1,9 +1,9 @@
 const EQUIPMENT = [
-  "Bodyweight", "Barbell", "Dumbbells", "Kettlebell", "Pull-up Bar", "Rings", "Rower",
-  "Assault Bike", "Ski Erg", "Jump Rope", "Plyo Box", "Wall Ball", "Sandbag", "GHD",
+  "Bodyweight", "Running", "Barbell", "Dumbbells", "Kettlebell", "Pull-up Bar", "Rings",
+  "Rower", "Assault Bike", "Ski Erg", "Jump Rope", "Plyo Box", "Wall Ball", "Sandbag", "GHD",
 ];
 const STYLES = ["AMRAP", "For Time", "EMOM", "Chipper", "Intervals"];
-const DURATIONS = [10, 15, 20, 30, 45];
+const DURATIONS = [7, 10, 12, 15, 18, 20, 25, 30, 45];
 const STORAGE_KEY = "repsheet-settings";
 
 const state = {
@@ -26,7 +26,6 @@ function loadSettings() {
     }
     if (STYLES.includes(saved.style)) state.style = saved.style;
     if (DURATIONS.includes(saved.duration)) state.duration = saved.duration;
-    if (typeof saved.keepAwake === "boolean") state.keepAwake = saved.keepAwake;
   } catch { /* corrupted or unavailable storage — keep defaults */ }
 }
 
@@ -37,7 +36,6 @@ function saveSettings() {
       equipment: [...state.equipment],
       style: state.style,
       duration: state.duration,
-      keepAwake: state.keepAwake,
     }));
   } catch { /* private mode etc. — persistence is a convenience only */ }
 }
@@ -81,13 +79,30 @@ function renderChips() {
     (v) => (state.duration = v), (v) => `${v} min`);
 }
 
+function showOverlay() {
+  const o = $("overlay");
+  o.classList.remove("error");
+  $("overlay-text").textContent = "Building your workout…";
+  o.hidden = false;
+}
+
+function showOverlayError(message) {
+  const o = $("overlay");
+  o.classList.add("error");
+  $("overlay-text").textContent = message;
+  o.hidden = false;
+}
+
+function hideOverlay() {
+  $("overlay").hidden = true;
+}
+
 async function generate() {
   const btn = $("generate-btn");
-  const error = $("error");
-  error.hidden = true;
   btn.disabled = true;
   btn.classList.add("loading");
   btn.textContent = "Generating…";
+  showOverlay();
 
   try {
     const res = await fetch("/api/generate", {
@@ -104,9 +119,9 @@ async function generate() {
       throw new Error(body.detail || `Request failed (${res.status})`);
     }
     showWorkout(await res.json());
+    hideOverlay();
   } catch (e) {
-    error.textContent = e.message;
-    error.hidden = false;
+    showOverlayError(e.message);
   } finally {
     btn.disabled = false;
     btn.classList.remove("loading");
@@ -115,7 +130,6 @@ async function generate() {
 }
 
 function showWorkout(w) {
-  $("w-title").textContent = w.title || "";
   $("w-format").textContent = w.format_line;
   $("w-scheme").textContent = w.scheme || "";
   $("w-notes").textContent = w.notes || "";
@@ -146,6 +160,10 @@ function showWorkout(w) {
 
   $("config-view").hidden = true;
   $("workout-view").hidden = false;
+  // Keep-awake re-arms for every workout; turning it off lasts only until the
+  // next workout is opened.
+  state.keepAwake = true;
+  if (wakeSupported) syncWakeButton();
   acquireWakeLock();
 }
 
@@ -159,22 +177,56 @@ function closeWorkout() {
 
 const wakeSupported = "wakeLock" in navigator;
 let wakeLock = null;
+let wakeWatchdog = null;
 
 async function acquireWakeLock() {
   if (!wakeSupported || !state.keepAwake || $("workout-view").hidden) return;
+  if (document.visibilityState !== "visible" || wakeLock) {
+    syncWakeButton();
+    return;
+  }
   try {
-    wakeLock = await navigator.wakeLock.request("screen");
-    wakeLock.addEventListener("release", () => { wakeLock = null; });
-  } catch { /* denied (e.g. battery saver) — the workout still displays */ }
+    const lock = await navigator.wakeLock.request("screen");
+    wakeLock = lock;
+    $("wake-btn").title = "Prevent the screen from locking";
+    lock.addEventListener("release", () => {
+      if (wakeLock === lock) wakeLock = null;
+      syncWakeButton();
+      // Released by the system (not by us): try to get it straight back.
+      setTimeout(acquireWakeLock, 0);
+    });
+  } catch {
+    // Rejected — on iOS most commonly Low Power Mode. The pill stays gray so
+    // the UI never claims a lock it doesn't hold.
+    $("wake-btn").title =
+      "Couldn't keep the screen awake — is Low Power Mode on?";
+  }
+  syncWakeButton();
 }
 
 function releaseWakeLock() {
-  wakeLock?.release();
-  wakeLock = null;
+  const lock = wakeLock;
+  wakeLock = null; // clear first so the release handler doesn't re-acquire
+  lock?.release();
+  syncWakeButton();
 }
 
 function syncWakeButton() {
-  $("wake-btn").setAttribute("aria-pressed", state.keepAwake);
+  // The pill reflects the lock we actually hold, not just the intent.
+  $("wake-btn").setAttribute("aria-pressed", state.keepAwake && wakeLock !== null);
+}
+
+function startWakeWatchdog() {
+  stopWakeWatchdog();
+  // Belt and suspenders: iOS can drop the lock without a usable signal.
+  wakeWatchdog = setInterval(acquireWakeLock, 15000);
+}
+
+function stopWakeWatchdog() {
+  if (wakeWatchdog) {
+    clearInterval(wakeWatchdog);
+    wakeWatchdog = null;
+  }
 }
 
 loadSettings();
@@ -182,8 +234,17 @@ renderChips();
 $("generate-btn").addEventListener("click", generate);
 $("close-btn").addEventListener("click", closeWorkout);
 $("regen-btn").addEventListener("click", generate);
+$("overlay").addEventListener("click", () => {
+  if ($("overlay").classList.contains("error")) hideOverlay();
+});
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && !$("workout-view").hidden) closeWorkout();
+  if (e.key === "Escape") {
+    if (!$("overlay").hidden && $("overlay").classList.contains("error")) {
+      hideOverlay();
+    } else if (!$("workout-view").hidden) {
+      closeWorkout();
+    }
+  }
 });
 
 if (wakeSupported) {
@@ -192,7 +253,6 @@ if (wakeSupported) {
     state.keepAwake = !state.keepAwake;
     syncWakeButton();
     state.keepAwake ? acquireWakeLock() : releaseWakeLock();
-    saveSettings();
   });
   // The browser force-releases the lock when the page is hidden — re-acquire.
   document.addEventListener("visibilitychange", () => {
