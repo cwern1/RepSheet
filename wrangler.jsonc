@@ -2,6 +2,13 @@
 {
   "name": "repsheet",
   "main": "src/entry.py",
+  // Explicit so a routes change can never silently disable the URL again.
+  "workers_dev": true,
+  // Custom domain: Cloudflare creates the DNS record and certificate for it
+  // on deploy (the christoph-werner.com zone lives in this account).
+  "routes": [
+    { "pattern": "repsheet.christoph-werner.com", "custom_domain": true }
+  ],
   "compatibility_date": "2026-08-23",
   "compatibility_flags": ["python_workers"],
   // Static frontend: served directly from the edge; only /api/* invokes Python.
