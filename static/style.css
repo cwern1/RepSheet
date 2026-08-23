@@ -203,8 +203,10 @@ button {
   .footer a:hover { text-decoration: underline; }
 }
 
-/* On the workout poster the safe area is already covered by .workout-inner. */
-.workout-inner .footer { padding: 2rem 0 0; }
+/* In the workout view the poster's own auto margins center it and push the
+   footer down; a second auto margin here would split the free space and leave
+   the footer floating at half-height. */
+.workout > .footer { margin-top: 0; flex-shrink: 0; }
 
 /* ---------- Generation overlay ---------- */
 
@@ -270,8 +272,8 @@ button {
   inset: 0;
   background: var(--bg);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   overflow-y: auto;
   animation: appear 0.25s ease-out;
 }
