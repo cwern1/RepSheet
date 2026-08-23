@@ -308,15 +308,20 @@ function closeWorkout() {
 
 const wakeSupported = "wakeLock" in navigator;
 let wakeLock = null;
+let wakeRequesting = false; // a request is in flight; wakeLock is still null
 let wakeWatchdog = null;
 
 async function acquireWakeLock() {
   if (!wakeSupported || !state.keepAwake || $("workout-view").hidden) return;
-  if (document.visibilityState !== "visible" || wakeLock) {
+  // wakeLock stays null for as long as the request below is pending, so the
+  // flag is what stops a second tap (or a watchdog tick) firing a second
+  // request and leaking the lock the first one is about to return.
+  if (document.visibilityState !== "visible" || wakeLock || wakeRequesting) {
     syncWakeButton();
     return;
   }
   try {
+    wakeRequesting = true;
     const lock = await navigator.wakeLock.request("screen");
     wakeLock = lock;
     $("wake-btn").title = "Prevent the screen from locking";
@@ -331,6 +336,8 @@ async function acquireWakeLock() {
     // the UI never claims a lock it doesn't hold.
     $("wake-btn").title =
       "Couldn't keep the screen awake — is Low Power Mode on?";
+  } finally {
+    wakeRequesting = false;
   }
   syncWakeButton();
 }
@@ -392,7 +399,16 @@ document.addEventListener("keydown", (e) => {
 if (wakeSupported) {
   syncWakeButton();
   $("wake-btn").addEventListener("click", () => {
-    state.keepAwake = !state.keepAwake;
+    // Toggle what the pill *shows*, not the intent behind it. The two disagree
+    // whenever the automatic acquire in showWorkout() was rejected — that one
+    // runs after `await fetch`, so the Generate tap's gesture has expired and
+    // iOS refuses it, leaving the intent on with no lock and the pill dark.
+    // Inverting the intent there spends the first tap turning off something
+    // that already looked off, which is why this needed two taps on a phone.
+    // Read back from the button and a dark pill always means "turn it on" —
+    // and the request then runs inside the tap, where iOS accepts it.
+    const showingOn = $("wake-btn").getAttribute("aria-pressed") === "true";
+    state.keepAwake = !showingOn;
     syncWakeButton();
     state.keepAwake ? acquireWakeLock() : releaseWakeLock();
   });
