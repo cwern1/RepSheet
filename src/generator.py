@@ -1,6 +1,7 @@
 """Workout generation via the Workers AI binding (gpt-oss-120b, Responses API)."""
 
 import json
+import random
 
 from js import Object
 from pydantic import BaseModel, ValidationError
@@ -120,9 +121,52 @@ FORMAT:
 - `notes`: only a rest scheme or one genuinely necessary instruction; otherwise
   null. Never restate the format or duration, and never contradict the
   structure (no pacing claims that don't match the prescribed work).
-- 3–8 movements. Vary movement selection between workouts; do not default to
-  the same classic pairings every time.
+- 3–8 movements.
+
+VARIETY — this is where you are weakest, so read it twice:
+- You have a strong pull toward one default set: pull-ups, air squats,
+  deadlifts, push-ups. Resist it. The equipment list almost always admits far
+  more movements than the obvious four — reach for the less obvious ones.
+- "Programming angle" is supplied with most requests. Let it drive movement
+  selection and the rep scheme: a hinge-dominant angle means the workout is
+  built around hinging, not that a deadlift appears somewhere.
+- An angle BIASES a workout, it never makes every movement the same pattern.
+  Always keep at least one contrasting movement — a pressing-emphasis workout
+  that is nothing but presses is bad programming, not a strong interpretation.
+- "Recently used" lists movements the athlete has just done. Treat them as
+  stale: reuse at most two, and only where the equipment list leaves you no
+  alternative.
+
+PRECEDENCE when these pull against each other, highest first: the EQUIPMENT
+hard rules, then the style blueprint, then the athlete request, then the
+programming angle. The angle is the first thing to sacrifice — if the athlete
+asks for no overhead work and the angle says pressing emphasis, press from the
+floor or drop the pressing emphasis entirely. Never mention the angle.
 """
+
+# Two orthogonal creative dials, one drawn from each per request. Deliberately
+# free of structural angles ("make it a couplet") — those would fight the style
+# blueprints, where a Chipper needs 6–8 movements and an AMRAP one short round.
+PATTERN_ANGLES = (
+    "hinge-dominant",
+    "squat-dominant",
+    "pressing emphasis",
+    "pulling emphasis",
+    "unilateral, single-limb emphasis",
+    "posterior-chain focus",
+    "grip-intensive",
+    "midline and core emphasis",
+    "machine- and monostructural-heavy",
+    "full-body, no repeated movement pattern",
+)
+
+STIMULUS_ANGLES = (
+    "sprint pace, high turnover",
+    "grindy and heavy, low reps per set",
+    "a lung-burner — breathing is the limiter",
+    "muscular endurance, long unbroken sets",
+    "steady pace the athlete never stops moving at",
+)
 
 
 class Movement(BaseModel):
@@ -214,15 +258,38 @@ async def _request_with_shape_retry(ai, messages: list[dict]) -> Workout:
             raise UpstreamError("The model returned a malformed workout twice")
 
 
+def _variation_brief(nonce: int | None) -> str:
+    """One pattern + one stimulus angle, so no two calls start from the same place.
+
+    Seeded from a client-supplied nonce rather than ambient entropy: Workers
+    restricts randomness during global-scope evaluation, and a fixed nonce also
+    pins the angle, which makes the conflict cases testable.
+    """
+    rng = random.Random(nonce) if nonce is not None else random
+    return f"{rng.choice(PATTERN_ANGLES)}; {rng.choice(STIMULUS_ANGLES)}"
+
+
 async def generate_workout(
-    ai, equipment: list[str], style: str, duration_min: int, custom: str = ""
+    ai,
+    equipment: list[str],
+    style: str,
+    duration_min: int,
+    custom: str = "",
+    avoid: list[str] | None = None,
+    nonce: int | None = None,
 ) -> Workout:
     equipment_text = ", ".join(equipment) if equipment else "none (bodyweight only)"
     user_prompt = (
         f"Equipment available (use ALL of it): {equipment_text}\n"
         f"Style: {style}\n"
-        f"Target duration: about {duration_min} minutes"
+        f"Target duration: about {duration_min} minutes\n"
+        f"Programming angle for this workout: {_variation_brief(nonce)}"
     )
+    if stale := [m.strip()[:60] for m in (avoid or []) if m.strip()][:24]:
+        user_prompt += (
+            "\n\nRecently used — pick different movements, reusing at most 2:\n"
+            + ", ".join(stale)
+        )
     if custom := custom.strip()[:500]:
         # Delimited so the model reads it as data, not as further instructions.
         user_prompt += f'\n\nAthlete request:\n"""\n{custom}\n"""'

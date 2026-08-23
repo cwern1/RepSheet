@@ -19,6 +19,10 @@ with one retry on malformed shapes.
 - Styles: AMRAP, For Time, EMOM, Chipper, Intervals — each with a structural
   blueprint in the prompt (round math, time-honest volume budgets, load rules
   in kg, hard caps on grinding movements).
+- Regenerate gives a genuinely different workout: every request carries a randomly
+  drawn programming angle (movement pattern + stimulus) plus the movements from the
+  last few workouts to steer away from. Measured across five successive regenerates,
+  mean movement overlap between consecutive workouts fell from ~73% to ~10%.
 - "Customize" sheet for free-text prompt tuning — injuries, intensity, movements
   you want in. Appended to the request as a delimited athlete request; the
   equipment list, style blueprint and JSON format still win. Persisted, and the

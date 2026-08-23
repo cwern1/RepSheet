@@ -7,12 +7,17 @@ const STYLES = ["AMRAP", "For Time", "EMOM", "Chipper", "Intervals"];
 const DURATIONS = [7, 10, 12, 15, 18, 20, 25, 30, 45];
 const STORAGE_KEY = "repsheet-settings";
 const CUSTOM_MAX = 500; // matches the server-side max_length
+const RECENT_WORKOUTS = 3; // how many past workouts feed the avoid-list
+const AVOID_MAX = 24;
 
 const state = {
   equipment: new Set(["Bodyweight", "Barbell", "Pull-up Bar"]),
   style: "AMRAP",
   duration: 15,
   custom: "",
+  // Movement names from the last few workouts, newest first. Deliberately not
+  // persisted: a fresh page load should behave exactly like a fresh install.
+  recent: [],
   keepAwake: true,
 };
 
@@ -208,13 +213,20 @@ async function generate() {
         style: state.style,
         duration: state.duration,
         custom: state.custom,
+        // Both buttons route through here, so ↻ and Generate get the same
+        // push away from whatever was just on screen.
+        avoid: [...new Set(state.recent.flat())].slice(0, AVOID_MAX),
+        nonce: Math.floor(Math.random() * 1e9),
       }),
     });
     if (!res.ok) {
       const body = await res.json().catch(() => ({}));
       throw new Error(body.detail || `Request failed (${res.status})`);
     }
-    showWorkout(await res.json());
+    const workout = await res.json();
+    state.recent.unshift(workout.movements.map((m) => m.name));
+    state.recent.length = Math.min(state.recent.length, RECENT_WORKOUTS);
+    showWorkout(workout);
     hideOverlay();
   } catch (e) {
     showOverlayError(e.message);

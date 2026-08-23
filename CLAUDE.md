@@ -118,6 +118,28 @@ across different styles and durations and reading them as a coach would**. One g
 sample proves nothing. Say plainly when a change is under-tested rather than declaring it
 done.
 
+### How variation works
+
+Identical inputs used to give near-identical workouts — the model has no memory
+between calls, so the old "vary between workouts" line was unenforceable. Two
+mechanisms replace it, both in the **user** message:
+
+- **Programming angle.** One `PATTERN_ANGLES` + one `STIMULUS_ANGLES` entry per request,
+  chosen by `_variation_brief()`. Seeded from the client's `nonce` — Workers restricts
+  entropy during global-scope evaluation, and a fixed nonce pins the angle, which is the
+  only way to test the conflict cases. Keep these tuples free of *structural* angles
+  ("make it a couplet"): those fight the style blueprints.
+- **Avoid-list.** `static/app.js` keeps the last 3 workouts' movement names in
+  `state.recent` (in memory only — never persisted) and sends them as `avoid`.
+
+Precedence, encoded in the prompt and worth re-testing after any edit:
+**equipment rules > style blueprint > athlete request > programming angle.** The angle
+is always the first thing sacrificed.
+
+Two failure modes to watch when tuning: an angle that turns every movement into the same
+pattern (a four-station pressing EMOM), and an angle that quietly overrides a `custom`
+restriction. Both are guarded in the prompt; neither guard is absolute.
+
 ## Tests (not yet written)
 
 A pytest suite is intended but doesn't exist. When adding it: it can only cover the pure
