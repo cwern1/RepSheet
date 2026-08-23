@@ -1,6 +1,7 @@
 const EQUIPMENT = [
   "Bodyweight", "Running", "Barbell", "Dumbbells", "Kettlebell", "Pull-up Bar", "Rings",
-  "Rower", "Assault Bike", "Ski Erg", "Jump Rope", "Plyo Box", "Wall Ball", "Sandbag", "GHD",
+  "Rower", "Assault Bike", "Ski Erg", "Bike Erg", "Jump Rope", "Plyo Box", "Wall Ball",
+  "Sandbag", "GHD",
 ];
 const STYLES = ["AMRAP", "For Time", "EMOM", "Chipper", "Intervals"];
 const DURATIONS = [7, 10, 12, 15, 18, 20, 25, 30, 45];
@@ -79,21 +80,83 @@ function renderChips() {
     (v) => (state.duration = v), (v) => `${v} min`);
 }
 
+const LOADING_MESSAGES = [
+  "Putting equipment in place…",
+  "Chalking up…",
+  "Consulting the whiteboard…",
+  "Setting the clock…",
+  "Tidying the floor…",
+  "Sweeping the platform…",
+  "Queuing the playlist…",
+  "Measuring out the lanes…",
+  "Counting reps on fingers…",
+  "Waking up the coach…",
+];
+
+const EQUIPMENT_MESSAGES = {
+  "Barbell": ["Loading the barbell…", "Hunting for collars…"],
+  "Dumbbells": ["Pairing up dumbbells…"],
+  "Kettlebell": ["Lining up kettlebells…"],
+  "Pull-up Bar": ["Testing the pull-up bar…"],
+  "Rings": ["Adjusting the rings…"],
+  "Rower": ["Setting the rower damper…"],
+  "Assault Bike": ["Oiling the assault bike…"],
+  "Ski Erg": ["Untangling the ski erg…"],
+  "Bike Erg": ["Setting the bike erg damper…"],
+  "Jump Rope": ["Untangling the jump rope…"],
+  "Plyo Box": ["Stacking the plyo box…"],
+  "Wall Ball": ["Pumping up the wall ball…"],
+  "Sandbag": ["Refilling the sandbag…"],
+  "GHD": ["Dusting off the GHD…"],
+  "Running": ["Marking the 400 m turnaround…"],
+  "Bodyweight": ["Clearing floor space…"],
+};
+
+let overlayTicker = null;
+
+function stopOverlayTicker() {
+  if (overlayTicker) {
+    clearInterval(overlayTicker);
+    overlayTicker = null;
+  }
+}
+
 function showOverlay() {
   const o = $("overlay");
   o.classList.remove("error");
-  $("overlay-text").textContent = "Building your workout…";
   o.hidden = false;
+
+  // Message pool tailored to the ticked equipment, then shuffled.
+  const pool = [
+    ...LOADING_MESSAGES,
+    ...[...state.equipment].flatMap((e) => EQUIPMENT_MESSAGES[e] ?? []),
+  ].sort(() => Math.random() - 0.5);
+
+  const text = $("overlay-text");
+  let i = 0;
+  text.textContent = pool[0];
+  stopOverlayTicker();
+  overlayTicker = setInterval(() => {
+    text.classList.add("swap");
+    setTimeout(() => {
+      i = (i + 1) % pool.length;
+      text.textContent = pool[i];
+      text.classList.remove("swap");
+    }, 250);
+  }, 2200);
 }
 
 function showOverlayError(message) {
+  stopOverlayTicker();
   const o = $("overlay");
   o.classList.add("error");
+  $("overlay-text").classList.remove("swap");
   $("overlay-text").textContent = message;
   o.hidden = false;
 }
 
 function hideOverlay() {
+  stopOverlayTicker();
   $("overlay").hidden = true;
 }
 

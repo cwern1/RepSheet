@@ -41,6 +41,13 @@ EQUIPMENT — hard rules:
   "Row".
 - Never program timed holds (plank, L-sit, wall sit) anywhere — every movement
   is countable reps, calories, or distance.
+- Slow, grinding movements (Turkish get-ups ≈ 30 s each, heavy carries, GHD
+  work, ring dips and ring pull-ups) eat the time budget about 3× faster than
+  cyclical reps — keep their totals SMALL (Turkish get-ups ≤ 3/arm per round
+  and never in a chipper; GHD sit-ups ≤ 50 total; ring dips or pull-ups
+  ≤ 40 total).
+- Carries (sandbag, dumbbell) are prescribed as a distance ("50 m"), never as
+  a rep count.
 
 STYLE BLUEPRINTS — follow the requested style exactly:
 - AMRAP: `format_line` "AMRAP {target} min". The movement list is ONE round that
@@ -54,19 +61,27 @@ STYLE BLUEPRINTS — follow the requested style exactly:
   minute, so total reps across ALL rounds ≈ 15 × target minutes, within ±30%
   (10 min ≈ 150 reps, 20 min ≈ 300). A single short pass is far too little —
   use multiple rounds to reach the budget, and never use "1 Round" as a scheme
-  (a single pass means `scheme` null).
+  (a single pass means `scheme` null). Budget by TIME, not just rep count:
+  a 400 m run costs about 2 minutes (≈30 reps' worth of budget), 200 m about
+  1 minute — subtract runs from the rep budget BEFORE allocating reps. Worked
+  example: 25 min with a 400 m run each round → 5 rounds × 2 min running
+  leaves ~15 min → ~225 reps total → about 45 reps per round alongside the
+  run, NOT 75.
 - EMOM: `format_line` "EMOM {target}". The number of movements MUST divide the
   total minutes evenly; put the rotation in `scheme` (e.g. "4 stations × 5
   rounds"). Each minute's work must take 35–45 seconds for a fit amateur —
   never more than 15 cal in a single minute.
 - Chipper: one long list done once, top to bottom, big rep counts trending
-  downward. `format_line` "Chipper · cap {target} min", 6–8 movements.
+  downward. `format_line` "Chipper · cap {target} min", 6–8 movements, each
+  movement appearing exactly ONCE — a chipper never repeats a movement.
 - Intervals: `format_line` states the exact structure, e.g. "5 × 3 min on /
   1 min rest", and it must fill the target duration exactly. EVERY interval
   repeats the SAME work: the movement list is one interval's work, and
   together the movements must nearly fill the "on" window — about 15 reps or
-  12 cal per minute of window (a 3-min window ≈ 45 reps or 35 cal total).
-  Never alternate different work between intervals. Pacing goes in `notes`.
+  10–12 cal per minute of window (a 3-min window ≈ 45 reps or 35 cal total;
+  a 5-min all-machine window ≈ 55 cal total, never more — a fit amateur
+  cannot hold 15+ cal/min for repeated intervals). Never alternate different
+  work between intervals. Pacing goes in `notes`.
 
 LOADS:
 - Every movement that uses a loaded implement (barbell, dumbbells, kettlebell,
@@ -84,7 +99,8 @@ FORMAT:
   limb suffix ONLY on genuinely unilateral movements (lunges → "/leg",
   single-arm work → "/arm"); ordinary two-handed movements like wall balls,
   swings, or thrusters get a bare number. "cal" exists only on machines
-  (Rower, Assault Bike, Ski Erg) — jump rope work is counted in reps.
+  (Rower, Assault Bike, Ski Erg, Bike Erg) — jump rope work is counted in
+  reps.
 - `notes`: only a rest scheme or one genuinely necessary instruction; otherwise
   null. Never restate the format or duration, and never contradict the
   structure (no pacing claims that don't match the prescribed work).
@@ -156,7 +172,7 @@ async def _request(ai, messages: list[dict]) -> Workout:
         to_js(
             {
                 "input": messages,
-                "reasoning": {"effort": "low"},
+                "reasoning": {"effort": "medium"},
                 "max_output_tokens": 2000,
             }
         ),
