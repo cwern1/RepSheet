@@ -24,6 +24,9 @@ class GenerateRequest(BaseModel):
     equipment: list[str] = Field(default_factory=list, max_length=20)
     style: str
     duration: int = Field(ge=5, le=60)
+    # Free-text tuning from the Customize sheet: injuries, intensity, movements
+    # the athlete wants in. Empty when unused.
+    custom: str = Field("", max_length=500)
 
     @field_validator("style")
     @classmethod
@@ -37,7 +40,9 @@ class GenerateRequest(BaseModel):
 async def generate(req: GenerateRequest, request: Request) -> Workout:
     env = request.scope["env"]
     try:
-        return await generate_workout(env.AI, req.equipment, req.style, req.duration)
+        return await generate_workout(
+            env.AI, req.equipment, req.style, req.duration, req.custom
+        )
     except (UpstreamError, EquipmentNotUsed) as e:
         raise HTTPException(502, str(e))
     except Exception as e:

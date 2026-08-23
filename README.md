@@ -19,9 +19,13 @@ with one retry on malformed shapes.
 - Styles: AMRAP, For Time, EMOM, Chipper, Intervals — each with a structural
   blueprint in the prompt (round math, time-honest volume budgets, load rules
   in kg, hard caps on grinding movements).
+- "Customize" sheet for free-text prompt tuning — injuries, intensity, movements
+  you want in. Appended to the request as a delimited athlete request; the
+  equipment list, style blueprint and JSON format still win. Persisted, and the
+  button stays lit so a saved note never shapes a workout invisibly.
 - Full-screen workout view with fit-to-width poster type (shrinks instead of
-  wrapping), screen wake lock while a workout is open ("Keep awake" pill),
-  and a generation overlay with rotating gym-prep messages.
+  wrapping), screen wake lock while a workout is open ("Prevent lockscreen"
+  pill), and a generation overlay with rotating gym-prep messages.
 - Installable on the iOS Home Screen (manifest + touch icons, safe-area
   aware); light/dark theme follows the system.
 

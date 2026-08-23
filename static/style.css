@@ -164,6 +164,8 @@ body {
 
 .chip:focus-visible,
 .generate:focus-visible,
+.customize:focus-visible,
+.sheet-btn:focus-visible,
 .chrome-btn:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
@@ -175,8 +177,14 @@ body {
   position: sticky;
   bottom: 0;
   margin-top: 0.5rem;
-  padding: 1.25rem 0 calc(1rem + env(safe-area-inset-bottom, 0px));
-  background: linear-gradient(to bottom, transparent, var(--bg) 40%);
+  /* Full-bleed to the viewport edges. Inset, the bar's flat --bg fill sits on
+     top of the body's ambient glows and its left/right edges read as a stray
+     rectangle behind the button. Bleeding it out leaves only the top fade. */
+  margin-inline: calc(50% - 50vw);
+  padding: 1.25rem calc(50vw - 50%) calc(1rem + env(safe-area-inset-bottom, 0px));
+  /* Fade completes inside the top padding — below that the bar is solid, so
+     scrolled content never shows through the two buttons. */
+  background: linear-gradient(to bottom, transparent, var(--bg) 22%);
 }
 
 .generate {
@@ -212,6 +220,136 @@ body {
 
 @keyframes pulse {
   50% { opacity: 0.4; }
+}
+
+/* Secondary action above the CTA: same footprint, none of the weight. */
+.customize {
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  display: block;
+  width: 100%;
+  max-width: 24rem;
+  margin: 0 auto 0.6rem;
+  padding: 0.7rem;
+  border-radius: 12px;
+  border: 1px solid var(--hairline);
+  /* Opaque, not transparent: it sits in the generate bar's fade zone, where a
+     see-through button would let the last row of chips scroll through it. */
+  background: var(--bg);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background 0.12s ease, border-color 0.12s ease, color 0.12s ease,
+    transform 0.12s ease;
+}
+
+/* A saved note keeps shaping every workout, so the button stays lit. The tint
+   is translucent, so it's layered over an opaque base rather than replacing it. */
+.customize[data-set="true"] {
+  background: linear-gradient(var(--accent-tint), var(--accent-tint)), var(--bg);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+@media (hover: hover) {
+  .customize:hover { border-color: var(--accent); color: var(--accent); }
+}
+
+.customize:active { transform: scale(0.99); }
+
+/* ---------- Customize sheet ---------- */
+
+/* Left at the UA's centered position on every screen size: a bottom sheet
+   would sit under the iOS keyboard, while a centered dialog gets scrolled
+   into view above it. */
+.sheet {
+  /* The `* { margin: 0 }` reset wipes the UA's `margin: auto` on dialog, which
+     is what centres a modal — put it back or the sheet pins to the top-left. */
+  margin: auto;
+  width: min(30rem, calc(100vw - 2rem));
+  max-height: 80dvh;
+  padding: 0;
+  border: none;
+  border-radius: 18px;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+/* Matches the generation overlay's blurred wash. */
+.sheet::backdrop {
+  background: color-mix(in srgb, var(--bg) 60%, transparent);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.sheet-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.sheet-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.sheet-inner .hint { margin-top: -0.5rem; }
+
+.sheet-input {
+  font: inherit;
+  /* Exactly 16px: anything smaller makes iOS Safari zoom in on focus. */
+  font-size: 1rem;
+  width: 100%;
+  min-height: 7rem;
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: 1px solid var(--hairline);
+  background: var(--bg);
+  color: var(--text);
+  resize: vertical;
+}
+
+.sheet-input:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.sheet-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+
+.sheet-btn {
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: opacity 0.12s ease, border-color 0.12s ease, color 0.12s ease;
+}
+
+.sheet-btn.ghost {
+  background: transparent;
+  border-color: var(--hairline);
+  color: var(--text-secondary);
+}
+
+.sheet-btn.primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+@media (hover: hover) {
+  .sheet-btn.ghost:hover { border-color: var(--danger); color: var(--danger); }
+  .sheet-btn.primary:hover { opacity: 0.9; }
 }
 
 /* Minimal legal footer: quiet, out of the visual hierarchy. Sits at the very
@@ -359,6 +497,7 @@ body {
   font: inherit;
   font-size: 0.85rem;
   font-weight: 600;
+  white-space: nowrap;
   padding: 0.55rem 1rem;
   border-radius: 999px;
   border: 1px solid var(--hairline);
