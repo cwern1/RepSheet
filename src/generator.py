@@ -659,7 +659,10 @@ async def _request(ai, messages: list[dict]) -> Workout:
         to_js(
             {
                 "input": messages,
-                "reasoning": {"effort": "medium"},
+                # "low" benchmarked quality-equal to "medium" at 2.3× the speed
+                # over 50 blind-judged cases — see experiments/effort-comparison.md
+                # on the model-comparison branch.
+                "reasoning": {"effort": "low"},
                 # Reasoning tokens come out of this budget. An athlete request
                 # that fights the equipment list makes the model think much
                 # harder, and at 2000 the JSON got truncated mid-string; long
