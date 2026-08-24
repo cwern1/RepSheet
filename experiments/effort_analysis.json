@@ -1,0 +1,605 @@
+{
+ "gpt-oss-120b@low": {
+  "n": 50,
+  "ok": 49,
+  "failed": [
+   {
+    "case": 1,
+    "seconds": 395.7,
+    "detail": "Workout generation failed: InferenceUpstreamError: Error: Network connection lost.\n    at async Object.fetch (file:///Users/chris/.npm/_npx/32026684e21afda6/node_modules/miniflare/dist/src/workers/core/entry.worker.js:4733:22)"
+   }
+  ],
+  "quota_blocked": 0,
+  "time_median": 16.6,
+  "time_mean": 18.3,
+  "time_p90": 36.9,
+  "time_min": 4.1,
+  "time_max": 41.7,
+  "clean": 34,
+  "total_violations": 21,
+  "details": [
+   {
+    "case": 2,
+    "seconds": 39.3,
+    "violations": [
+     "tagged with unlisted equipment: Front Squat -> Barbell"
+    ]
+   },
+   {
+    "case": 3,
+    "seconds": 36.2,
+    "violations": []
+   },
+   {
+    "case": 4,
+    "seconds": 24.8,
+    "violations": []
+   },
+   {
+    "case": 5,
+    "seconds": 9.1,
+    "violations": []
+   },
+   {
+    "case": 6,
+    "seconds": 24.8,
+    "violations": []
+   },
+   {
+    "case": 7,
+    "seconds": 17.5,
+    "violations": [
+     "OFF-VOCABULARY: Clean"
+    ]
+   },
+   {
+    "case": 8,
+    "seconds": 12.3,
+    "violations": []
+   },
+   {
+    "case": 9,
+    "seconds": 14.7,
+    "violations": [
+     "interval work ~2.5 min overflows 2 min window"
+    ]
+   },
+   {
+    "case": 10,
+    "seconds": 7.5,
+    "violations": []
+   },
+   {
+    "case": 11,
+    "seconds": 4.1,
+    "violations": []
+   },
+   {
+    "case": 12,
+    "seconds": 8.1,
+    "violations": []
+   },
+   {
+    "case": 13,
+    "seconds": 10.5,
+    "violations": []
+   },
+   {
+    "case": 14,
+    "seconds": 7.1,
+    "violations": []
+   },
+   {
+    "case": 15,
+    "seconds": 19.2,
+    "violations": []
+   },
+   {
+    "case": 16,
+    "seconds": 16.6,
+    "violations": []
+   },
+   {
+    "case": 17,
+    "seconds": 7.2,
+    "violations": []
+   },
+   {
+    "case": 18,
+    "seconds": 19.5,
+    "violations": []
+   },
+   {
+    "case": 19,
+    "seconds": 25.9,
+    "violations": []
+   },
+   {
+    "case": 20,
+    "seconds": 17.8,
+    "violations": []
+   },
+   {
+    "case": 21,
+    "seconds": 8.4,
+    "violations": []
+   },
+   {
+    "case": 22,
+    "seconds": 23.9,
+    "violations": []
+   },
+   {
+    "case": 23,
+    "seconds": 16.6,
+    "violations": []
+   },
+   {
+    "case": 24,
+    "seconds": 41.7,
+    "violations": []
+   },
+   {
+    "case": 25,
+    "seconds": 8.8,
+    "violations": []
+   },
+   {
+    "case": 26,
+    "seconds": 17.5,
+    "violations": []
+   },
+   {
+    "case": 27,
+    "seconds": 19.1,
+    "violations": [
+     "two barbell loads: [50.0, 60.0]"
+    ]
+   },
+   {
+    "case": 28,
+    "seconds": 15.8,
+    "violations": [
+     "EMOM row minute too big: 250 m",
+     "EMOM minute overflows: 8/leg Dumbbell Front-Rack Lunge"
+    ]
+   },
+   {
+    "case": 29,
+    "seconds": 7.0,
+    "violations": []
+   },
+   {
+    "case": 30,
+    "seconds": 4.8,
+    "violations": []
+   },
+   {
+    "case": 31,
+    "seconds": 8.3,
+    "violations": []
+   },
+   {
+    "case": 32,
+    "seconds": 5.8,
+    "violations": []
+   },
+   {
+    "case": 33,
+    "seconds": 38.0,
+    "violations": [
+     "chipper reps over ceiling: 60 Sit-up"
+    ]
+   },
+   {
+    "case": 34,
+    "seconds": 36.9,
+    "violations": [
+     "chipper ~9 min vs 20 target (too little)"
+    ]
+   },
+   {
+    "case": 35,
+    "seconds": 15.1,
+    "violations": [
+     "OFF-VOCABULARY: Barbell Walking Lunge",
+     "chipper reps over ceiling: 40/leg Barbell Walking Lunge"
+    ]
+   },
+   {
+    "case": 36,
+    "seconds": 34.3,
+    "violations": [
+     "9 movements (max 8)",
+     "chipper reps over ceiling: 50/leg Dumbbell Front-Rack Lunge"
+    ]
+   },
+   {
+    "case": 37,
+    "seconds": 39.2,
+    "violations": [
+     "repeated base lift (squat): Air Squat + Front Squat",
+     "9 movements (max 8)",
+     "two barbell loads: [60.0, 70.0]",
+     "chipper ~22 min vs 45 target (too little)"
+    ]
+   },
+   {
+    "case": 38,
+    "seconds": 25.8,
+    "violations": [
+     "OFF-VOCABULARY: Sandbag Shoulder-to-Shoulder Press"
+    ]
+   },
+   {
+    "case": 39,
+    "seconds": 8.2,
+    "violations": []
+   },
+   {
+    "case": 40,
+    "seconds": 8.7,
+    "violations": []
+   },
+   {
+    "case": 41,
+    "seconds": 18.5,
+    "violations": [
+     "interval work ~4.5 min overflows 3 min window"
+    ]
+   },
+   {
+    "case": 42,
+    "seconds": 24.2,
+    "violations": [
+     "interval work ~5.6 min overflows 5 min window"
+    ]
+   },
+   {
+    "case": 43,
+    "seconds": 24.2,
+    "violations": [
+     "interval work ~9.7 min overflows 3 min window"
+    ]
+   },
+   {
+    "case": 44,
+    "seconds": 16.5,
+    "violations": []
+   },
+   {
+    "case": 45,
+    "seconds": 9.9,
+    "violations": []
+   },
+   {
+    "case": 46,
+    "seconds": 11.8,
+    "violations": []
+   },
+   {
+    "case": 47,
+    "seconds": 29.4,
+    "violations": []
+   },
+   {
+    "case": 48,
+    "seconds": 21.9,
+    "violations": [
+     "interval work ~2.2 min overflows 2 min window"
+    ]
+   },
+   {
+    "case": 49,
+    "seconds": 21.6,
+    "violations": []
+   },
+   {
+    "case": 50,
+    "seconds": 11.3,
+    "violations": []
+   }
+  ]
+ },
+ "gpt-oss-120b@medium": {
+  "n": 50,
+  "ok": 46,
+  "failed": [
+   {
+    "case": 35,
+    "seconds": 319.3,
+    "detail": "The model kept using equipment the athlete does not have: Pull-up"
+   },
+   {
+    "case": 36,
+    "seconds": 420.0,
+    "detail": "client error: timed out"
+   },
+   {
+    "case": 47,
+    "seconds": 420.0,
+    "detail": "client error: timed out"
+   },
+   {
+    "case": 48,
+    "seconds": 420.0,
+    "detail": "client error: timed out"
+   }
+  ],
+  "quota_blocked": 0,
+  "time_median": 38.2,
+  "time_mean": 47.1,
+  "time_p90": 75.8,
+  "time_min": 13.0,
+  "time_max": 187.0,
+  "clean": 34,
+  "total_violations": 23,
+  "details": [
+   {
+    "case": 1,
+    "seconds": 59.1,
+    "violations": [
+     "EMOM token minute: 6 m Broad Jump"
+    ]
+   },
+   {
+    "case": 2,
+    "seconds": 75.8,
+    "violations": []
+   },
+   {
+    "case": 3,
+    "seconds": 187.0,
+    "violations": [
+     "repeated base lift (squat): Air Squat + Goblet Squat",
+     "chipper row over 1000 m: 1500 m",
+     "chipper reps over ceiling: 80 Pull-up",
+     "chipper reps over ceiling: 70 Kettlebell Clean",
+     "chipper reps over ceiling: 60 Sumo Deadlift High Pull"
+    ]
+   },
+   {
+    "case": 4,
+    "seconds": 37.7,
+    "violations": [
+     "two kettlebell loads: [16.0, 24.0]"
+    ]
+   },
+   {
+    "case": 5,
+    "seconds": 38.1,
+    "violations": []
+   },
+   {
+    "case": 6,
+    "seconds": 49.8,
+    "violations": [
+     "OFF-VOCABULARY: Barbell Deadlift"
+    ]
+   },
+   {
+    "case": 7,
+    "seconds": 105.9,
+    "violations": []
+   },
+   {
+    "case": 8,
+    "seconds": 23.8,
+    "violations": []
+   },
+   {
+    "case": 9,
+    "seconds": 75.7,
+    "violations": []
+   },
+   {
+    "case": 10,
+    "seconds": 24.7,
+    "violations": []
+   },
+   {
+    "case": 11,
+    "seconds": 21.7,
+    "violations": []
+   },
+   {
+    "case": 12,
+    "seconds": 13.0,
+    "violations": []
+   },
+   {
+    "case": 13,
+    "seconds": 21.5,
+    "violations": []
+   },
+   {
+    "case": 14,
+    "seconds": 15.4,
+    "violations": []
+   },
+   {
+    "case": 15,
+    "seconds": 60.1,
+    "violations": []
+   },
+   {
+    "case": 16,
+    "seconds": 20.2,
+    "violations": []
+   },
+   {
+    "case": 17,
+    "seconds": 22.9,
+    "violations": []
+   },
+   {
+    "case": 18,
+    "seconds": 20.7,
+    "violations": []
+   },
+   {
+    "case": 19,
+    "seconds": 42.8,
+    "violations": []
+   },
+   {
+    "case": 20,
+    "seconds": 28.7,
+    "violations": []
+   },
+   {
+    "case": 21,
+    "seconds": 24.8,
+    "violations": []
+   },
+   {
+    "case": 22,
+    "seconds": 56.3,
+    "violations": []
+   },
+   {
+    "case": 23,
+    "seconds": 72.7,
+    "violations": []
+   },
+   {
+    "case": 24,
+    "seconds": 36.0,
+    "violations": []
+   },
+   {
+    "case": 25,
+    "seconds": 35.7,
+    "violations": []
+   },
+   {
+    "case": 26,
+    "seconds": 65.6,
+    "violations": []
+   },
+   {
+    "case": 27,
+    "seconds": 20.2,
+    "violations": []
+   },
+   {
+    "case": 28,
+    "seconds": 21.9,
+    "violations": []
+   },
+   {
+    "case": 29,
+    "seconds": 23.5,
+    "violations": [
+     "OFF-VOCABULARY: Barbell Deadlift"
+    ]
+   },
+   {
+    "case": 30,
+    "seconds": 43.1,
+    "violations": [
+     "EMOM minute overflows: 22 Sit-up"
+    ]
+   },
+   {
+    "case": 31,
+    "seconds": 17.5,
+    "violations": []
+   },
+   {
+    "case": 32,
+    "seconds": 50.4,
+    "violations": [
+     "OFF-VOCABULARY: Back Squat"
+    ]
+   },
+   {
+    "case": 33,
+    "seconds": 57.9,
+    "violations": []
+   },
+   {
+    "case": 34,
+    "seconds": 41.0,
+    "violations": []
+   },
+   {
+    "case": 37,
+    "seconds": 121.1,
+    "violations": [
+     "OFF-VOCABULARY: Swing",
+     "OFF-VOCABULARY: Snatch",
+     "chipper reps over ceiling: 130 Swing",
+     "chipper reps over ceiling: 115 Deadlift",
+     "chipper reps over ceiling: 100/arm Snatch",
+     "chipper reps over ceiling: 90 Pull-up",
+     "chipper reps over ceiling: 80 Push-up",
+     "chipper reps over ceiling: 70 Air Squat"
+    ]
+   },
+   {
+    "case": 38,
+    "seconds": 126.6,
+    "violations": [
+     "chipper reps over ceiling: 55 Bearhug Squat"
+    ]
+   },
+   {
+    "case": 39,
+    "seconds": 67.0,
+    "violations": [
+     "interval work ~3.2 min overflows 3 min window"
+    ]
+   },
+   {
+    "case": 40,
+    "seconds": 21.7,
+    "violations": []
+   },
+   {
+    "case": 41,
+    "seconds": 38.3,
+    "violations": []
+   },
+   {
+    "case": 42,
+    "seconds": 28.4,
+    "violations": []
+   },
+   {
+    "case": 43,
+    "seconds": 47.2,
+    "violations": [
+     "interval work ~3.6 min overflows 3 min window"
+    ]
+   },
+   {
+    "case": 44,
+    "seconds": 23.7,
+    "violations": []
+   },
+   {
+    "case": 45,
+    "seconds": 26.0,
+    "violations": []
+   },
+   {
+    "case": 46,
+    "seconds": 49.5,
+    "violations": []
+   },
+   {
+    "case": 49,
+    "seconds": 39.7,
+    "violations": []
+   },
+   {
+    "case": 50,
+    "seconds": 67.9,
+    "violations": [
+     "OFF-VOCABULARY: Overhead Press"
+    ]
+   }
+  ]
+ }
+}

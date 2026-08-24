@@ -686,13 +686,15 @@ def _extract_json(text: str) -> str:
     return text
 
 
-async def _request(ai, messages: list[dict], model: str = MODEL) -> Workout:
+async def _request(
+    ai, messages: list[dict], model: str = MODEL, effort: str = "medium"
+) -> Workout:
     if model.startswith("@cf/openai/gpt-oss"):
         # gpt-oss models speak the OpenAI Responses API through the binding:
         # `input` instead of `messages`, output as an `output[]` item list.
         body = {
             "input": messages,
-            "reasoning": {"effort": "medium"},
+            "reasoning": {"effort": effort},
             # Reasoning tokens come out of this budget. An athlete request
             # that fights the equipment list makes the model think much
             # harder, and at 2000 the JSON got truncated mid-string; long
@@ -727,12 +729,14 @@ async def _request(ai, messages: list[dict], model: str = MODEL) -> Workout:
         raise
 
 
-async def _request_with_shape_retry(ai, messages: list[dict], model: str = MODEL) -> Workout:
+async def _request_with_shape_retry(
+    ai, messages: list[dict], model: str = MODEL, effort: str = "medium"
+) -> Workout:
     try:
-        return await _request(ai, messages, model)
+        return await _request(ai, messages, model, effort)
     except (json.JSONDecodeError, ValidationError, KeyError, TypeError, AttributeError):
         try:
-            return await _request(ai, messages, model)
+            return await _request(ai, messages, model, effort)
         except (json.JSONDecodeError, ValidationError, KeyError, TypeError, AttributeError):
             raise UpstreamError("The model returned a malformed workout twice")
 
@@ -757,6 +761,7 @@ async def generate_workout(
     avoid: list[str] | None = None,
     nonce: int | None = None,
     model: str = MODEL,
+    effort: str = "medium",
 ) -> Workout:
     equipment_text = ", ".join(equipment) if equipment else "none (bodyweight only)"
     coverage = (
@@ -785,7 +790,7 @@ async def generate_workout(
         {"role": "user", "content": user_prompt},
     ]
 
-    workout = await _request_with_shape_retry(ai, messages, model)
+    workout = await _request_with_shape_retry(ai, messages, model, effort)
     report = _problem_report(workout, equipment)
     quality = _quality_problems(workout, style, duration_min, avoid or [])
     if not report and not quality:
@@ -805,7 +810,7 @@ async def generate_workout(
             ),
         },
     ]
-    workout = await _request_with_shape_retry(ai, messages, model)
+    workout = await _request_with_shape_retry(ai, messages, model, effort)
     if impossible := _impossible_movements(workout, equipment):
         raise UpstreamError(
             "The model kept using equipment the athlete does not have: "
