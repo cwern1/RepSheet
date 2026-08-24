@@ -107,3 +107,25 @@ watch, don't fix yet.
 Each step: run `harness/run_experiment.py` (or the 20-case prod subset in
 `prod_low_results.jsonl`'s PICK list), `analyze.py`, and blind-judge before/after
 per `harness/judge_prep.py` — one sample proves nothing.
+
+## Status: implemented 2026-08-24 (main, commit 7e79825)
+
+All five steps plus the small validator adds shipped in one pass and were
+verified on the same 20 hardest cases ([`patched_results.jsonl`](patched_results.jsonl)):
+
+| metric (comparable 18 cases) | before | after |
+|---|---|---|
+| total violations | ~15 | 6 |
+| clean workouts | 10/18 | 12/18 |
+| off-vocabulary names | 5 | **0** |
+| chipper ceiling breaks | 3 | **0** |
+| unlisted-equipment leaks | 2 | **0** |
+| median time | 19.1 s | 25.2 s (stricter validator → more corrective retries) |
+
+The chronic 4-machines EMOM (case 2) now produces a legal machines+Rest
+rotation on prod. Residual weakness: **interval-window overflow arithmetic**
+(4 of the 6 remaining violations) — the model still overfills "on" windows,
+especially with machine calories, despite the new numeric caps; the next
+attack would be a validator-computed per-window cap in the corrective
+feedback. Not yet re-run: the full 50-case matrix and a before/after blind
+judging pass.
