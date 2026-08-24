@@ -4,6 +4,7 @@ from pydantic import BaseModel, Field, field_validator
 from workers import WorkerEntrypoint
 
 from generator import (
+    MODEL,
     STYLES,
     EquipmentNotUsed,
     UpstreamError,
@@ -33,6 +34,9 @@ class GenerateRequest(BaseModel):
     avoid: list[str] = Field(default_factory=list, max_length=40)
     # Entropy for the server's programming-angle pick; see _variation_brief.
     nonce: int | None = None
+    # Experiment (model-comparison branch): per-request model override for the
+    # A/B harness. None → the production MODEL.
+    model: str | None = Field(None, max_length=80)
 
     @field_validator("style")
     @classmethod
@@ -48,7 +52,7 @@ async def generate(req: GenerateRequest, request: Request) -> Workout:
     try:
         return await generate_workout(
             env.AI, req.equipment, req.style, req.duration, req.custom,
-            req.avoid, req.nonce,
+            req.avoid, req.nonce, req.model or MODEL,
         )
     except (UpstreamError, EquipmentNotUsed) as e:
         raise HTTPException(502, str(e))
