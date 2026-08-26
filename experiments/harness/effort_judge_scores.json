@@ -1,0 +1,602 @@
+{
+ "1": {
+  "gpt-oss-120b@low": {
+   "score": 0,
+   "rank": 2,
+   "note": "Generation failed"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 6,
+   "rank": 1,
+   "note": "Valid rotation; broad-jump and 6-burpee minutes far under 35-45s"
+  }
+ },
+ "2": {
+  "gpt-oss-120b@medium": {
+   "score": 8,
+   "rank": 1,
+   "note": "Clean monostructural EMOM, obeys machine caps, Rest makes rotation divide"
+  },
+  "gpt-oss-120b@low": {
+   "score": 2,
+   "rank": 2,
+   "note": "Barbell front squat with no Barbell listed \u2014 hard violation"
+  }
+ },
+ "3": {
+  "gpt-oss-120b@low": {
+   "score": 7,
+   "rank": 1,
+   "note": "Legal ceilings, decent chipper; slightly light for 30-min cap"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 3,
+   "rank": 2,
+   "note": "80 pull-ups, 1500m row smash ceilings; grossly over time"
+  }
+ },
+ "4": {
+  "gpt-oss-120b@low": {
+   "score": 8,
+   "rank": 1,
+   "note": "Balanced round, honest 3.6-min pace, one load per implement"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 5,
+   "rank": 2,
+   "note": "Two kettlebell loads (16/24); AMRAP Turkish Get-Up kills flow"
+  }
+ },
+ "5": {
+  "gpt-oss-120b@low": {
+   "score": 4,
+   "rank": 2,
+   "note": "120 deadlifts at 80 kg ceiling; blows past cap"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 6,
+   "rank": 1,
+   "note": "Better variety, sane loads; still overshoots rep budget"
+  }
+ },
+ "6": {
+  "gpt-oss-120b@medium": {
+   "score": 4,
+   "rank": 2,
+   "note": "\"Barbell Deadlift\" not vocabulary; 3-4 rep token movements; adjacent pulls"
+  },
+  "gpt-oss-120b@low": {
+   "score": 6,
+   "rank": 1,
+   "note": "Classic flow; only 6 items used, adjacent hinges"
+  }
+ },
+ "7": {
+  "gpt-oss-120b@medium": {
+   "score": 7,
+   "rank": 1,
+   "note": "Honors no-overhead, honest budget; front squat/lunge adjacent"
+  },
+  "gpt-oss-120b@low": {
+   "score": 4,
+   "rank": 2,
+   "note": "\"Clean\" and dumbbell Reverse Lunge are invented variants"
+  }
+ },
+ "8": {
+  "gpt-oss-120b@low": {
+   "score": 8,
+   "rank": 1,
+   "note": "Rich equipment use, clean patterns; lunge missing /leg"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 7,
+   "rank": 2,
+   "note": "Legal but thinner; kettlebell used once, less texture"
+  }
+ },
+ "9": {
+  "gpt-oss-120b@low": {
+   "score": 6,
+   "rank": 2,
+   "note": "~130s work overflows 2-min window"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 7,
+   "rank": 1,
+   "note": "Fills ~71% of window, just under 3/4 floor"
+  }
+ },
+ "10": {
+  "gpt-oss-120b@low": {
+   "score": 8,
+   "rank": 1,
+   "note": "Snatch adds overhead pull; good pace; swing/snatch adjacent hinges"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 7,
+   "rank": 2,
+   "note": "Swing beside dumbbell deadlift \u2014 redundant adjacent hinges"
+  }
+ },
+ "11": {
+  "gpt-oss-120b@low": {
+   "score": 5,
+   "rank": 2,
+   "note": "Uses both Bear Crawl and Broad Jump \u2014 seasoning rule violated"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 6,
+   "rank": 1,
+   "note": "Adjacent lunge/squat pair, but legal seasoning and fuller balance"
+  }
+ },
+ "12": {
+  "gpt-oss-120b@medium": {
+   "score": 5,
+   "rank": 1,
+   "note": "Round ~1.7 min, under 2-min floor; rope work token-thin"
+  },
+  "gpt-oss-120b@low": {
+   "score": 4,
+   "rank": 2,
+   "note": "Skimpier still \u2014 ~1.2 min round, 10 single-unders is trivial"
+  }
+ },
+ "13": {
+  "gpt-oss-120b@low": {
+   "score": 5,
+   "rank": 2,
+   "note": "60 kg Push Press breaks 40 kg overhead ceiling"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 8,
+   "rank": 1,
+   "note": "Legal loads, honest 3.5-min round, good pattern spread"
+  }
+ },
+ "14": {
+  "gpt-oss-120b@low": {
+   "score": 8,
+   "rank": 1,
+   "note": "Classic clean quadruplet: hinge, pull, squat, press; strong flow"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 7,
+   "rank": 2,
+   "note": "Legal but fragmented; 5-rep stations dilute the stimulus"
+  }
+ },
+ "15": {
+  "gpt-oss-120b@medium": {
+   "score": 6,
+   "rank": 2,
+   "note": "Air Squat adjacent to lunge; 2x22.5 kg exceeds lunge ceiling"
+  },
+  "gpt-oss-120b@low": {
+   "score": 7,
+   "rank": 1,
+   "note": "Cleaner patterns and loads; lunge reps missing /leg suffix"
+  }
+ },
+ "16": {
+  "gpt-oss-120b@low": {
+   "score": 8,
+   "rank": 1,
+   "note": "Clean 3-min round, standard 250 m row, all items earn place"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 7,
+   "rank": 2,
+   "note": "Odd 150 m row; solid otherwise, slightly less coherent"
+  }
+ },
+ "17": {
+  "gpt-oss-120b@medium": {
+   "score": 3,
+   "rank": 2,
+   "note": "5/arm Turkish Get-Up smashes 3/arm hard cap"
+  },
+  "gpt-oss-120b@low": {
+   "score": 6,
+   "rank": 1,
+   "note": "Caps respected; TGUs still bloat round past 4 min"
+  }
+ },
+ "18": {
+  "gpt-oss-120b@low": {
+   "score": 6,
+   "rank": 2,
+   "note": "Sandbag Carry missing required load_kg; round runs ~4.5 min"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 7,
+   "rank": 1,
+   "note": "Loads legal and timed well; DB Snatch lacks /arm"
+  }
+ },
+ "19": {
+  "gpt-oss-120b@low": {
+   "score": 5,
+   "rank": 2,
+   "note": "60 grunt cleans push finish ~10.5 min, misses \u00b120%"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 8,
+   "rank": 1,
+   "note": "Lands ~8.5 min on target; balanced kettlebell flow"
+  }
+ },
+ "20": {
+  "gpt-oss-120b@medium": {
+   "score": 5,
+   "rank": 1,
+   "note": "Push Press plus Thruster breaks one-per-press-family rule"
+  },
+  "gpt-oss-120b@low": {
+   "score": 2,
+   "rank": 2,
+   "note": "Three press-family movements, 180 overhead reps, blows the cap"
+  }
+ },
+ "21": {
+  "gpt-oss-120b@low": {
+   "score": 7,
+   "rank": 1,
+   "note": "Clean flow, honest 20 min; 20 kg dumbbells off the allowed list"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 6,
+   "rank": 2,
+   "note": "45 kg front-rack lunges break the 40 kg lunge ceiling; runs short"
+  }
+ },
+ "22": {
+  "gpt-oss-120b@medium": {
+   "score": 6,
+   "rank": 1,
+   "note": "Rep total ~414 overshoots budget; patterns spaced legally"
+  },
+  "gpt-oss-120b@low": {
+   "score": 5,
+   "rank": 2,
+   "note": "Swing into deadlift is adjacent hinges; even bigger volume overshoot"
+  }
+ },
+ "23": {
+  "gpt-oss-120b@low": {
+   "score": 6,
+   "rank": 1,
+   "note": "Pull-up next to Ring Row; otherwise honest 40-min build"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 5,
+   "rank": 2,
+   "note": "~47 min of work, 150 heavy snatches; volume dishonest"
+  }
+ },
+ "24": {
+  "gpt-oss-120b@medium": {
+   "score": 7,
+   "rank": 1,
+   "note": "Fits the clock; tidy balance; 12 double-unders oddly small"
+  },
+  "gpt-oss-120b@low": {
+   "score": 4,
+   "rank": 2,
+   "note": "Double- and Single-Unders together; ~430 reps for 10 minutes"
+  }
+ },
+ "25": {
+  "gpt-oss-120b@medium": {
+   "score": 7,
+   "rank": 1,
+   "note": "Whiteboard-ready; push-ups give real upper work; slightly rep-heavy"
+  },
+  "gpt-oss-120b@low": {
+   "score": 6,
+   "rank": 2,
+   "note": "50 total Broad Jumps abuses a seasoning movement; thin upper body"
+  }
+ },
+ "26": {
+  "gpt-oss-120b@low": {
+   "score": 4,
+   "rank": 2,
+   "note": "3/arm Turkish Get-Ups cannot fit a 60-second window"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 6,
+   "rank": 1,
+   "note": "Legal and consistent 24 kg; several minutes land under 35 s"
+  }
+ },
+ "27": {
+  "gpt-oss-120b@medium": {
+   "score": 7,
+   "rank": 1,
+   "note": "Farmers Carry adds real variety; deadlift minute slightly light"
+  },
+  "gpt-oss-120b@low": {
+   "score": 5,
+   "rank": 2,
+   "note": "Two barbell loads (60/50) and three hinges, two adjacent"
+  }
+ },
+ "28": {
+  "gpt-oss-120b@medium": {
+   "score": 7,
+   "rank": 1,
+   "note": "Every minute lands 35-45 s; snatch missing /arm suffix"
+  },
+  "gpt-oss-120b@low": {
+   "score": 3,
+   "rank": 2,
+   "note": "250 m row breaks EMOM cap; overloaded lunges; no Bodyweight movement"
+  }
+ },
+ "29": {
+  "gpt-oss-120b@low": {
+   "score": 7,
+   "rank": 1,
+   "note": "Well-filled minutes; swing-deadlift adjacency is the lone flaw"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 5,
+   "rank": 2,
+   "note": "\"Barbell Deadlift\" off-vocabulary; 5 pull-ups underfills its minute"
+  }
+ },
+ "30": {
+  "gpt-oss-120b@low": {
+   "score": 7,
+   "rank": 1,
+   "note": "All three minutes hit the prescribed windows cleanly"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 5,
+   "rank": 2,
+   "note": "6 burpees too little, 22 sit-ups overflow the minute"
+  }
+ },
+ "31": {
+  "gpt-oss-120b@low": {
+   "score": 7,
+   "rank": 2,
+   "note": "10 snatches at max 22.5 kg risks minute overflow"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 8,
+   "rank": 1,
+   "note": "sustainable load, correct /arm notation; coin-flip structure"
+  }
+ },
+ "32": {
+  "gpt-oss-120b@medium": {
+   "score": 3,
+   "rank": 2,
+   "note": "Back Squat not in vocabulary (no rack exists)"
+  },
+  "gpt-oss-120b@low": {
+   "score": 9,
+   "rank": 1,
+   "note": "clean 4-station rotation, one barbell load, honest minutes"
+  }
+ },
+ "33": {
+  "gpt-oss-120b@low": {
+   "score": 4,
+   "rank": 2,
+   "note": "60 sit-ups breaks 50 ceiling; KB Overhead Lunge invented; four hinges"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 7,
+   "rank": 1,
+   "note": "legal and time-honest; push press/push-up adjacent presses"
+  }
+ },
+ "34": {
+  "gpt-oss-120b@low": {
+   "score": 8,
+   "rank": 1,
+   "note": "balanced descent, sane loads, fits the 20-min cap"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 6,
+   "rank": 2,
+   "note": "50 pull-ups plus 40 heavy DB cleans overcooks amateurs"
+  }
+ },
+ "35": {
+  "gpt-oss-120b@low": {
+   "score": 4,
+   "rank": 1,
+   "note": "Barbell Walking Lunge invented; 80 loaded lunges; descent breaks"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 0,
+   "rank": 2,
+   "note": "generation failed"
+  }
+ },
+ "36": {
+  "gpt-oss-120b@medium": {
+   "score": 0,
+   "rank": 2,
+   "note": "generation failed"
+  },
+  "gpt-oss-120b@low": {
+   "score": 4,
+   "rank": 1,
+   "note": "9 movements, 100 lunges, adjacent pulls, descent breaks at end"
+  }
+ },
+ "37": {
+  "gpt-oss-120b@medium": {
+   "score": 2,
+   "rank": 2,
+   "note": "200 snatches, 130 swings; ceilings and names shredded"
+  },
+  "gpt-oss-120b@low": {
+   "score": 5,
+   "rank": 1,
+   "note": "two barbell loads, 9 movements, mid-list run breaks descent"
+  }
+ },
+ "38": {
+  "gpt-oss-120b@low": {
+   "score": 6,
+   "rank": 1,
+   "note": "fits the cap; carry missing load, adjacent presses"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 5,
+   "rank": 2,
+   "note": "55 reps breaks ceiling; total work overshoots 20 min"
+  }
+ },
+ "39": {
+  "gpt-oss-120b@low": {
+   "score": 8,
+   "rank": 1,
+   "note": "clean couplet, window filled honestly, balanced patterns"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 7,
+   "rank": 2,
+   "note": "swing and deadlift adjacent hinges"
+  }
+ },
+ "40": {
+  "gpt-oss-120b@medium": {
+   "score": 7,
+   "rank": 1,
+   "note": "row separates presses; note restates rest; no lower-body work"
+  },
+  "gpt-oss-120b@low": {
+   "score": 6,
+   "rank": 2,
+   "note": "adjacent press pair, no lower-body movement"
+  }
+ },
+ "41": {
+  "gpt-oss-120b@low": {
+   "score": 4,
+   "rank": 2,
+   "note": "20-cal ski alone eats the 3-min window; illegal 30 kg dumbbell load"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 7,
+   "rank": 1,
+   "note": "Fills 24 min exactly; window slightly tight but legal, balanced"
+  }
+ },
+ "42": {
+  "gpt-oss-120b@low": {
+   "score": 7,
+   "rank": 1,
+   "note": "Packs 5-min windows honestly; stray EMOM-style scheme field"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 6,
+   "rank": 2,
+   "note": "Work barely reaches 3/4 of window; light pull volume"
+  }
+ },
+ "43": {
+  "gpt-oss-120b@medium": {
+   "score": 6,
+   "rank": 1,
+   "note": "Adjacent squat-pattern pair; mild window overflow, otherwise sound"
+  },
+  "gpt-oss-120b@low": {
+   "score": 2,
+   "rank": 2,
+   "note": "30-cal Assault Bike plus 90 reps cannot fit 3 minutes"
+  }
+ },
+ "44": {
+  "gpt-oss-120b@low": {
+   "score": 8,
+   "rank": 1,
+   "note": "Knee-safe hinge/press build, legal loads, round ~4 min"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 6,
+   "rank": 2,
+   "note": "'Push Press' on dumbbells breaks vocabulary; thin round"
+  }
+ },
+ "45": {
+  "gpt-oss-120b@low": {
+   "score": 6,
+   "rank": 2,
+   "note": "24 kg everywhere ignores recovery request; third KB hinge grinds"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 7,
+   "rank": 1,
+   "note": "Same flawed 24 kg load, but sit-ups suit recovery better; coin flip"
+  }
+ },
+ "46": {
+  "gpt-oss-120b@low": {
+   "score": 7,
+   "rank": 1,
+   "note": "Minutes dosed near 35-45 s target; no pure Bodyweight-pool movement"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 6,
+   "rank": 2,
+   "note": "8 air squats per minute is far under the dosing floor"
+  }
+ },
+ "47": {
+  "gpt-oss-120b@low": {
+   "score": 6,
+   "rank": 1,
+   "note": "50 swings after 45 pull-ups breaks strict descent; rower correctly ignored"
+  },
+  "gpt-oss-120b@medium": {
+   "score": 0,
+   "rank": 2,
+   "note": "Generation failed"
+  }
+ },
+ "48": {
+  "gpt-oss-120b@medium": {
+   "score": 0,
+   "rank": 2,
+   "note": "Generation failed"
+  },
+  "gpt-oss-120b@low": {
+   "score": 7,
+   "rank": 1,
+   "note": "No-jumping honored, windows well filled; plain but correct"
+  }
+ },
+ "49": {
+  "gpt-oss-120b@medium": {
+   "score": 8,
+   "rank": 1,
+   "note": "Clean avoid compliance, tidy 3.5-min round, good pattern spread"
+  },
+  "gpt-oss-120b@low": {
+   "score": 6,
+   "rank": 2,
+   "note": "Adjacent squat/lunge pair; lunge reps missing /leg suffix"
+  }
+ },
+ "50": {
+  "gpt-oss-120b@medium": {
+   "score": 5,
+   "rank": 1,
+   "note": "'Overhead Press' not in vocabulary; otherwise honest budget, avoid respected"
+  },
+  "gpt-oss-120b@low": {
+   "score": 4,
+   "rank": 2,
+   "note": "Programs avoided Pull-up; 30 front squats at 40 kg per round brutal"
+  }
+ }
+}

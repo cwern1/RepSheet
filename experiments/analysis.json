@@ -1,0 +1,1283 @@
+{
+ "@cf/openai/gpt-oss-120b": {
+  "n": 50,
+  "ok": 50,
+  "failed": [],
+  "quota_blocked": 0,
+  "time_median": 47.3,
+  "time_mean": 55.2,
+  "time_p90": 103.5,
+  "time_min": 13.1,
+  "time_max": 186.1,
+  "clean": 37,
+  "total_violations": 20,
+  "details": [
+   {
+    "case": 1,
+    "seconds": 74.6,
+    "violations": [
+     "repeated base lift (lunge): Walking Lunge + Reverse Lunge"
+    ]
+   },
+   {
+    "case": 2,
+    "seconds": 54.2,
+    "violations": []
+   },
+   {
+    "case": 3,
+    "seconds": 70.5,
+    "violations": [
+     "chipper with 5 movements (want 6-8)"
+    ]
+   },
+   {
+    "case": 4,
+    "seconds": 25.9,
+    "violations": []
+   },
+   {
+    "case": 5,
+    "seconds": 34.2,
+    "violations": [
+     "OFF-VOCABULARY: Front Rack Lunge"
+    ]
+   },
+   {
+    "case": 6,
+    "seconds": 103.5,
+    "violations": []
+   },
+   {
+    "case": 7,
+    "seconds": 68.2,
+    "violations": []
+   },
+   {
+    "case": 8,
+    "seconds": 68.3,
+    "violations": []
+   },
+   {
+    "case": 9,
+    "seconds": 56.2,
+    "violations": []
+   },
+   {
+    "case": 10,
+    "seconds": 33.1,
+    "violations": []
+   },
+   {
+    "case": 11,
+    "seconds": 20.6,
+    "violations": []
+   },
+   {
+    "case": 12,
+    "seconds": 15.1,
+    "violations": []
+   },
+   {
+    "case": 13,
+    "seconds": 15.5,
+    "violations": []
+   },
+   {
+    "case": 14,
+    "seconds": 42.5,
+    "violations": []
+   },
+   {
+    "case": 15,
+    "seconds": 44.3,
+    "violations": []
+   },
+   {
+    "case": 16,
+    "seconds": 13.1,
+    "violations": []
+   },
+   {
+    "case": 17,
+    "seconds": 23.9,
+    "violations": [
+     "OFF-VOCABULARY: Kettlebell Goblet Squat",
+     "OFF-VOCABULARY: Kettlebell Overhead Lunge"
+    ]
+   },
+   {
+    "case": 18,
+    "seconds": 31.4,
+    "violations": []
+   },
+   {
+    "case": 19,
+    "seconds": 24.9,
+    "violations": []
+   },
+   {
+    "case": 20,
+    "seconds": 37.9,
+    "violations": []
+   },
+   {
+    "case": 21,
+    "seconds": 31.5,
+    "violations": []
+   },
+   {
+    "case": 22,
+    "seconds": 186.1,
+    "violations": [
+     "OFF-VOCABULARY: Barbell Deadlift",
+     "OFF-VOCABULARY: Barbell Push Press"
+    ]
+   },
+   {
+    "case": 23,
+    "seconds": 38.2,
+    "violations": []
+   },
+   {
+    "case": 24,
+    "seconds": 56.3,
+    "violations": []
+   },
+   {
+    "case": 25,
+    "seconds": 31.0,
+    "violations": []
+   },
+   {
+    "case": 26,
+    "seconds": 24.4,
+    "violations": []
+   },
+   {
+    "case": 27,
+    "seconds": 62.8,
+    "violations": []
+   },
+   {
+    "case": 28,
+    "seconds": 74.6,
+    "violations": [
+     "EMOM token minute: 4 cal Row",
+     "EMOM token minute: 5 Push-up"
+    ]
+   },
+   {
+    "case": 29,
+    "seconds": 56.6,
+    "violations": [
+     "OFF-VOCABULARY: Barbell Deadlift"
+    ]
+   },
+   {
+    "case": 30,
+    "seconds": 63.6,
+    "violations": []
+   },
+   {
+    "case": 31,
+    "seconds": 53.2,
+    "violations": [
+     "OFF-VOCABULARY: Kettlebell Goblet Squat"
+    ]
+   },
+   {
+    "case": 32,
+    "seconds": 33.9,
+    "violations": []
+   },
+   {
+    "case": 33,
+    "seconds": 64.2,
+    "violations": []
+   },
+   {
+    "case": 34,
+    "seconds": 86.6,
+    "violations": [
+     "chipper reps over ceiling: 120 Double-Under"
+    ]
+   },
+   {
+    "case": 35,
+    "seconds": 110.6,
+    "violations": [
+     "two barbell loads: [40.0, 70.0]"
+    ]
+   },
+   {
+    "case": 36,
+    "seconds": 161.7,
+    "violations": [
+     "chipper row over 1000 m: 2500 m",
+     "chipper reps over ceiling: 210 Air Squat"
+    ]
+   },
+   {
+    "case": 37,
+    "seconds": 117.0,
+    "violations": []
+   },
+   {
+    "case": 38,
+    "seconds": 93.3,
+    "violations": []
+   },
+   {
+    "case": 39,
+    "seconds": 50.4,
+    "violations": []
+   },
+   {
+    "case": 40,
+    "seconds": 19.8,
+    "violations": []
+   },
+   {
+    "case": 41,
+    "seconds": 74.2,
+    "violations": []
+   },
+   {
+    "case": 42,
+    "seconds": 26.6,
+    "violations": []
+   },
+   {
+    "case": 43,
+    "seconds": 58.6,
+    "violations": [
+     "interval work ~4.1 min overflows 3 min window"
+    ]
+   },
+   {
+    "case": 44,
+    "seconds": 60.4,
+    "violations": []
+   },
+   {
+    "case": 45,
+    "seconds": 35.1,
+    "violations": []
+   },
+   {
+    "case": 46,
+    "seconds": 39.4,
+    "violations": []
+   },
+   {
+    "case": 47,
+    "seconds": 87.9,
+    "violations": [
+     "OFF-VOCABULARY: Kettlebell Sumo Deadlift High Pull",
+     "chipper reps over ceiling: 120 Kettlebell Swing",
+     "chipper reps over ceiling: 100 Kettlebell Deadlift",
+     "chipper reps over ceiling: 80 Hand-Release Push-up"
+    ]
+   },
+   {
+    "case": 48,
+    "seconds": 39.2,
+    "violations": []
+   },
+   {
+    "case": 49,
+    "seconds": 28.6,
+    "violations": []
+   },
+   {
+    "case": 50,
+    "seconds": 35.5,
+    "violations": []
+   }
+  ]
+ },
+ "@cf/openai/gpt-oss-20b": {
+  "n": 50,
+  "ok": 50,
+  "failed": [],
+  "quota_blocked": 0,
+  "time_median": 43.3,
+  "time_mean": 48.5,
+  "time_p90": 86.0,
+  "time_min": 15.2,
+  "time_max": 215.3,
+  "clean": 32,
+  "total_violations": 36,
+  "details": [
+   {
+    "case": 1,
+    "seconds": 31.3,
+    "violations": []
+   },
+   {
+    "case": 2,
+    "seconds": 29.1,
+    "violations": []
+   },
+   {
+    "case": 3,
+    "seconds": 58.0,
+    "violations": [
+     "OFF-VOCABULARY: Barbell Deadlift",
+     "OFF-VOCABULARY: Push Up",
+     "chipper reps over ceiling: 120 Kettlebell Swing",
+     "chipper reps over ceiling: 80 Pull-up",
+     "chipper reps over ceiling: 80 Air Squat",
+     "chipper reps over ceiling: 70 Barbell Deadlift",
+     "chipper reps over ceiling: 80 Push Up"
+    ]
+   },
+   {
+    "case": 4,
+    "seconds": 54.2,
+    "violations": []
+   },
+   {
+    "case": 5,
+    "seconds": 52.3,
+    "violations": []
+   },
+   {
+    "case": 6,
+    "seconds": 82.2,
+    "violations": []
+   },
+   {
+    "case": 7,
+    "seconds": 86.9,
+    "violations": [
+     "OFF-VOCABULARY: Dumbbell Front Rack Lunge",
+     "repeated base lift (deadlift): Deadlift + Dumbbell Deadlift"
+    ]
+   },
+   {
+    "case": 8,
+    "seconds": 21.3,
+    "violations": []
+   },
+   {
+    "case": 9,
+    "seconds": 93.0,
+    "violations": []
+   },
+   {
+    "case": 10,
+    "seconds": 29.0,
+    "violations": [
+     "OFF-VOCABULARY: Push Up"
+    ]
+   },
+   {
+    "case": 11,
+    "seconds": 45.6,
+    "violations": []
+   },
+   {
+    "case": 12,
+    "seconds": 22.3,
+    "violations": []
+   },
+   {
+    "case": 13,
+    "seconds": 45.3,
+    "violations": []
+   },
+   {
+    "case": 14,
+    "seconds": 25.1,
+    "violations": []
+   },
+   {
+    "case": 15,
+    "seconds": 21.9,
+    "violations": []
+   },
+   {
+    "case": 16,
+    "seconds": 20.2,
+    "violations": []
+   },
+   {
+    "case": 17,
+    "seconds": 41.3,
+    "violations": []
+   },
+   {
+    "case": 18,
+    "seconds": 36.9,
+    "violations": []
+   },
+   {
+    "case": 19,
+    "seconds": 50.9,
+    "violations": []
+   },
+   {
+    "case": 20,
+    "seconds": 51.7,
+    "violations": []
+   },
+   {
+    "case": 21,
+    "seconds": 40.4,
+    "violations": []
+   },
+   {
+    "case": 22,
+    "seconds": 54.6,
+    "violations": []
+   },
+   {
+    "case": 23,
+    "seconds": 40.3,
+    "violations": [
+     "OFF-VOCABULARY: Dumbbell Hang Clean"
+    ]
+   },
+   {
+    "case": 24,
+    "seconds": 25.7,
+    "violations": []
+   },
+   {
+    "case": 25,
+    "seconds": 33.9,
+    "violations": []
+   },
+   {
+    "case": 26,
+    "seconds": 22.1,
+    "violations": []
+   },
+   {
+    "case": 27,
+    "seconds": 23.1,
+    "violations": [
+     "OFF-VOCABULARY: Dumbbell Clean & Jerk"
+    ]
+   },
+   {
+    "case": 28,
+    "seconds": 53.0,
+    "violations": [
+     "OFF-VOCABULARY: Rower"
+    ]
+   },
+   {
+    "case": 29,
+    "seconds": 22.0,
+    "violations": []
+   },
+   {
+    "case": 30,
+    "seconds": 54.6,
+    "violations": []
+   },
+   {
+    "case": 31,
+    "seconds": 20.8,
+    "violations": []
+   },
+   {
+    "case": 32,
+    "seconds": 18.7,
+    "violations": [
+     "OFF-VOCABULARY: Back Squat"
+    ]
+   },
+   {
+    "case": 33,
+    "seconds": 82.0,
+    "violations": []
+   },
+   {
+    "case": 34,
+    "seconds": 65.7,
+    "violations": []
+   },
+   {
+    "case": 35,
+    "seconds": 215.3,
+    "violations": [
+     "OFF-VOCABULARY: Barbell Thruster",
+     "OFF-VOCABULARY: Barbell Push Press",
+     "OFF-VOCABULARY: Barbell Deadlift",
+     "chipper reps over ceiling: 120 Burpee",
+     "chipper reps over ceiling: 80 Jumping Lunge"
+    ]
+   },
+   {
+    "case": 36,
+    "seconds": 63.8,
+    "violations": [
+     "OFF-VOCABULARY: Plyo Box Jump",
+     "OFF-VOCABULARY: Rings Row",
+     "chipper ~13 min vs 35 target (too little)"
+    ]
+   },
+   {
+    "case": 37,
+    "seconds": 96.5,
+    "violations": [
+     "chipper ~22 min vs 45 target (too little)"
+    ]
+   },
+   {
+    "case": 38,
+    "seconds": 86.0,
+    "violations": [
+     "repeated base lift (lunge): Sandbag Lunge + Jumping Lunge"
+    ]
+   },
+   {
+    "case": 39,
+    "seconds": 46.3,
+    "violations": [
+     "interval work ~3.5 min overflows 3 min window"
+    ]
+   },
+   {
+    "case": 40,
+    "seconds": 47.1,
+    "violations": [
+     "OFF-VOCABULARY: Barbell Push Press",
+     "OFF-VOCABULARY: Bodyweight Push-up",
+     "OFF-VOCABULARY: Rower",
+     "OFF-VOCABULARY: Bodyweight Sit-up",
+     "interval work ~5.3 min overflows 4 min window"
+    ]
+   },
+   {
+    "case": 41,
+    "seconds": 64.4,
+    "violations": [
+     "OFF-VOCABULARY: Dumbbell Alternating Lunge",
+     "interval work ~6.5 min overflows 5 min window"
+    ]
+   },
+   {
+    "case": 42,
+    "seconds": 35.4,
+    "violations": []
+   },
+   {
+    "case": 43,
+    "seconds": 60.7,
+    "violations": [
+     "interval work ~3.2 min overflows 3 min window"
+    ]
+   },
+   {
+    "case": 44,
+    "seconds": 15.2,
+    "violations": []
+   },
+   {
+    "case": 45,
+    "seconds": 18.1,
+    "violations": [
+     "OFF-VOCABULARY: Kettlebell Goblet Squat"
+    ]
+   },
+   {
+    "case": 46,
+    "seconds": 58.1,
+    "violations": []
+   },
+   {
+    "case": 47,
+    "seconds": 77.9,
+    "violations": [
+     "OFF-VOCABULARY: Kettlebell Front-Rack Lunge"
+    ]
+   },
+   {
+    "case": 48,
+    "seconds": 30.7,
+    "violations": [
+     "interval work ~3.2 min overflows 3 min window"
+    ]
+   },
+   {
+    "case": 49,
+    "seconds": 21.7,
+    "violations": []
+   },
+   {
+    "case": 50,
+    "seconds": 34.6,
+    "violations": []
+   }
+  ]
+ },
+ "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+  "n": 50,
+  "ok": 49,
+  "failed": [
+   {
+    "case": 2,
+    "seconds": 15.9,
+    "detail": "The model kept using equipment the athlete does not have: Wall Ball, Dumbbell Thruster"
+   }
+  ],
+  "quota_blocked": 0,
+  "time_median": 6.6,
+  "time_mean": 6.8,
+  "time_p90": 10.1,
+  "time_min": 2.5,
+  "time_max": 16.1,
+  "clean": 33,
+  "total_violations": 35,
+  "details": [
+   {
+    "case": 1,
+    "seconds": 6.8,
+    "violations": [
+     "4 stations do not divide EMOM 7"
+    ]
+   },
+   {
+    "case": 3,
+    "seconds": 12.6,
+    "violations": [
+     "OFF-VOCABULARY: Barbell Deadlift",
+     "OFF-VOCABULARY: Kettlebell Goblet Squat",
+     "OFF-VOCABULARY: Barbell Hang Power Clean",
+     "chipper reps over ceiling: 80 Pull-up",
+     "chipper reps over ceiling: 60 Barbell Deadlift"
+    ]
+   },
+   {
+    "case": 4,
+    "seconds": 8.6,
+    "violations": [
+     "OFF-VOCABULARY: Kettlebell Goblet Squat"
+    ]
+   },
+   {
+    "case": 5,
+    "seconds": 9.5,
+    "violations": []
+   },
+   {
+    "case": 6,
+    "seconds": 15.0,
+    "violations": [
+     "10 movements (max 8)",
+     "AMRAP round ~6 min (want 2-4)"
+    ]
+   },
+   {
+    "case": 7,
+    "seconds": 4.3,
+    "violations": [
+     "OFF-VOCABULARY: Barbell Deadlift"
+    ]
+   },
+   {
+    "case": 8,
+    "seconds": 10.1,
+    "violations": [
+     "OFF-VOCABULARY: Kettlebell GHD Sit-up",
+     "repeated base lift (sit-up): Sit-up + Kettlebell GHD Sit-up",
+     "9 movements (max 8)"
+    ]
+   },
+   {
+    "case": 9,
+    "seconds": 8.2,
+    "violations": []
+   },
+   {
+    "case": 10,
+    "seconds": 4.8,
+    "violations": []
+   },
+   {
+    "case": 11,
+    "seconds": 3.1,
+    "violations": []
+   },
+   {
+    "case": 12,
+    "seconds": 5.1,
+    "violations": []
+   },
+   {
+    "case": 13,
+    "seconds": 2.9,
+    "violations": []
+   },
+   {
+    "case": 14,
+    "seconds": 4.4,
+    "violations": []
+   },
+   {
+    "case": 15,
+    "seconds": 3.9,
+    "violations": []
+   },
+   {
+    "case": 16,
+    "seconds": 3.1,
+    "violations": []
+   },
+   {
+    "case": 17,
+    "seconds": 3.4,
+    "violations": [
+     "OFF-VOCABULARY: Kettlebell Goblet Squat"
+    ]
+   },
+   {
+    "case": 18,
+    "seconds": 2.5,
+    "violations": []
+   },
+   {
+    "case": 19,
+    "seconds": 8.0,
+    "violations": []
+   },
+   {
+    "case": 20,
+    "seconds": 3.4,
+    "violations": []
+   },
+   {
+    "case": 21,
+    "seconds": 4.3,
+    "violations": []
+   },
+   {
+    "case": 22,
+    "seconds": 4.7,
+    "violations": []
+   },
+   {
+    "case": 23,
+    "seconds": 14.4,
+    "violations": [
+     "OFF-VOCABULARY: Barbell Front-Rack Lunge"
+    ]
+   },
+   {
+    "case": 24,
+    "seconds": 6.5,
+    "violations": []
+   },
+   {
+    "case": 25,
+    "seconds": 6.6,
+    "violations": []
+   },
+   {
+    "case": 26,
+    "seconds": 2.9,
+    "violations": []
+   },
+   {
+    "case": 27,
+    "seconds": 9.9,
+    "violations": []
+   },
+   {
+    "case": 28,
+    "seconds": 6.1,
+    "violations": []
+   },
+   {
+    "case": 29,
+    "seconds": 7.5,
+    "violations": []
+   },
+   {
+    "case": 30,
+    "seconds": 6.9,
+    "violations": []
+   },
+   {
+    "case": 31,
+    "seconds": 7.1,
+    "violations": []
+   },
+   {
+    "case": 32,
+    "seconds": 7.6,
+    "violations": []
+   },
+   {
+    "case": 33,
+    "seconds": 7.0,
+    "violations": [
+     "OFF-VOCABULARY: Kettlebell Goblet Squat"
+    ]
+   },
+   {
+    "case": 34,
+    "seconds": 9.4,
+    "violations": [
+     "repeated base lift (lunge): Dumbbell Front-Rack Lunge + Jumping Lunge",
+     "chipper reps over ceiling: 30/leg Dumbbell Front-Rack Lunge"
+    ]
+   },
+   {
+    "case": 35,
+    "seconds": 8.0,
+    "violations": []
+   },
+   {
+    "case": 36,
+    "seconds": 9.0,
+    "violations": []
+   },
+   {
+    "case": 37,
+    "seconds": 16.1,
+    "violations": [
+     "OFF-VOCABULARY: Kettlebell Goblet Squat",
+     "duplicate movement: Run",
+     "repeated base lift (squat): Air Squat + Kettlebell Goblet Squat",
+     "9 movements (max 8)",
+     "chipper reps over ceiling: 100 Air Squat",
+     "chipper reps over ceiling: 80 Deadlift",
+     "chipper reps over ceiling: 60 Kettlebell Swing",
+     "chipper run over 800 m: 1600 m"
+    ]
+   },
+   {
+    "case": 38,
+    "seconds": 4.3,
+    "violations": []
+   },
+   {
+    "case": 39,
+    "seconds": 7.5,
+    "violations": []
+   },
+   {
+    "case": 40,
+    "seconds": 5.9,
+    "violations": [
+     "interval work ~5.4 min overflows 4 min window"
+    ]
+   },
+   {
+    "case": 41,
+    "seconds": 6.8,
+    "violations": []
+   },
+   {
+    "case": 42,
+    "seconds": 6.7,
+    "violations": []
+   },
+   {
+    "case": 43,
+    "seconds": 5.7,
+    "violations": [
+     "interval format_line unparseable: 8 \u00d7 1.5 min on / 0.5 min rest"
+    ]
+   },
+   {
+    "case": 44,
+    "seconds": 4.3,
+    "violations": [
+     "OFF-VOCABULARY: Barbell Hang Power Clean"
+    ]
+   },
+   {
+    "case": 45,
+    "seconds": 7.0,
+    "violations": []
+   },
+   {
+    "case": 46,
+    "seconds": 4.8,
+    "violations": []
+   },
+   {
+    "case": 47,
+    "seconds": 9.9,
+    "violations": [
+     "repeated base lift (squat): Air Squat + Goblet Squat",
+     "chipper reps over ceiling: 100 Pull-up",
+     "chipper reps over ceiling: 80 Kettlebell Swing",
+     "chipper reps over ceiling: 60 Sit-up"
+    ]
+   },
+   {
+    "case": 48,
+    "seconds": 5.5,
+    "violations": [
+     "repeated base lift (lunge): Walking Lunge + Reverse Lunge",
+     "interval work ~6.2 min overflows 4 min window"
+    ]
+   },
+   {
+    "case": 49,
+    "seconds": 6.6,
+    "violations": []
+   },
+   {
+    "case": 50,
+    "seconds": 4.0,
+    "violations": []
+   }
+  ]
+ },
+ "@cf/meta/llama-4-scout-17b-16e-instruct": {
+  "n": 50,
+  "ok": 47,
+  "failed": [
+   {
+    "case": 5,
+    "seconds": 11.9,
+    "detail": "The model kept using equipment the athlete does not have: Goblet Lunge"
+   },
+   {
+    "case": 46,
+    "seconds": 10.0,
+    "detail": "The model kept using equipment the athlete does not have: Ring Row"
+   },
+   {
+    "case": 47,
+    "seconds": 16.9,
+    "detail": "The model kept using equipment the athlete does not have: Row, Row, Row"
+   }
+  ],
+  "quota_blocked": 0,
+  "time_median": 10.3,
+  "time_mean": 10.0,
+  "time_p90": 13.6,
+  "time_min": 3.3,
+  "time_max": 22.5,
+  "clean": 18,
+  "total_violations": 52,
+  "details": [
+   {
+    "case": 1,
+    "seconds": 10.7,
+    "violations": [
+     "EMOM minute overflows: 12/leg Jumping Lunge",
+     "4 stations do not divide EMOM 7"
+    ]
+   },
+   {
+    "case": 2,
+    "seconds": 14.3,
+    "violations": [
+     "tagged with unlisted equipment: Burpee -> Bodyweight"
+    ]
+   },
+   {
+    "case": 3,
+    "seconds": 10.0,
+    "violations": [
+     "chipper ~10 min vs 30 target (too little)",
+     "chipper with 5 movements (want 6-8)"
+    ]
+   },
+   {
+    "case": 4,
+    "seconds": 13.6,
+    "violations": []
+   },
+   {
+    "case": 6,
+    "seconds": 11.5,
+    "violations": [
+     "OFF-VOCABULARY: 250 m",
+     "AMRAP round ~8 min (want 2-4)"
+    ]
+   },
+   {
+    "case": 7,
+    "seconds": 13.2,
+    "violations": [
+     "repeated base lift (clean): Squat Clean + Dumbbell Clean",
+     "for-time ~26 min vs cap 18"
+    ]
+   },
+   {
+    "case": 8,
+    "seconds": 11.1,
+    "violations": []
+   },
+   {
+    "case": 9,
+    "seconds": 7.0,
+    "violations": [
+     "intervals span 20 min vs target 15",
+     "interval work ~3.1 min overflows 3 min window"
+    ]
+   },
+   {
+    "case": 10,
+    "seconds": 12.1,
+    "violations": [
+     "OFF-VOCABULARY: Dumbbell Lunge",
+     "repeated base lift (lunge): Dumbbell Lunge + Goblet Lunge",
+     "AMRAP round ~8 min (want 2-4)"
+    ]
+   },
+   {
+    "case": 11,
+    "seconds": 4.1,
+    "violations": []
+   },
+   {
+    "case": 12,
+    "seconds": 8.9,
+    "violations": []
+   },
+   {
+    "case": 13,
+    "seconds": 5.4,
+    "violations": []
+   },
+   {
+    "case": 14,
+    "seconds": 4.5,
+    "violations": []
+   },
+   {
+    "case": 15,
+    "seconds": 12.1,
+    "violations": [
+     "OFF-VOCABULARY: Dumbbell Squat Clean"
+    ]
+   },
+   {
+    "case": 16,
+    "seconds": 10.0,
+    "violations": [
+     "OFF-VOCABULARY: Rower"
+    ]
+   },
+   {
+    "case": 17,
+    "seconds": 9.3,
+    "violations": [
+     "AMRAP round ~7 min (want 2-4)"
+    ]
+   },
+   {
+    "case": 18,
+    "seconds": 11.2,
+    "violations": [
+     "AMRAP round ~8 min (want 2-4)"
+    ]
+   },
+   {
+    "case": 19,
+    "seconds": 10.3,
+    "violations": []
+   },
+   {
+    "case": 20,
+    "seconds": 3.3,
+    "violations": []
+   },
+   {
+    "case": 21,
+    "seconds": 13.1,
+    "violations": [
+     "OFF-VOCABULARY: Rower"
+    ]
+   },
+   {
+    "case": 22,
+    "seconds": 3.5,
+    "violations": []
+   },
+   {
+    "case": 23,
+    "seconds": 7.4,
+    "violations": []
+   },
+   {
+    "case": 24,
+    "seconds": 4.3,
+    "violations": []
+   },
+   {
+    "case": 25,
+    "seconds": 3.7,
+    "violations": [
+     "OFF-VOCABULARY: Rower"
+    ]
+   },
+   {
+    "case": 26,
+    "seconds": 8.8,
+    "violations": []
+   },
+   {
+    "case": 27,
+    "seconds": 8.6,
+    "violations": []
+   },
+   {
+    "case": 28,
+    "seconds": 13.0,
+    "violations": [
+     "OFF-VOCABULARY: Rower",
+     "6 stations do not divide EMOM 16"
+    ]
+   },
+   {
+    "case": 29,
+    "seconds": 7.2,
+    "violations": [
+     "OFF-VOCABULARY: Rower"
+    ]
+   },
+   {
+    "case": 30,
+    "seconds": 7.1,
+    "violations": [
+     "4 stations do not divide EMOM 9"
+    ]
+   },
+   {
+    "case": 31,
+    "seconds": 10.3,
+    "violations": [
+     "4 stations do not divide EMOM 14"
+    ]
+   },
+   {
+    "case": 32,
+    "seconds": 10.8,
+    "violations": [
+     "EMOM cal minute too big: 10 cal Assault Bike",
+     "EMOM token minute: 6 Overhead Squat"
+    ]
+   },
+   {
+    "case": 33,
+    "seconds": 11.0,
+    "violations": [
+     "repeated base lift (squat): Goblet Squat + Air Squat",
+     "chipper ~7 min vs 15 target (too little)"
+    ]
+   },
+   {
+    "case": 34,
+    "seconds": 13.6,
+    "violations": [
+     "chipper ~6 min vs 20 target (too little)"
+    ]
+   },
+   {
+    "case": 35,
+    "seconds": 14.4,
+    "violations": [
+     "duplicate movement: Row",
+     "duplicate movement: Wall Ball",
+     "chipper ~10 min vs 25 target (too little)"
+    ]
+   },
+   {
+    "case": 36,
+    "seconds": 22.5,
+    "violations": [
+     "OFF-VOCABULARY: Rower",
+     "9 movements (max 8)",
+     "chipper reps over ceiling: 36/arm Dumbbell Snatch"
+    ]
+   },
+   {
+    "case": 37,
+    "seconds": 15.4,
+    "violations": [
+     "duplicate movement: Deadlift",
+     "duplicate movement: Kettlebell Swing",
+     "duplicate movement: Dumbbell Snatch",
+     "repeated base lift (deadlift): Deadlift + Deadlift",
+     "repeated base lift (swing): Kettlebell Swing + Kettlebell Swing",
+     "repeated base lift (snatch): Dumbbell Snatch + Dumbbell Snatch",
+     "10 movements (max 8)",
+     "chipper reps over ceiling: 40/leg Dumbbell Snatch"
+    ]
+   },
+   {
+    "case": 38,
+    "seconds": 11.9,
+    "violations": []
+   },
+   {
+    "case": 39,
+    "seconds": 8.2,
+    "violations": []
+   },
+   {
+    "case": 40,
+    "seconds": 10.1,
+    "violations": [
+     "OFF-VOCABULARY: Rower",
+     "intervals span 25 min vs target 20",
+     "interval work ~2.1 min underfills 4 min window"
+    ]
+   },
+   {
+    "case": 41,
+    "seconds": 11.8,
+    "violations": []
+   },
+   {
+    "case": 42,
+    "seconds": 11.3,
+    "violations": [
+     "interval work ~3.5 min overflows 3 min window"
+    ]
+   },
+   {
+    "case": 43,
+    "seconds": 8.1,
+    "violations": [
+     "interval work ~4.7 min overflows 3 min window"
+    ]
+   },
+   {
+    "case": 44,
+    "seconds": 12.9,
+    "violations": [
+     "repeated base lift (press): Push Press + Dumbbell Push Press"
+    ]
+   },
+   {
+    "case": 45,
+    "seconds": 9.4,
+    "violations": []
+   },
+   {
+    "case": 48,
+    "seconds": 6.4,
+    "violations": [
+     "interval work ~4.8 min overflows 4 min window"
+    ]
+   },
+   {
+    "case": 49,
+    "seconds": 12.6,
+    "violations": [
+     "AMRAP round ~6 min (want 2-4)"
+    ]
+   },
+   {
+    "case": 50,
+    "seconds": 12.3,
+    "violations": []
+   }
+  ]
+ }
+}

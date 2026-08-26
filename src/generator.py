@@ -10,6 +10,23 @@ from pyodide.ffi import JsProxy, to_js as raw_to_js
 
 MODEL = "@cf/openai/gpt-oss-120b"
 
+# Experiment (model-comparison branch): per-request model override. gpt-oss
+# models speak the Responses API; everything else speaks chat completions.
+# Values are the extra request params each chat model needs.
+CHAT_MODEL_PARAMS = {
+    "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {"max_tokens": 2048},
+    "@cf/zai-org/glm-4.7-flash": {
+        "max_completion_tokens": 6000,
+        # Unconstrained, its thinking blew past a 120 s client timeout; even
+        # reasoning_effort "low" ran ~3 min, so thinking is off entirely.
+        "chat_template_kwargs": {"enable_thinking": False},
+    },
+    # _json_mode: ask Workers AI for schema-constrained output — these two
+    # echo the schema back as prose when merely shown it in the prompt.
+    "@cf/google/gemma-4-26b-a4b-it": {"max_completion_tokens": 6000, "_json_mode": True},
+    "@cf/meta/llama-4-scout-17b-16e-instruct": {"max_tokens": 2048, "_json_mode": True},
+}
+
 STYLES = ["AMRAP", "For Time", "EMOM", "Chipper", "Intervals"]
 
 SYSTEM_PROMPT = """\
@@ -793,53 +810,90 @@ JSON_INSTRUCTION = (
 
 
 def _extract_text(result) -> str:
-    """Pull the assistant text out of a Responses API result."""
+    """Pull the assistant text out of a Responses API or chat-completions result."""
     if isinstance(result, str):
         return result
     if text := result.get("output_text"):
         return text
-    for item in result.get("output", []):
+    for item in result.get("output") or []:
         if item.get("type") == "message":
-            for part in item.get("content", []):
+            for part in item.get("content") or []:
                 if part.get("type") == "output_text":
                     return part["text"]
+    # Chat-completions shapes: Workers AI native {"response": ...} or
+    # OpenAI-style {"choices": [{"message": {"content": ...}}]}.
+    if text := result.get("response"):
+        return text
+    for choice in result.get("choices") or []:
+        if text := (choice.get("message") or {}).get("content"):
+            return text
     raise KeyError("no assistant text in model output")
 
 
-async def _request(ai, messages: list[dict]) -> Workout:
-    # gpt-oss models speak the OpenAI Responses API through the binding:
-    # `input` instead of `messages`, output as an `output[]` item list.
-    result = await ai.run(
-        MODEL,
-        to_js(
-            {
-                "input": messages,
-                # "low" benchmarked quality-equal to "medium" at 2.3× the speed
-                # over 50 blind-judged cases — see experiments/effort-comparison.md
-                # on the model-comparison branch.
-                "reasoning": {"effort": "low"},
-                # Reasoning tokens come out of this budget. An athlete request
-                # that fights the equipment list makes the model think much
-                # harder, and at 2000 the JSON got truncated mid-string; long
-                # chippers under the vocabulary prompt still truncated at 4000.
-                "max_output_tokens": 6000,
-            }
-        ),
-    )
-    if isinstance(result, JsProxy):
-        result = result.to_py()
-    text = _extract_text(result).strip()
+def _extract_json(text: str) -> str:
+    """The JSON object inside model text that may carry think-tags or prose."""
+    text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL).strip()
     if text.startswith("```"):
         text = text.strip("`").removeprefix("json").strip()
-    return Workout.model_validate(json.loads(text))
+    start, end = text.find("{"), text.rfind("}")
+    if start != -1 and end > start:
+        return text[start : end + 1]
+    return text
 
 
-async def _request_with_shape_retry(ai, messages: list[dict]) -> Workout:
+async def _request(
+    ai, messages: list[dict], model: str = MODEL, effort: str = "low"
+) -> Workout:
+    if model.startswith("@cf/openai/gpt-oss"):
+        # gpt-oss models speak the OpenAI Responses API through the binding:
+        # `input` instead of `messages`, output as an `output[]` item list.
+        body = {
+            "input": messages,
+            # "low" benchmarked quality-equal to "medium" at 2.3× the speed
+            # over 50 blind-judged cases — see experiments/effort-comparison.md.
+            "reasoning": {"effort": effort},
+            # Reasoning tokens come out of this budget. An athlete request
+            # that fights the equipment list makes the model think much
+            # harder, and at 2000 the JSON got truncated mid-string; long
+            # chippers under the vocabulary prompt still truncated at 4000.
+            "max_output_tokens": 6000,
+        }
+    else:
+        body = {"messages": messages, **CHAT_MODEL_PARAMS.get(model, {})}
+        if body.pop("_json_mode", False):
+            body["response_format"] = {
+                "type": "json_schema",
+                "json_schema": Workout.model_json_schema(),
+            }
+    result = await ai.run(model, to_js(body))
+    if isinstance(result, JsProxy):
+        result = result.to_py()
     try:
-        return await _request(ai, messages)
+        text = _extract_text(result)
+        if not isinstance(text, str):
+            # Some chat models' binding output carries the already-parsed JSON
+            # object in `response` (workers.rpc.JsDict) rather than a string.
+            return Workout.model_validate(json.loads(json.dumps(text, default=dict)))
+        return Workout.model_validate(json.loads(_extract_json(text.strip())))
+    except Exception as e:
+        # Experiment-branch debugging: surface what the model actually said.
+        try:
+            t = _extract_text(result)
+            info = f"text type={type(t)} val={repr(t)[:200]}"
+        except Exception as e2:
+            info = f"extract failed {e2!r}"
+        print(f"[model-debug] {model} unparseable ({e!r}; {info}): {repr(result)[:1200]}")
+        raise
+
+
+async def _request_with_shape_retry(
+    ai, messages: list[dict], model: str = MODEL, effort: str = "low"
+) -> Workout:
+    try:
+        return await _request(ai, messages, model, effort)
     except (json.JSONDecodeError, ValidationError, KeyError, TypeError, AttributeError):
         try:
-            return await _request(ai, messages)
+            return await _request(ai, messages, model, effort)
         except (json.JSONDecodeError, ValidationError, KeyError, TypeError, AttributeError):
             raise UpstreamError("The model returned a malformed workout twice")
 
@@ -863,6 +917,8 @@ async def generate_workout(
     custom: str = "",
     avoid: list[str] | None = None,
     nonce: int | None = None,
+    model: str = MODEL,
+    effort: str = "low",
 ) -> Workout:
     equipment_text = ", ".join(equipment) if equipment else "none (bodyweight only)"
     coverage = (
@@ -891,7 +947,7 @@ async def generate_workout(
         {"role": "user", "content": user_prompt},
     ]
 
-    workout = await _request_with_shape_retry(ai, messages)
+    workout = await _request_with_shape_retry(ai, messages, model, effort)
     _canonicalize_names(workout)
     report = _problem_report(workout, equipment)
     quality = _quality_problems(workout, style, duration_min, avoid or [])
@@ -914,7 +970,7 @@ async def generate_workout(
             ),
         },
     ]
-    workout = await _request_with_shape_retry(ai, messages)
+    workout = await _request_with_shape_retry(ai, messages, model, effort)
     _canonicalize_names(workout)
     if impossible := _impossible_movements(workout, equipment):
         raise UpstreamError(
