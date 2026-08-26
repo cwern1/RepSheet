@@ -237,7 +237,10 @@ async function generate() {
   }
 }
 
+let currentWorkout = null; // whatever the workout view is showing right now
+
 function showWorkout(w) {
+  currentWorkout = w;
   $("w-format").textContent = w.format_line;
   $("w-scheme").textContent = w.scheme || "";
   $("w-notes").textContent = w.notes || "";
@@ -296,6 +299,63 @@ function fitMovements() {
 }
 
 window.addEventListener("resize", fitMovements);
+
+// --- Copy to clipboard: the workout as plain text for a workout log ---
+
+// Log-friendly plain text: spaces only (no tabs), and the model's typographic
+// punctuation ("·", "×", "–") flattened to plain "-", "x", ".".
+function cleanForCopy(s) {
+  return (s ?? "")
+    .replaceAll("·", "-")
+    .replaceAll("×", "x")
+    .replaceAll("–", "-")
+    .replaceAll("—", "-")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function workoutAsText(w) {
+  const lines = [cleanForCopy(w.format_line)];
+  if (w.scheme) lines.push(cleanForCopy(w.scheme));
+  lines.push("");
+  for (const m of w.movements) {
+    // "12/leg" reads better in a log as "12 <movement> per leg".
+    const reps = cleanForCopy(m.reps);
+    const per = reps.match(/^(.*\d)\s*\/\s*(\w+)$/);
+    let line = per
+      ? `- ${per[1]} ${cleanForCopy(m.name)} per ${per[2]}`
+      : `- ${reps} ${cleanForCopy(m.name)}`;
+    if (m.load_kg) line += ` - ${cleanForCopy(m.load_kg)}`;
+    lines.push(line);
+  }
+  if (w.notes) lines.push("", cleanForCopy(w.notes));
+  return lines.join("\n");
+}
+
+let copiedTimer = null;
+
+async function copyWorkout() {
+  if (!currentWorkout) return;
+  const text = workoutAsText(currentWorkout);
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch {
+    // Clipboard API refused (old WebView, insecure context) — textarea fallback.
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try { document.execCommand("copy"); } catch { /* nothing left to try */ }
+    ta.remove();
+  }
+  const btn = $("copy-btn");
+  btn.classList.add("copied");
+  clearTimeout(copiedTimer);
+  copiedTimer = setTimeout(() => btn.classList.remove("copied"), 1500);
+}
 
 function closeWorkout() {
   $("workout-view").hidden = true;
@@ -380,6 +440,7 @@ $("customize-dialog").addEventListener("click", (e) => {
 });
 $("generate-btn").addEventListener("click", generate);
 $("close-btn").addEventListener("click", closeWorkout);
+$("copy-btn").addEventListener("click", copyWorkout);
 $("regen-btn").addEventListener("click", generate);
 $("overlay").addEventListener("click", () => {
   if ($("overlay").classList.contains("error")) hideOverlay();

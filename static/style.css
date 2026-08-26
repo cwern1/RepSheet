@@ -524,6 +524,12 @@ button {
 
 .chrome-btn svg { width: 1.15rem; height: 1.15rem; }
 
+/* Copy button: swap to an accent checkmark for a moment after copying. */
+.chrome-btn .icon-check { display: none; }
+.chrome-btn.copied { border-color: var(--accent); color: var(--accent); }
+.chrome-btn.copied .icon-copy { display: none; }
+.chrome-btn.copied .icon-check { display: block; }
+
 /* Wake-lock toggle: a labeled pill, tinted while the screen is kept awake. */
 .wake-pill {
   font: inherit;
@@ -551,6 +557,7 @@ button {
 @media (hover: hover) {
   .chrome-btn, .wake-pill { opacity: 0.7; }
   .chrome-btn:hover { opacity: 1; color: var(--text); }
+  .chrome-btn.copied { opacity: 1; color: var(--accent); }
   .wake-pill:hover, .wake-pill[aria-pressed="true"] { opacity: 1; }
 }
 
