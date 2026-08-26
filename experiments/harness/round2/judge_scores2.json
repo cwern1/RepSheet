@@ -1,0 +1,1102 @@
+{
+ "1": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 7,
+   "rank": 1,
+   "note": "Solid stations, but lunge/squat adjacent and 8-burpee minute light."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 3,
+   "rank": 3,
+   "note": "Broad Jump plus Bear Crawl, rep-count crawl, lazy uniform 10s."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 6,
+   "rank": 2,
+   "note": "Best rep sizing, but rotation missing from scheme, chatty notes."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 0,
+   "rank": 4,
+   "note": "Generation failed."
+  }
+ },
+ "2": {
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 3,
+   "rank": 3,
+   "note": "Four stations cannot divide 30; scheme covers only 20 minutes."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 4,
+   "rank": 2,
+   "note": "Row and Bike Erg each listed twice to pad rotation."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 8,
+   "rank": 1,
+   "note": "Clean 5-station rotation via rest minute; machine caps respected."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 0,
+   "rank": 4,
+   "note": "Generation failed."
+  }
+ },
+ "3": {
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 4,
+   "rank": 3,
+   "note": "Cap 33 wrong for chipper; Burpee and Bar-Facing Burpee both."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 5,
+   "rank": 2,
+   "note": "Deadlift-Power Clean adjacent hinges, 60 kg power clean over ceiling."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 6,
+   "rank": 1,
+   "note": "Cleanest descent, but light volume and 10/arm breaks descent."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 3,
+   "rank": 4,
+   "note": "Ascending 500 m row finisher, adjacent pull variants, 60 kg push press."
+  }
+ },
+ "4": {
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 6,
+   "rank": 2,
+   "note": "Solid triplet; lunge-dominated round at window's top end."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 8,
+   "rank": 1,
+   "note": "Balanced five-movement flow, honest 3-minute round, good variety."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 5,
+   "rank": 3,
+   "note": "Lunge into goblet squat adjacent; sloppy equipment tags."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 4,
+   "rank": 4,
+   "note": "Two lunge variants adjacent; round runs over six minutes."
+  }
+ },
+ "5": {
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 5,
+   "rank": 2,
+   "note": "Two lunge types, squat/lunge three times, 50 kg push press."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 3,
+   "rank": 3,
+   "note": "Roughly nine minutes of work against a 25-minute target."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 2,
+   "rank": 4,
+   "note": "Forbidden single short pass, nine minutes, 60 kg push press."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 9,
+   "rank": 1,
+   "note": "Honest 24-minute fit, clean balance, legal loads throughout."
+  }
+ },
+ "6": {
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 6,
+   "rank": 2,
+   "note": "Deadlift into swings adjacent hinges; claims unused Bodyweight."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 4,
+   "rank": 3,
+   "note": "Token 3s and 2s everywhere; 100 m run not in vocabulary."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 7,
+   "rank": 1,
+   "note": "Good seven-item spread and balance; round slightly over four minutes."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 0,
+   "rank": 4,
+   "note": "Generation failed."
+  }
+ },
+ "7": {
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 3,
+   "rank": 4,
+   "note": "600 reps, near 40 minutes of work; loaded Bar-Facing Burpee."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 7,
+   "rank": 1,
+   "note": "Legal and time-honest; thin upper body, 90 total burpees."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 6,
+   "rank": 2,
+   "note": "Honest fit, but barbell Front-Rack Lunge name on dumbbells."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 5,
+   "rank": 3,
+   "note": "Squat-lunge adjacent, 40-rep grunt sets, runs under time."
+  }
+ },
+ "8": {
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 7,
+   "rank": 2,
+   "note": "Clean and legal; two hinges, no squat pattern."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 5,
+   "rank": 4,
+   "note": "Round only ~100 seconds, below the 2-4 minute window."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 8,
+   "rank": 1,
+   "note": "Textbook pull-hinge-squat-core balance, clean 2-minute round."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 6,
+   "rank": 3,
+   "note": "Pull-ups plus chin-ups every round; grip-heavy near-duplicate."
+  }
+ },
+ "9": {
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 2,
+   "rank": 4,
+   "note": "24 minutes for a 15-minute target; work overflows windows."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 5,
+   "rank": 3,
+   "note": "Window under three-quarters filled; note misstates interval time."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 6,
+   "rank": 2,
+   "note": "Duration fits; work just under three-quarters of window."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 7,
+   "rank": 1,
+   "note": "Fills 15 exactly and packs windows; barely 10 s spare."
+  }
+ },
+ "10": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 6,
+   "rank": 1,
+   "note": "Best time fit; swing into dumbbell deadlift adjacent hinges."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 5,
+   "rank": 2,
+   "note": "Adjacent hinges, 4.4-minute round, single-bell deadlift notation."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 4,
+   "rank": 4,
+   "note": "Three consecutive hinges, no squat or lunge anywhere."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 5,
+   "rank": 3,
+   "note": "Round near 6.5 minutes; thruster and push-up adjacent presses."
+  }
+ },
+ "11": {
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 6,
+   "rank": 3,
+   "note": "No real upper-body work; 12 broad jumps overuses seasoning."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 8,
+   "rank": 1,
+   "note": "Balanced triplet that fits the window; lunges miss /leg suffix."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 7,
+   "rank": 2,
+   "note": "Legal triplet but 40 lunges per round is a long grind."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 0,
+   "rank": 4,
+   "note": "Failed generation."
+  }
+ },
+ "12": {
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 5,
+   "rank": 2,
+   "note": "Single-Under plus Double-Under duplicates jump-rope variants."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 7,
+   "rank": 1,
+   "note": "Honest 2-minute round; timid burpee count, easy single-unders."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 3,
+   "rank": 4,
+   "note": "Two lunge types, adjacent \u2014 explicit variant and pattern violation."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 5,
+   "rank": 3,
+   "note": "No upper-body press or pull; nearly all-legs round."
+  }
+ },
+ "13": {
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 3,
+   "rank": 4,
+   "note": "50 kg overhead breaks load ceilings; 6-minute round too long."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 6,
+   "rank": 3,
+   "note": "Fits and legal but no upper press or pull."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 8,
+   "rank": 1,
+   "note": "Balanced, legal loads, honest round with real variety."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 7,
+   "rank": 2,
+   "note": "Complete balance but six small-rep movements read listy."
+  }
+ },
+ "14": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 8,
+   "rank": 1,
+   "note": "Classic balanced quartet, honest round, sound 24 kg load."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 7,
+   "rank": 2,
+   "note": "Solid, but 12 pull-ups every round is steep for 20 minutes."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 6,
+   "rank": 3,
+   "note": "Sprint-pace note contradicts a 20-minute AMRAP."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 5,
+   "rank": 4,
+   "note": "40-swing set is lopsided; grip dies by round two."
+  }
+ },
+ "15": {
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 4,
+   "rank": 3,
+   "note": "Two lunge types, near 5-minute round, all lower body."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 0,
+   "rank": 4,
+   "note": "Failed generation."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 4,
+   "rank": 2,
+   "note": "Two dumbbell loads; 20 kg is off the dumbbell set."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 6,
+   "rank": 1,
+   "note": "Best here despite spurious tags and burpee-only upper work."
+  }
+ },
+ "16": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 7,
+   "rank": 2,
+   "note": "Sound round; adjacent lunge and wall ball repeat squat pattern."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 8,
+   "rank": 1,
+   "note": "Clean four-movement round using all equipment honestly."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 6,
+   "rank": 3,
+   "note": "18 heavy deadlifts every round; 150 m row nonstandard."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 4,
+   "rank": 4,
+   "note": "Adjacent deadlift and SDHP, 60 kg SDHP, 5.5-minute round."
+  }
+ },
+ "17": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 5,
+   "rank": 3,
+   "note": "Six Turkish get-ups balloon the round past six minutes."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 4,
+   "rank": 4,
+   "note": "Seven movements, 6-minute round, hinge pattern everywhere."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 8,
+   "rank": 1,
+   "note": "Tight two-minute triplet, one load, perfect pattern spread."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 6,
+   "rank": 2,
+   "note": "Good triplet but get-ups push the round past four minutes."
+  }
+ },
+ "18": {
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 4,
+   "rank": 3,
+   "note": "Bear Crawl as reps breaks the distance rule; round overlong."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 6,
+   "rank": 2,
+   "note": "Great variety but unloaded Sandbag Carry and slightly long round."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 8,
+   "rank": 1,
+   "note": "Balanced, legal loads, honest round; both implements well used."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 3,
+   "rank": 4,
+   "note": "'Bodyweight Squat' off-vocabulary plus thruster/push-press family repeat."
+  }
+ },
+ "19": {
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 5,
+   "rank": 3,
+   "note": "192 reps with 48 burpees overshoots 8 minutes badly."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 1,
+   "rank": 4,
+   "note": "720 reps in eight minutes is fantasy volume."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 6,
+   "rank": 2,
+   "note": "Cap says 9, not target+3; no upper-body movement."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 8,
+   "rank": 1,
+   "note": "Honest descending single pass, right budget, balanced."
+  }
+ },
+ "20": {
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 6,
+   "rank": 2,
+   "note": "Reasonable volume but power clean beside deadlift doubles hinge."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 1,
+   "rank": 4,
+   "note": "Four press-family lifts at illegal 60 kg, absurd volume."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 7,
+   "rank": 1,
+   "note": "Legal loads, clean pattern spread, honest 10-minute finish."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 4,
+   "rank": 3,
+   "note": "Thruster beside push press repeats the family; 90 loaded lunges."
+  }
+ },
+ "21": {
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 7,
+   "rank": 2,
+   "note": "Honest fit; two-hand dumbbell loads should read 2x22.5 kg."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 6,
+   "rank": 3,
+   "note": "Single light pass, wrong cap (22), 48-rep lunge monster set."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 8,
+   "rank": 1,
+   "note": "Best time fit and balance; correct dumbbell notation throughout."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 3,
+   "rank": 4,
+   "note": "Row twice per round, two lunge variants, thruster missing load."
+  }
+ },
+ "22": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 7,
+   "rank": 1,
+   "note": "Adjacent deadlift-swing hinges; otherwise honest volume and sane loads."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 4,
+   "rank": 3,
+   "note": "60 kg SDHP absurd, 600 m run not in vocabulary, triple hinge."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 5,
+   "rank": 2,
+   "note": "No upper-body movement; adjacent hinges; 90 total deadlifts brutal."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 3,
+   "rank": 4,
+   "note": "Wrong style: delivers a Chipper for a For Time request."
+  }
+ },
+ "23": {
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 6,
+   "rank": 2,
+   "note": "16 minutes of rowing dominates; notes restate the format."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 4,
+   "rank": 4,
+   "note": "Push press 60 kg breaks overhead ceiling; wrong cap; adjacent hinges."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 6,
+   "rank": 3,
+   "note": "Adjacent pull-up and ring row; volume runs hot at cap."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 7,
+   "rank": 1,
+   "note": "Cleanest loads, notation, and pacing; adjacent pulls the lone flaw."
+  }
+ },
+ "24": {
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 2,
+   "rank": 4,
+   "note": "Burpee and double-under each listed twice; ~990 reps absurd."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 4,
+   "rank": 3,
+   "note": "Half the target time; no upper-body work at all."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 7,
+   "rank": 1,
+   "note": "Honest descending ladder, good balance; cap should be 13."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 5,
+   "rank": 2,
+   "note": "No upper-body movement; volume slightly over time."
+  }
+ },
+ "25": {
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 5,
+   "rank": 2,
+   "note": "Light single pass; wall ball into air squat, adjacent squats."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 0,
+   "rank": 4,
+   "note": "Generation failed: Wall Ball never used."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 5,
+   "rank": 3,
+   "note": "Too light for 15 minutes; adjacent squat movements; 6 kg ball soft."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 8,
+   "rank": 1,
+   "note": "Well-rounded, honest 13-minute fit, patterns cleanly spaced."
+  }
+ },
+ "26": {
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 6,
+   "rank": 2,
+   "note": "Lazy uniform 12s; sit-up minute far too light."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 4,
+   "rank": 3,
+   "note": "Scheme says 2 stations but lists 4, which cannot divide 10."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 0,
+   "rank": 4,
+   "note": "Generation failed: kept programming Ring Row without rings."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 8,
+   "rank": 1,
+   "note": "Well-sized minutes, real variety, bear crawl earns its slot."
+  }
+ },
+ "27": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 6,
+   "rank": 1,
+   "note": "Compliant but light: 6 burpees and 6 snatches undershoot minutes."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 0,
+   "rank": 4,
+   "note": "Generation failed: insisted on pull-ups without a bar."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 4,
+   "rank": 2,
+   "note": "Bear Crawl given reps not distance; clean-and-jerk minute overflows."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 3,
+   "rank": 3,
+   "note": "Six movements crammed into 3 stations; two deadlifts; minutes overflow."
+  }
+ },
+ "28": {
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 6,
+   "rank": 2,
+   "note": "20 kg dumbbell nonstandard; 20 jumping lunges overflow the minute."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 0,
+   "rank": 4,
+   "note": "Generation failed: kept programming chin-ups without a bar."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 4,
+   "rank": 3,
+   "note": "Bodyweight listed but never actually programmed; light minutes."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 7,
+   "rank": 1,
+   "note": "Full coverage, good sizing; 12-snatch minute runs hot."
+  }
+ },
+ "29": {
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 7,
+   "rank": 2,
+   "note": "Adjacent swing-deadlift hinges; 5-rep deadlift minute light."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 8,
+   "rank": 1,
+   "note": "Well-sized minutes, clean spacing; notes needlessly restate scheme."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 0,
+   "rank": 4,
+   "note": "Generation failed: Bodyweight never used."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 5,
+   "rank": 3,
+   "note": "Light minutes throughout; adjacent deadlift-swing hinges."
+  }
+ },
+ "30": {
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 7,
+   "rank": 2,
+   "note": "Solid; 20-sit-up minute runs hot, notes restate scheme."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 3,
+   "rank": 4,
+   "note": "Five-rep minutes are token work, far under budget."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 5,
+   "rank": 3,
+   "note": "30 sit-ups cannot fit one minute."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 8,
+   "rank": 1,
+   "note": "Perfectly sized minutes, clean and compliant."
+  }
+ },
+ "31": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 3,
+   "rank": 4,
+   "note": "24 grunt reps and 6 TGUs per minute cannot fit; 20 kg DB non-standard"
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 6,
+   "rank": 1,
+   "note": "Minutes fit, but Thruster plus Push Press breaks one-press-family rule"
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 5,
+   "rank": 2,
+   "note": "Legal Rest station but tagged Bodyweight; 16 DB snatches overflow the minute"
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 4,
+   "rank": 3,
+   "note": "4 stations do not divide 14; '3.5 rounds' scheme is dishonest"
+  }
+ },
+ "32": {
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 7,
+   "rank": 2,
+   "note": "Clean minute fits, but Push Press adjacent to Push-up doubles pressing"
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 8,
+   "rank": 1,
+   "note": "Simple 3x8, honest 35-45s minutes, balanced squat/press/engine"
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 6,
+   "rank": 4,
+   "note": "No upper-body press or pull anywhere; all legs and bike"
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 6.5,
+   "rank": 3,
+   "note": "Notes '6 stations x 4 rounds' contradicts its own 4x6 scheme"
+  }
+ },
+ "33": {
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 4.5,
+   "rank": 2,
+   "note": "Only 5 movements, and 50 sit-ups breaks the descent"
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 6.5,
+   "rank": 1,
+   "note": "Clean 50-to-15 descent and budget; adjacent deadlift/swing double hinge"
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 4,
+   "rank": 3,
+   "note": "Wrong cap 18, half the needed volume, token 9-swing finisher"
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 3,
+   "rank": 4,
+   "note": "Kettlebell Clean listed twice and reps bounce up and down"
+  }
+ },
+ "34": {
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 6,
+   "rank": 1,
+   "note": "Best volume honesty; 100 double-unders late technically breaks descent"
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 4,
+   "rank": 3,
+   "note": "Wrong cap 23, two jump-rope variants, 42 loaded lunges brutal"
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 3.5,
+   "rank": 4,
+   "note": "Pull-up plus Chin-up same family; barely 7 reps/min volume"
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 5.5,
+   "rank": 2,
+   "note": "200 double-unders doubles the 100 ceiling; deadlift-snatch adjacent hinges"
+  }
+ },
+ "35": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 4.5,
+   "rank": 3,
+   "note": "Three squat-pattern movements, two adjacent; 50 heavy deadlifts opener"
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 5,
+   "rank": 2,
+   "note": "Great descent, but 60 kg push press and clean break load ceilings"
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 5.5,
+   "rank": 1,
+   "note": "Sanest loads and flow; wrong cap 28 and adjacent squat pair"
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 4,
+   "rank": 4,
+   "note": "Descent broken four times and volume well under a 25-min cap"
+  }
+ },
+ "36": {
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 4,
+   "rank": 3,
+   "note": "90 pulls in adjacent openers, 150 DUs over ceiling, false equipment_used"
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 7,
+   "rank": 1,
+   "note": "Textbook descent and honest 7-item pick; 'Front-Rack Lunge' misnamed for dumbbells"
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 3,
+   "rank": 4,
+   "note": "12 movements, wrong cap, two burpee variants, broken descent"
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 4.5,
+   "rank": 2,
+   "note": "9 movements and a banned 2000 m mega-row; descent at least holds"
+  }
+ },
+ "37": {
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 3.5,
+   "rank": 3,
+   "note": "1200 m run not in vocabulary; descent broken; light for 45 minutes"
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 5,
+   "rank": 1,
+   "note": "Honest 45-min volume and clean descent; 75 and 60 breach 50-rep ceiling"
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 4.5,
+   "rank": 2,
+   "note": "9 movements, 60 and 55 over ceiling, snatch load written two-bell"
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 3,
+   "rank": 4,
+   "note": "10 movements, wrong cap 48, four squat-family patterns, broken descent"
+  }
+ },
+ "38": {
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 5,
+   "rank": 2,
+   "note": "Descent breaks at burpees and effective volume overshoots the cap"
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 6.5,
+   "rank": 1,
+   "note": "Honest fit and clean descent; Sandbag Carry missing load and odd 30 m"
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 3,
+   "rank": 3,
+   "note": "800 m loaded carry is absurd; Sit-up duplicates GHD Sit-up family"
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 0,
+   "rank": 4,
+   "note": "Generation failed on illegal equipment"
+  }
+ },
+ "39": {
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 4,
+   "rank": 3,
+   "note": "Roughly 185 s of work stuffed into a 2-minute window"
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 4.5,
+   "rank": 2,
+   "note": "Overflows the window ~30% and swing-deadlift adjacent hinges"
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 5.5,
+   "rank": 1,
+   "note": "Only candidate that fits its windows, though work underfills the 3/4 floor"
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 3.5,
+   "rank": 4,
+   "note": "3 x 5 min totals 15 minutes, not the requested 12"
+  }
+ },
+ "40": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 5.5,
+   "rank": 2,
+   "note": "Windows fit well, but adjacent presses and zero lower-body work"
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 7,
+   "rank": 1,
+   "note": "Thrusters give legs plus honest window fit; mild press adjacency"
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 5,
+   "rank": 3,
+   "note": "50 kg push press breaks the 40 kg overhead ceiling; notes restate format"
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 4.5,
+   "rank": 4,
+   "note": "Work slightly underfills windows; adjacent presses, no squat or hinge"
+  }
+ },
+ "41": {
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 3,
+   "rank": 3,
+   "note": "35-cal ski triples shared-machine cap; work far overflows 5-min window."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 4,
+   "rank": 2,
+   "note": "15-cal ski over cap, window overflows, no upper press or pull."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 2,
+   "rank": 4,
+   "note": "6x5+1 totals 30 min, not 24; work overflows too."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 6,
+   "rank": 1,
+   "note": "Fills 24 min with best balance; 14 cal over cap, off-list 20 kg."
+  }
+ },
+ "42": {
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 8,
+   "rank": 1,
+   "note": "Exact 30 min, work fills window honestly, clean balance."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 3,
+   "rank": 4,
+   "note": "8x4 totals 32 min, not 30, and work overflows windows."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 5,
+   "rank": 3,
+   "note": "Work fits well but 7x4 totals 28, not 30."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 6,
+   "rank": 2,
+   "note": "Exact 30 min but work slightly underfills the 5-min window."
+  }
+ },
+ "43": {
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 7,
+   "rank": 1,
+   "note": "Exact fit, bike under cap; air squat adjacent to wall ball."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 3,
+   "rank": 4,
+   "note": "12-cal bike exceeds 8 cap; work badly overflows window."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 5,
+   "rank": 3,
+   "note": "Work right at window edge; notes restate the format."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 6,
+   "rank": 2,
+   "note": "Legal and tidy but work underfills window below three-quarters."
+  }
+ },
+ "44": {
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 6,
+   "rank": 2,
+   "note": "Honors knee well but snatch and deadlift are adjacent hinges."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 2,
+   "rank": 3,
+   "note": "Thruster deep-squats the bad knee; push press duplicates press family."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 7,
+   "rank": 1,
+   "note": "Knee-safe, clean loads and reps; adjacent hinges the only blemish."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 1,
+   "rank": 4,
+   "note": "Front squat plus two lunge variants ignore the bad knee entirely."
+  }
+ },
+ "45": {
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 8,
+   "rank": 1,
+   "note": "Genuinely easy: light 20 kg, modest volume, balanced patterns."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 5,
+   "rank": 3,
+   "note": "24 kg and three kettlebell hinges are not a recovery day."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 1,
+   "rank": 4,
+   "note": "950 reps in 12 minutes; absurd volume, ignores easy request."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 7,
+   "rank": 2,
+   "note": "Balanced and honest, but 24 kg and 200 reps run firm."
+  }
+ },
+ "46": {
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 5,
+   "rank": 2,
+   "note": "Devil press included, but 9 per minute overflows the window."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 0,
+   "rank": 4,
+   "note": "Generation failed on unlisted pull-up equipment."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 2,
+   "rank": 3,
+   "note": "Chain-of-thought dumped into scheme field; devil press adjacent burpee."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 6,
+   "rank": 1,
+   "note": "Devil press honored, correct 2x load format; snatch minute runs long."
+  }
+ },
+ "47": {
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 0,
+   "rank": 3,
+   "note": "Generation failed: programmed rower the athlete does not have."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 3,
+   "rank": 2,
+   "note": "Four lines break the 50-rep ceiling; 60 pull-ups is savage."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 4,
+   "rank": 1,
+   "note": "Sane volume but reps rise mid-list and bear crawl gets reps."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 0,
+   "rank": 4,
+   "note": "Generation failed: programmed rower the athlete does not have."
+  }
+ },
+ "48": {
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 5,
+   "rank": 2,
+   "note": "Exact 18 min, no jumping, but work overflows and note misstates it."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 4,
+   "rank": 3,
+   "note": "Work fits nicely but 4x5 totals 20 min, not 18."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 7,
+   "rank": 1,
+   "note": "Exact 18 min, no jumping, nice variety; work barely overflows."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 3,
+   "rank": 4,
+   "note": "Totals 16 min, not 18, and work underfills its windows."
+  }
+ },
+ "49": {
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 2,
+   "rank": 4,
+   "note": "Reuses two avoided movements; four squat patterns; 7-minute round."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 5,
+   "rank": 1,
+   "note": "Avoids the stale list; clean and deadlift are adjacent hinges."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 4,
+   "rank": 2,
+   "note": "Avoid list honored but two adjacent same-pattern pairs, no press."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 4,
+   "rank": 3,
+   "note": "All three movements lower-body; no upper work at all."
+  }
+ },
+ "50": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 7,
+   "rank": 2,
+   "note": "Avoids list, honest budget; 45 straight front squats is rough."
+  },
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast": {
+   "score": 8,
+   "rank": 1,
+   "note": "Exactly on rep budget, balanced patterns, one bar load throughout."
+  },
+  "@cf/qwen/qwen3-30b-a3b-fp8": {
+   "score": 2,
+   "rank": 4,
+   "note": "496 reps and 50 kg overhead lifts break load and time."
+  },
+  "@cf/google/gemma-4-26b-a4b-it": {
+   "score": 4,
+   "rank": 3,
+   "note": "No press, three core movements, volume undershoots 15-minute target."
+  }
+ }
+}

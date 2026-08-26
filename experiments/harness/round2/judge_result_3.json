@@ -1,0 +1,62 @@
+{
+  "21": {
+    "A": {"score": 7, "rank": 2, "note": "Honest fit; two-hand dumbbell loads should read 2x22.5 kg."},
+    "B": {"score": 6, "rank": 3, "note": "Single light pass, wrong cap (22), 48-rep lunge monster set."},
+    "C": {"score": 8, "rank": 1, "note": "Best time fit and balance; correct dumbbell notation throughout."},
+    "D": {"score": 3, "rank": 4, "note": "Row twice per round, two lunge variants, thruster missing load."}
+  },
+  "22": {
+    "A": {"score": 7, "rank": 1, "note": "Adjacent deadlift-swing hinges; otherwise honest volume and sane loads."},
+    "B": {"score": 4, "rank": 3, "note": "60 kg SDHP absurd, 600 m run not in vocabulary, triple hinge."},
+    "C": {"score": 5, "rank": 2, "note": "No upper-body movement; adjacent hinges; 90 total deadlifts brutal."},
+    "D": {"score": 3, "rank": 4, "note": "Wrong style: delivers a Chipper for a For Time request."}
+  },
+  "23": {
+    "A": {"score": 6, "rank": 2, "note": "16 minutes of rowing dominates; notes restate the format."},
+    "B": {"score": 4, "rank": 4, "note": "Push press 60 kg breaks overhead ceiling; wrong cap; adjacent hinges."},
+    "C": {"score": 6, "rank": 3, "note": "Adjacent pull-up and ring row; volume runs hot at cap."},
+    "D": {"score": 7, "rank": 1, "note": "Cleanest loads, notation, and pacing; adjacent pulls the lone flaw."}
+  },
+  "24": {
+    "A": {"score": 2, "rank": 4, "note": "Burpee and double-under each listed twice; ~990 reps absurd."},
+    "B": {"score": 4, "rank": 3, "note": "Half the target time; no upper-body work at all."},
+    "C": {"score": 7, "rank": 1, "note": "Honest descending ladder, good balance; cap should be 13."},
+    "D": {"score": 5, "rank": 2, "note": "No upper-body movement; volume slightly over time."}
+  },
+  "25": {
+    "A": {"score": 5, "rank": 2, "note": "Light single pass; wall ball into air squat, adjacent squats."},
+    "B": {"score": 0, "rank": 4, "note": "Generation failed: Wall Ball never used."},
+    "C": {"score": 5, "rank": 3, "note": "Too light for 15 minutes; adjacent squat movements; 6 kg ball soft."},
+    "D": {"score": 8, "rank": 1, "note": "Well-rounded, honest 13-minute fit, patterns cleanly spaced."}
+  },
+  "26": {
+    "A": {"score": 6, "rank": 2, "note": "Lazy uniform 12s; sit-up minute far too light."},
+    "B": {"score": 4, "rank": 3, "note": "Scheme says 2 stations but lists 4, which cannot divide 10."},
+    "C": {"score": 0, "rank": 4, "note": "Generation failed: kept programming Ring Row without rings."},
+    "D": {"score": 8, "rank": 1, "note": "Well-sized minutes, real variety, bear crawl earns its slot."}
+  },
+  "27": {
+    "A": {"score": 6, "rank": 1, "note": "Compliant but light: 6 burpees and 6 snatches undershoot minutes."},
+    "B": {"score": 0, "rank": 4, "note": "Generation failed: insisted on pull-ups without a bar."},
+    "C": {"score": 4, "rank": 2, "note": "Bear Crawl given reps not distance; clean-and-jerk minute overflows."},
+    "D": {"score": 3, "rank": 3, "note": "Six movements crammed into 3 stations; two deadlifts; minutes overflow."}
+  },
+  "28": {
+    "A": {"score": 6, "rank": 2, "note": "20 kg dumbbell nonstandard; 20 jumping lunges overflow the minute."},
+    "B": {"score": 0, "rank": 4, "note": "Generation failed: kept programming chin-ups without a bar."},
+    "C": {"score": 4, "rank": 3, "note": "Bodyweight listed but never actually programmed; light minutes."},
+    "D": {"score": 7, "rank": 1, "note": "Full coverage, good sizing; 12-snatch minute runs hot."}
+  },
+  "29": {
+    "A": {"score": 7, "rank": 2, "note": "Adjacent swing-deadlift hinges; 5-rep deadlift minute light."},
+    "B": {"score": 8, "rank": 1, "note": "Well-sized minutes, clean spacing; notes needlessly restate scheme."},
+    "C": {"score": 0, "rank": 4, "note": "Generation failed: Bodyweight never used."},
+    "D": {"score": 5, "rank": 3, "note": "Light minutes throughout; adjacent deadlift-swing hinges."}
+  },
+  "30": {
+    "A": {"score": 7, "rank": 2, "note": "Solid; 20-sit-up minute runs hot, notes restate scheme."},
+    "B": {"score": 3, "rank": 4, "note": "Five-rep minutes are token work, far under budget."},
+    "C": {"score": 5, "rank": 3, "note": "30 sit-ups cannot fit one minute."},
+    "D": {"score": 8, "rank": 1, "note": "Perfectly sized minutes, clean and compliant."}
+  }
+}

@@ -21,9 +21,22 @@ CHAT_MODEL_PARAMS = {
         # reasoning_effort "low" ran ~3 min, so thinking is off entirely.
         "chat_template_kwargs": {"enable_thinking": False},
     },
+    # Round 2 candidate: MoE, ~3B active params — expected llama-fast latency
+    # class. Hybrid-thinking model, so thinking must be off for speed.
+    "@cf/qwen/qwen3-30b-a3b-fp8": {
+        "max_completion_tokens": 6000,
+        "chat_template_kwargs": {"enable_thinking": False},
+        "_json_mode": True,
+    },
     # _json_mode: ask Workers AI for schema-constrained output — these two
     # echo the schema back as prose when merely shown it in the prompt.
-    "@cf/google/gemma-4-26b-a4b-it": {"max_completion_tokens": 6000, "_json_mode": True},
+    # Gemma round 1 ran ~50 s warm; round-2 recheck adds thinking-off, since
+    # a 4B-active MoE shouldn't be that slow unless it was thinking.
+    "@cf/google/gemma-4-26b-a4b-it": {
+        "max_completion_tokens": 6000,
+        "chat_template_kwargs": {"enable_thinking": False},
+        "_json_mode": True,
+    },
     "@cf/meta/llama-4-scout-17b-16e-instruct": {"max_tokens": 2048, "_json_mode": True},
 }
 
@@ -825,7 +838,12 @@ def _extract_text(result) -> str:
     if text := result.get("response"):
         return text
     for choice in result.get("choices") or []:
-        if text := (choice.get("message") or {}).get("content"):
+        message = choice.get("message") or {}
+        if text := message.get("content"):
+            return text
+        # qwen3's vLLM reasoning parser routes the whole answer into the
+        # reasoning field with content=None, even with thinking disabled.
+        if text := message.get("reasoning_content") or message.get("reasoning"):
             return text
     raise KeyError("no assistant text in model output")
 

@@ -1,0 +1,62 @@
+{
+  "1": {
+    "A": {"score": 7, "rank": 1, "note": "Solid stations, but lunge/squat adjacent and 8-burpee minute light."},
+    "B": {"score": 3, "rank": 3, "note": "Broad Jump plus Bear Crawl, rep-count crawl, lazy uniform 10s."},
+    "C": {"score": 6, "rank": 2, "note": "Best rep sizing, but rotation missing from scheme, chatty notes."},
+    "D": {"score": 0, "rank": 4, "note": "Generation failed."}
+  },
+  "2": {
+    "A": {"score": 3, "rank": 3, "note": "Four stations cannot divide 30; scheme covers only 20 minutes."},
+    "B": {"score": 4, "rank": 2, "note": "Row and Bike Erg each listed twice to pad rotation."},
+    "C": {"score": 8, "rank": 1, "note": "Clean 5-station rotation via rest minute; machine caps respected."},
+    "D": {"score": 0, "rank": 4, "note": "Generation failed."}
+  },
+  "3": {
+    "A": {"score": 4, "rank": 3, "note": "Cap 33 wrong for chipper; Burpee and Bar-Facing Burpee both."},
+    "B": {"score": 5, "rank": 2, "note": "Deadlift-Power Clean adjacent hinges, 60 kg power clean over ceiling."},
+    "C": {"score": 6, "rank": 1, "note": "Cleanest descent, but light volume and 10/arm breaks descent."},
+    "D": {"score": 3, "rank": 4, "note": "Ascending 500 m row finisher, adjacent pull variants, 60 kg push press."}
+  },
+  "4": {
+    "A": {"score": 6, "rank": 2, "note": "Solid triplet; lunge-dominated round at window's top end."},
+    "B": {"score": 8, "rank": 1, "note": "Balanced five-movement flow, honest 3-minute round, good variety."},
+    "C": {"score": 5, "rank": 3, "note": "Lunge into goblet squat adjacent; sloppy equipment tags."},
+    "D": {"score": 4, "rank": 4, "note": "Two lunge variants adjacent; round runs over six minutes."}
+  },
+  "5": {
+    "A": {"score": 5, "rank": 2, "note": "Two lunge types, squat/lunge three times, 50 kg push press."},
+    "B": {"score": 3, "rank": 3, "note": "Roughly nine minutes of work against a 25-minute target."},
+    "C": {"score": 2, "rank": 4, "note": "Forbidden single short pass, nine minutes, 60 kg push press."},
+    "D": {"score": 9, "rank": 1, "note": "Honest 24-minute fit, clean balance, legal loads throughout."}
+  },
+  "6": {
+    "A": {"score": 6, "rank": 2, "note": "Deadlift into swings adjacent hinges; claims unused Bodyweight."},
+    "B": {"score": 4, "rank": 3, "note": "Token 3s and 2s everywhere; 100 m run not in vocabulary."},
+    "C": {"score": 7, "rank": 1, "note": "Good seven-item spread and balance; round slightly over four minutes."},
+    "D": {"score": 0, "rank": 4, "note": "Generation failed."}
+  },
+  "7": {
+    "A": {"score": 3, "rank": 4, "note": "600 reps, near 40 minutes of work; loaded Bar-Facing Burpee."},
+    "B": {"score": 7, "rank": 1, "note": "Legal and time-honest; thin upper body, 90 total burpees."},
+    "C": {"score": 6, "rank": 2, "note": "Honest fit, but barbell Front-Rack Lunge name on dumbbells."},
+    "D": {"score": 5, "rank": 3, "note": "Squat-lunge adjacent, 40-rep grunt sets, runs under time."}
+  },
+  "8": {
+    "A": {"score": 7, "rank": 2, "note": "Clean and legal; two hinges, no squat pattern."},
+    "B": {"score": 5, "rank": 4, "note": "Round only ~100 seconds, below the 2-4 minute window."},
+    "C": {"score": 8, "rank": 1, "note": "Textbook pull-hinge-squat-core balance, clean 2-minute round."},
+    "D": {"score": 6, "rank": 3, "note": "Pull-ups plus chin-ups every round; grip-heavy near-duplicate."}
+  },
+  "9": {
+    "A": {"score": 2, "rank": 4, "note": "24 minutes for a 15-minute target; work overflows windows."},
+    "B": {"score": 5, "rank": 3, "note": "Window under three-quarters filled; note misstates interval time."},
+    "C": {"score": 6, "rank": 2, "note": "Duration fits; work just under three-quarters of window."},
+    "D": {"score": 7, "rank": 1, "note": "Fills 15 exactly and packs windows; barely 10 s spare."}
+  },
+  "10": {
+    "A": {"score": 6, "rank": 1, "note": "Best time fit; swing into dumbbell deadlift adjacent hinges."},
+    "B": {"score": 5, "rank": 2, "note": "Adjacent hinges, 4.4-minute round, single-bell deadlift notation."},
+    "C": {"score": 4, "rank": 4, "note": "Three consecutive hinges, no squat or lunge anywhere."},
+    "D": {"score": 5, "rank": 3, "note": "Round near 6.5 minutes; thruster and push-up adjacent presses."}
+  }
+}

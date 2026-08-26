@@ -13,10 +13,13 @@ URL = "http://localhost:8787/api/generate"
 OUT = sys.argv[1] if len(sys.argv) > 1 else "results.jsonl"
 
 MODELS = [
-    "@cf/openai/gpt-oss-120b",            # baseline (production)
-    "@cf/openai/gpt-oss-20b",
-    "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
-    "@cf/meta/llama-4-scout-17b-16e-instruct",
+    # Round 2 (2026-08-26): fresh baseline at effort "low" (prod default since
+    # 89f0e11) plus the fast class. Prompt/validators changed since round 1
+    # (robustness pass 7e79825), so llama-3.3 is re-run, not reused.
+    "@cf/openai/gpt-oss-120b",                  # baseline (production, effort low)
+    "@cf/meta/llama-3.3-70b-instruct-fp8-fast", # round-1 fast candidate, re-run
+    "@cf/qwen/qwen3-30b-a3b-fp8",               # new: MoE 3B active, thinking off
+    "@cf/google/gemma-4-26b-a4b-it",            # recheck: thinking off fixed ~50s
 ]
 
 BW = "Bodyweight"

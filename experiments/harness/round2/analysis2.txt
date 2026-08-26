@@ -1,0 +1,103 @@
+
+=== @cf/openai/gpt-oss-120b
+  ok 50/50  time med 17.1s mean 18.2s p90 28.5s
+  clean workouts 36/50  total violations 22
+      8  chipper reps over ceiling
+      4  EMOM minute overflows
+      1  repeated base lift (lunge)
+      1  two dumbbells loads
+      1  chipper ~16 min vs 35 target (too little)
+      1  9 movements (max 8)
+      1  repeated base lift (squat)
+      1  chipper ~9 min vs 20 target (too little)
+      1  interval work ~3.2 min overflows 2 min window
+      1  interval work ~3.5 min overflows 3 min window
+      1  interval work ~4.6 min overflows 3 min window
+      1  interval work ~4.5 min overflows 4 min window
+
+=== @cf/meta/llama-3.3-70b-instruct-fp8-fast
+  ok 47/50  time med 7.6s mean 7.7s p90 12.8s
+  clean workouts 39/47  total violations 14
+      2  repeated base lift (burpee)
+      2  EMOM token minute
+      2  repeated base lift (squat)
+      1  chipper ~14 min vs 30 target (too little)
+      1  chipper ~7 min vs 15 target (too little)
+      1  repeated base lift (lunge)
+      1  12 movements (max 8)
+      1  10 movements (max 8)
+      1  repeated base lift (sit-up)
+      1  chipper ~29 min vs 20 cap
+      1  interval work ~3.2 min overflows 3 min window
+    FAILED case 2: The model kept using equipment the athlete does not have: Burpee Pull-up
+    FAILED case 6: Equipment not used: Dumbbells, Rings, Jump Rope, Plyo Box, Wall Ball, Running
+    FAILED case 29: Equipment not used: Bodyweight
+
+=== @cf/qwen/qwen3-30b-a3b-fp8
+  ok 41/50  time med 3.1s mean 3.3s p90 4.7s
+  clean workouts 11/41  total violations 47
+      6  repeated base lift (lunge)
+      4  repeated base lift (squat)
+      4  duplicate movement
+      3  AMRAP round ~6 min (want 2-4)
+      3  AMRAP round ~7 min (want 2-4)
+      1  4 stations do not divide EMOM 30
+      1  chipper ~11 min vs 30 target (too little)
+      1  for-time ~42 min vs cap 18
+      1  intervals span 24 min vs target 15
+      1  interval work ~3.8 min overflows 2 min window
+      1  AMRAP round ~8 min (want 2-4)
+      1  OFF-VOCABULARY
+      1  for-time ~39 min vs cap 11
+      1  for-time ~31 min vs cap 23
+      1  repeated base lift (burpee)
+      1  for-time ~28 min vs cap 13
+      1  4 stations do not divide EMOM 14
+      1  EMOM minute overflows
+      1  repeated base lift (clean)
+      1  chipper ~7 min vs 20 target (too little)
+      1  chipper ~10 min vs 25 target (too little)
+      1  chipper reps over ceiling
+      1  chipper run over 800 m
+      1  chipper ~19 min vs 45 target (too little)
+      1  intervals span 15 min vs target 12
+      1  interval work ~4.5 min overflows 4 min window
+      1  intervals span 30 min vs target 24
+      1  interval work ~4.2 min overflows 4 min window
+      1  interval work ~3.9 min overflows 3 min window
+      1  interval work ~3.4 min overflows 3 min window
+      1  avoid-list ignored
+      1  for-time ~30 min vs cap 18
+    FAILED case 1: The model kept using equipment the athlete does not have: Chin-up, Ring Dip
+    FAILED case 11: The model kept using equipment the athlete does not have: Wall-Ball Sit-up
+    FAILED case 25: Equipment not used: Wall Ball
+    FAILED case 26: The model kept using equipment the athlete does not have: Ring Row
+    FAILED case 27: The model kept using equipment the athlete does not have: Pull-up
+    FAILED case 28: The model kept using equipment the athlete does not have: Chin-up
+    FAILED case 38: The model kept using equipment the athlete does not have: Ring Row
+    FAILED case 46: The model kept using equipment the athlete does not have: Pull-up
+    FAILED case 47: The model kept using equipment the athlete does not have: Row
+
+=== @cf/google/gemma-4-26b-a4b-it
+  ok 48/50  time med 4.3s mean 9.3s p90 16.4s
+  clean workouts 35/48  total violations 21
+      4  chipper reps over ceiling
+      2  duplicate movement
+      2  EMOM token minute
+      1  for-time ~9 min vs target 25 (too little)
+      1  4 stations do not divide EMOM 10
+      1  repeated base lift (deadlift)
+      1  EMOM minute overflows
+      1  chipper with 5 movements (want 6-8)
+      1  9 movements (max 8)
+      1  chipper row over 1000 m
+      1  interval work ~3.9 min overflows 2 min window
+      1  interval work ~6.7 min overflows 5 min window
+      1  repeated base lift (squat)
+      1  for-time ~54 min vs cap 15
+      1  intervals without rest
+      1  interval work ~4.6 min overflows 3 min window
+    FAILED case 15: The model kept using equipment the athlete does not have: Dumbbell Goblet Squat
+    FAILED case 47: The model kept using equipment the athlete does not have: Row, Row
+
+-> analysis.json
