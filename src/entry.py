@@ -9,6 +9,7 @@ from generator import (
     UpstreamError,
     Workout,
     generate_workout,
+    to_js,
 )
 
 
@@ -45,6 +46,14 @@ class GenerateRequest(BaseModel):
 @app.post("/api/generate")
 async def generate(req: GenerateRequest, request: Request) -> Workout:
     env = request.scope["env"]
+    # Throttle before the AI call. CF-Connecting-IP is set by Cloudflare on
+    # every edge request (and by wrangler dev locally).
+    ip = request.headers.get("cf-connecting-ip", "unknown")
+    outcome = await env.GENERATE_LIMITER.limit(to_js({"key": ip}))
+    if not outcome.success:
+        raise HTTPException(
+            429, "Too many workouts in a short time — wait a minute and try again."
+        )
     try:
         return await generate_workout(
             env.AI, req.equipment, req.style, req.duration, req.custom,
