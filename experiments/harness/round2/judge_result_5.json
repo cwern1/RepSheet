@@ -1,0 +1,62 @@
+{
+  "41": {
+    "A": {"score": 3, "rank": 3, "note": "35-cal ski triples shared-machine cap; work far overflows 5-min window."},
+    "B": {"score": 4, "rank": 2, "note": "15-cal ski over cap, window overflows, no upper press or pull."},
+    "C": {"score": 2, "rank": 4, "note": "6x5+1 totals 30 min, not 24; work overflows too."},
+    "D": {"score": 6, "rank": 1, "note": "Fills 24 min with best balance; 14 cal over cap, off-list 20 kg."}
+  },
+  "42": {
+    "A": {"score": 8, "rank": 1, "note": "Exact 30 min, work fills window honestly, clean balance."},
+    "B": {"score": 3, "rank": 4, "note": "8x4 totals 32 min, not 30, and work overflows windows."},
+    "C": {"score": 5, "rank": 3, "note": "Work fits well but 7x4 totals 28, not 30."},
+    "D": {"score": 6, "rank": 2, "note": "Exact 30 min but work slightly underfills the 5-min window."}
+  },
+  "43": {
+    "A": {"score": 7, "rank": 1, "note": "Exact fit, bike under cap; air squat adjacent to wall ball."},
+    "B": {"score": 3, "rank": 4, "note": "12-cal bike exceeds 8 cap; work badly overflows window."},
+    "C": {"score": 5, "rank": 3, "note": "Work right at window edge; notes restate the format."},
+    "D": {"score": 6, "rank": 2, "note": "Legal and tidy but work underfills window below three-quarters."}
+  },
+  "44": {
+    "A": {"score": 6, "rank": 2, "note": "Honors knee well but snatch and deadlift are adjacent hinges."},
+    "B": {"score": 2, "rank": 3, "note": "Thruster deep-squats the bad knee; push press duplicates press family."},
+    "C": {"score": 7, "rank": 1, "note": "Knee-safe, clean loads and reps; adjacent hinges the only blemish."},
+    "D": {"score": 1, "rank": 4, "note": "Front squat plus two lunge variants ignore the bad knee entirely."}
+  },
+  "45": {
+    "A": {"score": 8, "rank": 1, "note": "Genuinely easy: light 20 kg, modest volume, balanced patterns."},
+    "B": {"score": 5, "rank": 3, "note": "24 kg and three kettlebell hinges are not a recovery day."},
+    "C": {"score": 1, "rank": 4, "note": "950 reps in 12 minutes; absurd volume, ignores easy request."},
+    "D": {"score": 7, "rank": 2, "note": "Balanced and honest, but 24 kg and 200 reps run firm."}
+  },
+  "46": {
+    "A": {"score": 5, "rank": 2, "note": "Devil press included, but 9 per minute overflows the window."},
+    "B": {"score": 0, "rank": 4, "note": "Generation failed on unlisted pull-up equipment."},
+    "C": {"score": 2, "rank": 3, "note": "Chain-of-thought dumped into scheme field; devil press adjacent burpee."},
+    "D": {"score": 6, "rank": 1, "note": "Devil press honored, correct 2x load format; snatch minute runs long."}
+  },
+  "47": {
+    "A": {"score": 0, "rank": 3, "note": "Generation failed: programmed rower the athlete does not have."},
+    "B": {"score": 3, "rank": 2, "note": "Four lines break the 50-rep ceiling; 60 pull-ups is savage."},
+    "C": {"score": 4, "rank": 1, "note": "Sane volume but reps rise mid-list and bear crawl gets reps."},
+    "D": {"score": 0, "rank": 4, "note": "Generation failed: programmed rower the athlete does not have."}
+  },
+  "48": {
+    "A": {"score": 5, "rank": 2, "note": "Exact 18 min, no jumping, but work overflows and note misstates it."},
+    "B": {"score": 4, "rank": 3, "note": "Work fits nicely but 4x5 totals 20 min, not 18."},
+    "C": {"score": 7, "rank": 1, "note": "Exact 18 min, no jumping, nice variety; work barely overflows."},
+    "D": {"score": 3, "rank": 4, "note": "Totals 16 min, not 18, and work underfills its windows."}
+  },
+  "49": {
+    "A": {"score": 2, "rank": 4, "note": "Reuses two avoided movements; four squat patterns; 7-minute round."},
+    "B": {"score": 5, "rank": 1, "note": "Avoids the stale list; clean and deadlift are adjacent hinges."},
+    "C": {"score": 4, "rank": 2, "note": "Avoid list honored but two adjacent same-pattern pairs, no press."},
+    "D": {"score": 4, "rank": 3, "note": "All three movements lower-body; no upper work at all."}
+  },
+  "50": {
+    "A": {"score": 7, "rank": 2, "note": "Avoids list, honest budget; 45 straight front squats is rough."},
+    "B": {"score": 8, "rank": 1, "note": "Exactly on rep budget, balanced patterns, one bar load throughout."},
+    "C": {"score": 2, "rank": 4, "note": "496 reps and 50 kg overhead lifts break load and time."},
+    "D": {"score": 4, "rank": 3, "note": "No press, three core movements, volume undershoots 15-minute target."}
+  }
+}

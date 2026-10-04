@@ -1,0 +1,302 @@
+{
+ "1": {
+  "A": "@cf/openai/gpt-oss-120b",
+  "B": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/openai/gpt-oss-20b"
+ },
+ "2": {
+  "A": "@cf/openai/gpt-oss-20b",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/meta/llama-4-scout-17b-16e-instruct"
+ },
+ "3": {
+  "A": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/openai/gpt-oss-20b"
+ },
+ "4": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "D": "@cf/openai/gpt-oss-20b"
+ },
+ "5": {
+  "A": "@cf/openai/gpt-oss-20b",
+  "B": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/openai/gpt-oss-120b"
+ },
+ "6": {
+  "A": "@cf/openai/gpt-oss-20b",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/meta/llama-4-scout-17b-16e-instruct"
+ },
+ "7": {
+  "A": "@cf/openai/gpt-oss-20b",
+  "B": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+ },
+ "8": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/openai/gpt-oss-20b"
+ },
+ "9": {
+  "A": "@cf/openai/gpt-oss-20b",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "D": "@cf/openai/gpt-oss-120b"
+ },
+ "10": {
+  "A": "@cf/openai/gpt-oss-120b",
+  "B": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/openai/gpt-oss-20b"
+ },
+ "11": {
+  "A": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/openai/gpt-oss-20b"
+ },
+ "12": {
+  "A": "@cf/openai/gpt-oss-20b",
+  "B": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+ },
+ "13": {
+  "A": "@cf/openai/gpt-oss-20b",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "D": "@cf/openai/gpt-oss-120b"
+ },
+ "14": {
+  "A": "@cf/openai/gpt-oss-120b",
+  "B": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/openai/gpt-oss-20b"
+ },
+ "15": {
+  "A": "@cf/openai/gpt-oss-20b",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/meta/llama-4-scout-17b-16e-instruct"
+ },
+ "16": {
+  "A": "@cf/openai/gpt-oss-120b",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "D": "@cf/openai/gpt-oss-20b"
+ },
+ "17": {
+  "A": "@cf/openai/gpt-oss-120b",
+  "B": "@cf/openai/gpt-oss-20b",
+  "C": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "D": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+ },
+ "18": {
+  "A": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/openai/gpt-oss-20b"
+ },
+ "19": {
+  "A": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "B": "@cf/openai/gpt-oss-20b",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/openai/gpt-oss-120b"
+ },
+ "20": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/openai/gpt-oss-20b",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/meta/llama-4-scout-17b-16e-instruct"
+ },
+ "21": {
+  "A": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/openai/gpt-oss-20b"
+ },
+ "22": {
+  "A": "@cf/openai/gpt-oss-120b",
+  "B": "@cf/openai/gpt-oss-20b",
+  "C": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "D": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+ },
+ "23": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/openai/gpt-oss-20b",
+  "C": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "D": "@cf/openai/gpt-oss-120b"
+ },
+ "24": {
+  "A": "@cf/openai/gpt-oss-20b",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/meta/llama-4-scout-17b-16e-instruct"
+ },
+ "25": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/openai/gpt-oss-20b",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/meta/llama-4-scout-17b-16e-instruct"
+ },
+ "26": {
+  "A": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/openai/gpt-oss-20b",
+  "D": "@cf/openai/gpt-oss-120b"
+ },
+ "27": {
+  "A": "@cf/openai/gpt-oss-120b",
+  "B": "@cf/openai/gpt-oss-20b",
+  "C": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "D": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+ },
+ "28": {
+  "A": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "B": "@cf/openai/gpt-oss-20b",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+ },
+ "29": {
+  "A": "@cf/openai/gpt-oss-20b",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "D": "@cf/openai/gpt-oss-120b"
+ },
+ "30": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/openai/gpt-oss-20b"
+ },
+ "31": {
+  "A": "@cf/openai/gpt-oss-120b",
+  "B": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/openai/gpt-oss-20b"
+ },
+ "32": {
+  "A": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/openai/gpt-oss-20b",
+  "D": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+ },
+ "33": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "D": "@cf/openai/gpt-oss-20b"
+ },
+ "34": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "C": "@cf/openai/gpt-oss-20b",
+  "D": "@cf/openai/gpt-oss-120b"
+ },
+ "35": {
+  "A": "@cf/openai/gpt-oss-120b",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "D": "@cf/openai/gpt-oss-20b"
+ },
+ "36": {
+  "A": "@cf/openai/gpt-oss-20b",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "D": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+ },
+ "37": {
+  "A": "@cf/openai/gpt-oss-20b",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/meta/llama-4-scout-17b-16e-instruct"
+ },
+ "38": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "D": "@cf/openai/gpt-oss-20b"
+ },
+ "39": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "D": "@cf/openai/gpt-oss-20b"
+ },
+ "40": {
+  "A": "@cf/openai/gpt-oss-120b",
+  "B": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "C": "@cf/openai/gpt-oss-20b",
+  "D": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+ },
+ "41": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "C": "@cf/openai/gpt-oss-20b",
+  "D": "@cf/openai/gpt-oss-120b"
+ },
+ "42": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/openai/gpt-oss-20b",
+  "C": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "D": "@cf/openai/gpt-oss-120b"
+ },
+ "43": {
+  "A": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/openai/gpt-oss-20b",
+  "D": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+ },
+ "44": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/openai/gpt-oss-20b"
+ },
+ "45": {
+  "A": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "B": "@cf/openai/gpt-oss-20b",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/openai/gpt-oss-120b"
+ },
+ "46": {
+  "A": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "B": "@cf/openai/gpt-oss-20b",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/openai/gpt-oss-120b"
+ },
+ "47": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "D": "@cf/openai/gpt-oss-20b"
+ },
+ "48": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/openai/gpt-oss-20b",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/meta/llama-4-scout-17b-16e-instruct"
+ },
+ "49": {
+  "A": "@cf/openai/gpt-oss-20b",
+  "B": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+ },
+ "50": {
+  "A": "@cf/openai/gpt-oss-120b",
+  "B": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "C": "@cf/openai/gpt-oss-20b",
+  "D": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+ }
+}

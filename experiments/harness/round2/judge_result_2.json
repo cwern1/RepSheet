@@ -1,0 +1,62 @@
+{
+  "11": {
+    "A": {"score": 6, "rank": 3, "note": "No real upper-body work; 12 broad jumps overuses seasoning."},
+    "B": {"score": 8, "rank": 1, "note": "Balanced triplet that fits the window; lunges miss /leg suffix."},
+    "C": {"score": 7, "rank": 2, "note": "Legal triplet but 40 lunges per round is a long grind."},
+    "D": {"score": 0, "rank": 4, "note": "Failed generation."}
+  },
+  "12": {
+    "A": {"score": 5, "rank": 2, "note": "Single-Under plus Double-Under duplicates jump-rope variants."},
+    "B": {"score": 7, "rank": 1, "note": "Honest 2-minute round; timid burpee count, easy single-unders."},
+    "C": {"score": 3, "rank": 4, "note": "Two lunge types, adjacent — explicit variant and pattern violation."},
+    "D": {"score": 5, "rank": 3, "note": "No upper-body press or pull; nearly all-legs round."}
+  },
+  "13": {
+    "A": {"score": 3, "rank": 4, "note": "50 kg overhead breaks load ceilings; 6-minute round too long."},
+    "B": {"score": 6, "rank": 3, "note": "Fits and legal but no upper press or pull."},
+    "C": {"score": 8, "rank": 1, "note": "Balanced, legal loads, honest round with real variety."},
+    "D": {"score": 7, "rank": 2, "note": "Complete balance but six small-rep movements read listy."}
+  },
+  "14": {
+    "A": {"score": 8, "rank": 1, "note": "Classic balanced quartet, honest round, sound 24 kg load."},
+    "B": {"score": 7, "rank": 2, "note": "Solid, but 12 pull-ups every round is steep for 20 minutes."},
+    "C": {"score": 6, "rank": 3, "note": "Sprint-pace note contradicts a 20-minute AMRAP."},
+    "D": {"score": 5, "rank": 4, "note": "40-swing set is lopsided; grip dies by round two."}
+  },
+  "15": {
+    "A": {"score": 4, "rank": 3, "note": "Two lunge types, near 5-minute round, all lower body."},
+    "B": {"score": 0, "rank": 4, "note": "Failed generation."},
+    "C": {"score": 4, "rank": 2, "note": "Two dumbbell loads; 20 kg is off the dumbbell set."},
+    "D": {"score": 6, "rank": 1, "note": "Best here despite spurious tags and burpee-only upper work."}
+  },
+  "16": {
+    "A": {"score": 7, "rank": 2, "note": "Sound round; adjacent lunge and wall ball repeat squat pattern."},
+    "B": {"score": 8, "rank": 1, "note": "Clean four-movement round using all equipment honestly."},
+    "C": {"score": 6, "rank": 3, "note": "18 heavy deadlifts every round; 150 m row nonstandard."},
+    "D": {"score": 4, "rank": 4, "note": "Adjacent deadlift and SDHP, 60 kg SDHP, 5.5-minute round."}
+  },
+  "17": {
+    "A": {"score": 5, "rank": 3, "note": "Six Turkish get-ups balloon the round past six minutes."},
+    "B": {"score": 4, "rank": 4, "note": "Seven movements, 6-minute round, hinge pattern everywhere."},
+    "C": {"score": 8, "rank": 1, "note": "Tight two-minute triplet, one load, perfect pattern spread."},
+    "D": {"score": 6, "rank": 2, "note": "Good triplet but get-ups push the round past four minutes."}
+  },
+  "18": {
+    "A": {"score": 4, "rank": 3, "note": "Bear Crawl as reps breaks the distance rule; round overlong."},
+    "B": {"score": 6, "rank": 2, "note": "Great variety but unloaded Sandbag Carry and slightly long round."},
+    "C": {"score": 8, "rank": 1, "note": "Balanced, legal loads, honest round; both implements well used."},
+    "D": {"score": 3, "rank": 4, "note": "'Bodyweight Squat' off-vocabulary plus thruster/push-press family repeat."}
+  },
+  "19": {
+    "A": {"score": 5, "rank": 3, "note": "192 reps with 48 burpees overshoots 8 minutes badly."},
+    "B": {"score": 1, "rank": 4, "note": "720 reps in eight minutes is fantasy volume."},
+    "C": {"score": 6, "rank": 2, "note": "Cap says 9, not target+3; no upper-body movement."},
+    "D": {"score": 8, "rank": 1, "note": "Honest descending single pass, right budget, balanced."}
+  },
+  "20": {
+    "A": {"score": 6, "rank": 2, "note": "Reasonable volume but power clean beside deadlift doubles hinge."},
+    "B": {"score": 1, "rank": 4, "note": "Four press-family lifts at illegal 60 kg, absurd volume."},
+    "C": {"score": 7, "rank": 1, "note": "Legal loads, clean pattern spread, honest 10-minute finish."},
+    "D": {"score": 4, "rank": 3, "note": "Thruster beside push press repeats the family; 90 loaded lunges."}
+  }
+}

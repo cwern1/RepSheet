@@ -1,0 +1,302 @@
+{
+ "1": {
+  "A": "@cf/openai/gpt-oss-120b",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/google/gemma-4-26b-a4b-it",
+  "D": "@cf/qwen/qwen3-30b-a3b-fp8"
+ },
+ "2": {
+  "A": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "B": "@cf/google/gemma-4-26b-a4b-it",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+ },
+ "3": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/google/gemma-4-26b-a4b-it",
+  "D": "@cf/qwen/qwen3-30b-a3b-fp8"
+ },
+ "4": {
+  "A": "@cf/google/gemma-4-26b-a4b-it",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/qwen/qwen3-30b-a3b-fp8"
+ },
+ "5": {
+  "A": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/google/gemma-4-26b-a4b-it",
+  "D": "@cf/openai/gpt-oss-120b"
+ },
+ "6": {
+  "A": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/google/gemma-4-26b-a4b-it",
+  "D": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+ },
+ "7": {
+  "A": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/google/gemma-4-26b-a4b-it"
+ },
+ "8": {
+  "A": "@cf/google/gemma-4-26b-a4b-it",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/qwen/qwen3-30b-a3b-fp8"
+ },
+ "9": {
+  "A": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "B": "@cf/google/gemma-4-26b-a4b-it",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/openai/gpt-oss-120b"
+ },
+ "10": {
+  "A": "@cf/openai/gpt-oss-120b",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/google/gemma-4-26b-a4b-it",
+  "D": "@cf/qwen/qwen3-30b-a3b-fp8"
+ },
+ "11": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/google/gemma-4-26b-a4b-it",
+  "D": "@cf/qwen/qwen3-30b-a3b-fp8"
+ },
+ "12": {
+  "A": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/google/gemma-4-26b-a4b-it"
+ },
+ "13": {
+  "A": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "B": "@cf/google/gemma-4-26b-a4b-it",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/openai/gpt-oss-120b"
+ },
+ "14": {
+  "A": "@cf/openai/gpt-oss-120b",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/google/gemma-4-26b-a4b-it",
+  "D": "@cf/qwen/qwen3-30b-a3b-fp8"
+ },
+ "15": {
+  "A": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "B": "@cf/google/gemma-4-26b-a4b-it",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+ },
+ "16": {
+  "A": "@cf/openai/gpt-oss-120b",
+  "B": "@cf/google/gemma-4-26b-a4b-it",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/qwen/qwen3-30b-a3b-fp8"
+ },
+ "17": {
+  "A": "@cf/openai/gpt-oss-120b",
+  "B": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/google/gemma-4-26b-a4b-it"
+ },
+ "18": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/google/gemma-4-26b-a4b-it",
+  "D": "@cf/qwen/qwen3-30b-a3b-fp8"
+ },
+ "19": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "C": "@cf/google/gemma-4-26b-a4b-it",
+  "D": "@cf/openai/gpt-oss-120b"
+ },
+ "20": {
+  "A": "@cf/google/gemma-4-26b-a4b-it",
+  "B": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+ },
+ "21": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/google/gemma-4-26b-a4b-it",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/qwen/qwen3-30b-a3b-fp8"
+ },
+ "22": {
+  "A": "@cf/openai/gpt-oss-120b",
+  "B": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/google/gemma-4-26b-a4b-it"
+ },
+ "23": {
+  "A": "@cf/google/gemma-4-26b-a4b-it",
+  "B": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/openai/gpt-oss-120b"
+ },
+ "24": {
+  "A": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/google/gemma-4-26b-a4b-it",
+  "D": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+ },
+ "25": {
+  "A": "@cf/google/gemma-4-26b-a4b-it",
+  "B": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+ },
+ "26": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/google/gemma-4-26b-a4b-it",
+  "C": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "D": "@cf/openai/gpt-oss-120b"
+ },
+ "27": {
+  "A": "@cf/openai/gpt-oss-120b",
+  "B": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/google/gemma-4-26b-a4b-it"
+ },
+ "28": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/google/gemma-4-26b-a4b-it"
+ },
+ "29": {
+  "A": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "B": "@cf/google/gemma-4-26b-a4b-it",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/openai/gpt-oss-120b"
+ },
+ "30": {
+  "A": "@cf/google/gemma-4-26b-a4b-it",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/qwen/qwen3-30b-a3b-fp8"
+ },
+ "31": {
+  "A": "@cf/openai/gpt-oss-120b",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/google/gemma-4-26b-a4b-it",
+  "D": "@cf/qwen/qwen3-30b-a3b-fp8"
+ },
+ "32": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "D": "@cf/google/gemma-4-26b-a4b-it"
+ },
+ "33": {
+  "A": "@cf/google/gemma-4-26b-a4b-it",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/qwen/qwen3-30b-a3b-fp8"
+ },
+ "34": {
+  "A": "@cf/google/gemma-4-26b-a4b-it",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "D": "@cf/openai/gpt-oss-120b"
+ },
+ "35": {
+  "A": "@cf/openai/gpt-oss-120b",
+  "B": "@cf/google/gemma-4-26b-a4b-it",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/qwen/qwen3-30b-a3b-fp8"
+ },
+ "36": {
+  "A": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/google/gemma-4-26b-a4b-it"
+ },
+ "37": {
+  "A": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "B": "@cf/google/gemma-4-26b-a4b-it",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+ },
+ "38": {
+  "A": "@cf/google/gemma-4-26b-a4b-it",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/qwen/qwen3-30b-a3b-fp8"
+ },
+ "39": {
+  "A": "@cf/google/gemma-4-26b-a4b-it",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/qwen/qwen3-30b-a3b-fp8"
+ },
+ "40": {
+  "A": "@cf/openai/gpt-oss-120b",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "D": "@cf/google/gemma-4-26b-a4b-it"
+ },
+ "41": {
+  "A": "@cf/google/gemma-4-26b-a4b-it",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "D": "@cf/openai/gpt-oss-120b"
+ },
+ "42": {
+  "A": "@cf/google/gemma-4-26b-a4b-it",
+  "B": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/openai/gpt-oss-120b"
+ },
+ "43": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "D": "@cf/google/gemma-4-26b-a4b-it"
+ },
+ "44": {
+  "A": "@cf/google/gemma-4-26b-a4b-it",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/qwen/qwen3-30b-a3b-fp8"
+ },
+ "45": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "C": "@cf/google/gemma-4-26b-a4b-it",
+  "D": "@cf/openai/gpt-oss-120b"
+ },
+ "46": {
+  "A": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "B": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "C": "@cf/google/gemma-4-26b-a4b-it",
+  "D": "@cf/openai/gpt-oss-120b"
+ },
+ "47": {
+  "A": "@cf/google/gemma-4-26b-a4b-it",
+  "B": "@cf/openai/gpt-oss-120b",
+  "C": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "D": "@cf/qwen/qwen3-30b-a3b-fp8"
+ },
+ "48": {
+  "A": "@cf/google/gemma-4-26b-a4b-it",
+  "B": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+ },
+ "49": {
+  "A": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/openai/gpt-oss-120b",
+  "D": "@cf/google/gemma-4-26b-a4b-it"
+ },
+ "50": {
+  "A": "@cf/openai/gpt-oss-120b",
+  "B": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "C": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "D": "@cf/google/gemma-4-26b-a4b-it"
+ }
+}
