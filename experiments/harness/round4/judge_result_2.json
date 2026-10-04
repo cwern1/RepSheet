@@ -1,0 +1,52 @@
+{
+ "11": {
+  "A": {"score": 7, "rank": 1, "note": "Tight triplet, ~1:25 rounds, breathing named as limiter; leg-biased but fine for 5 min"},
+  "B": {"score": 6, "rank": 3, "note": "Four stations ~2:20/round, only two rounds in 5 min; no notes"},
+  "C": {"score": 7, "rank": 2, "note": "Same triplet as A; notes marginally less specific about the limiter"}
+ },
+ "12": {
+  "A": {"score": 8, "rank": 1, "note": "Classic DU/lunge/burpee triplet, ~2 min rounds, honest pacing notes"},
+  "B": {"score": 5, "rank": 3, "note": "All lower body: lunge, broad jump, double-under; no upper work at all"},
+  "C": {"score": 6, "rank": 2, "note": "Five stations, heavy jumping volume, scattered stimulus, no notes"}
+ },
+ "13": {
+  "A": {"score": 6, "rank": 3, "note": "Front squat plus push press is a split thruster; 20 sit-ups filler; no notes"},
+  "B": {"score": 7, "rank": 2, "note": "Thruster/burpee engine with sit-up breather; ~80 thrusters at 35 kg is stout"},
+  "C": {"score": 7, "rank": 1, "note": "Same triplet, 30 kg more sustainable over ~10 rounds; concrete pacing note"}
+ },
+ "14": {
+  "A": {"score": 6, "rank": 2, "note": "Cindy-like grip triplet; 10 pull-ups/round harsh; 'steady sprint' note contradictory"},
+  "B": {"score": 5, "rank": 3, "note": "Pull-ups plus toes-to-bar plus swings: redundant hanging, grip dies; no notes"},
+  "C": {"score": 7, "rank": 1, "note": "Clean triplet, ~1:30 rounds, sensible break strategy; 10 swings slightly short"}
+ },
+ "15": {
+  "A": {"score": 7, "rank": 1, "note": "Burpee box jump-over makes a real triplet; thruster plus air squat redundant"},
+  "B": {"score": 6, "rank": 2, "note": "Four stations, 20 air squats filler; 'keep dumbbells light' note moot, step-over tip useful"},
+  "C": {"score": 5, "rank": 3, "note": "Same four-station shape as B without notes; thruster/air squat redundancy"}
+ },
+ "16": {
+  "A": {"score": 6, "rank": 3, "note": "Solid grinder but sit-ups token and no notes for a 30-minute effort"},
+  "B": {"score": 7, "rank": 2, "note": "Well balanced hinge/squat/pull/push, ~2:40 rounds; notes adequate"},
+  "C": {"score": 8, "rank": 1, "note": "Classic 30-min grinder; row pace and round target given, clear stimulus"}
+ },
+ "17": {
+  "A": {"score": 5, "rank": 3, "note": "Turkish get-ups in an AMRAP: slow, technical, ~4 min rounds, muddy stimulus"},
+  "B": {"score": 6, "rank": 1, "note": "Balanced hinge/squat/press/lunge, ~2 min rounds; push press sides unclear, no notes"},
+  "C": {"score": 5, "rank": 2, "note": "Same get-up anchor as A; clearer 3/side notation but still poor metcon fit"}
+ },
+ "18": {
+  "A": {"score": 6, "rank": 1, "note": "Has an upper push, consistent 22.5 kg dumbbells; clean/deadlift overlap, no notes"},
+  "B": {"score": 6, "rank": 3, "note": "Three floor pulls plus sit-ups, 2x15 carry token; grip note fine, 'bell' stray"},
+  "C": {"score": 6, "rank": 2, "note": "Same as B; note adds round target and shake-out tip"}
+ },
+ "19": {
+  "A": {"score": 7, "rank": 1, "note": "Simple triplet, ~7 min for 8 target, cap fits; 'never stand still' apt"},
+  "B": {"score": 6, "rank": 3, "note": "Lunge plus air squat redundant, odd 10 unilateral reps, no notes"},
+  "C": {"score": 7, "rank": 2, "note": "Same as A; advising breaks on 10 goblet squats at 20 kg is off"}
+ },
+ "20": {
+  "A": {"score": 5, "rank": 1, "note": "Press/pull/squat complex flows well; finishes ~8 min against 12 target"},
+  "B": {"score": 4, "rank": 3, "note": "Best timing, but bar-facing burpees are bodyweight work the athlete did not list"},
+  "C": {"score": 5, "rank": 2, "note": "Thruster and front-rack lunge overlap, 40 kg deadlift token; ~9 min, no notes"}
+ }
+}

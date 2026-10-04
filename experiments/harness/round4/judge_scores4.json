@@ -1,0 +1,852 @@
+{
+ "1": {
+  "sonnet-low-v1": {
+   "score": 6,
+   "rank": 2,
+   "note": "EMOM 6 for 7 requested; sit-ups filler; no notes but balanced stations."
+  },
+  "sonnet-low-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "Clean burpee/squat couplet, times fit the minute, useful pacing note."
+  },
+  "sonnet-medium-v2": {
+   "score": 5,
+   "rank": 3,
+   "note": "Burpee plus bear crawl both shoulder-loaded; one-sided for bodyweight EMOM."
+  }
+ },
+ "2": {
+  "sonnet-low-v2": {
+   "score": 7,
+   "rank": 2,
+   "note": "Honest 28-minute rotation, cal targets about 40 s, accurate note."
+  },
+  "sonnet-medium-v2": {
+   "score": 8,
+   "rank": 1,
+   "note": "Rest station lands exactly 30 min and allows harder machine efforts."
+  },
+  "sonnet-low-v1": {
+   "score": 6,
+   "rank": 3,
+   "note": "Same as A but 10-cal row runs long and no notes."
+  }
+ },
+ "3": {
+  "sonnet-medium-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "Big honest 30-minute chipper; 75 bar-gymnastic reps heavy for amateur."
+  },
+  "sonnet-low-v1": {
+   "score": 3,
+   "rank": 3,
+   "note": "Finishes around 20 min; SDHP, sit-ups, 12 goblet squats are token stations."
+  },
+  "sonnet-low-v2": {
+   "score": 4,
+   "rank": 2,
+   "note": "Finishes around 20 min of a 30 cap; 30 air squats token."
+  }
+ },
+ "4": {
+  "sonnet-low-v1": {
+   "score": 5,
+   "rank": 3,
+   "note": "Five movements, snatch and devil press redundant, muddled stimulus, no notes."
+  },
+  "sonnet-medium-v2": {
+   "score": 6,
+   "rank": 2,
+   "note": "Classic triplet, but round is 2 min not 4; note misleads pacing."
+  },
+  "sonnet-low-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "Balanced four-movement round about 2:30-3:00; note roughly right."
+  }
+ },
+ "5": {
+  "sonnet-low-v1": {
+   "score": 5,
+   "rank": 3,
+   "note": "Five movements, two bar-gymnastics, finishes near 20 min, no notes."
+  },
+  "sonnet-low-v2": {
+   "score": 6,
+   "rank": 2,
+   "note": "Honest 25-28 min; 84 pull-ups and 112 loaded lunges brutal volume."
+  },
+  "sonnet-medium-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "Clean four-movement rounds, about 22-25 min; 90 kg deadlift heavy side."
+  }
+ },
+ "6": {
+  "sonnet-low-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "Seven items, elegant burpee box jump-over, 4-4.5 min rounds, good notes."
+  },
+  "sonnet-medium-v2": {
+   "score": 6,
+   "rank": 2,
+   "note": "Same workout split into seven stations; slightly cluttered, decent notes."
+  },
+  "sonnet-low-v1": {
+   "score": 6,
+   "rank": 3,
+   "note": "Seven items, more variety (step-ups, double-unders), but no notes."
+  }
+ },
+ "7": {
+  "sonnet-medium-v2": {
+   "score": 8,
+   "rank": 1,
+   "note": "Honest 13-15 min triplet, no overhead honoured, limiter named in note."
+  },
+  "sonnet-low-v2": {
+   "score": 7,
+   "rank": 2,
+   "note": "Near-identical triplet, honest timing, execution cues useful."
+  },
+  "sonnet-low-v1": {
+   "score": 4,
+   "rank": 3,
+   "note": "Finishes around 9-10 min; DB deadlift and lunges are token stations."
+  }
+ },
+ "8": {
+  "sonnet-low-v1": {
+   "score": 5,
+   "rank": 3,
+   "note": "Five movements, two bar-gymnastics, 24 kg KB deadlift token, no notes."
+  },
+  "sonnet-low-v2": {
+   "score": 6,
+   "rank": 2,
+   "note": "KB deadlift and clean redundant hinges; note honours no-overhead explicitly."
+  },
+  "sonnet-medium-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "Balanced pull/hinge/squat/burpee, round about 2 min, helpful pacing note."
+  }
+ },
+ "9": {
+  "sonnet-low-v1": {
+   "score": 5,
+   "rank": 3,
+   "note": "Work about 1:30 leaves slack; push-ups and sit-ups light; generic note."
+  },
+  "sonnet-medium-v2": {
+   "score": 6,
+   "rank": 2,
+   "note": "Work about 1:40 fits window; detailed note; 150 m run short."
+  },
+  "sonnet-low-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "Work fills the 2-minute window nicely; clear pacing guidance."
+  }
+ },
+ "10": {
+  "sonnet-low-v1": {
+   "score": 5,
+   "rank": 3,
+   "note": "DB deadlift redundant with swings and light; no notes."
+  },
+  "sonnet-low-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "Clean hinge-pull-burpee triplet, about 10 rounds, clear limiter."
+  },
+  "sonnet-medium-v2": {
+   "score": 6,
+   "rank": 2,
+   "note": "Devil press plus 12 burpees is redundant burpee volume; note fine."
+  }
+ },
+ "11": {
+  "sonnet-medium-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "Tight triplet, ~1:25 rounds, breathing named as limiter; leg-biased but fine for 5 min"
+  },
+  "sonnet-low-v1": {
+   "score": 6,
+   "rank": 3,
+   "note": "Four stations ~2:20/round, only two rounds in 5 min; no notes"
+  },
+  "sonnet-low-v2": {
+   "score": 7,
+   "rank": 2,
+   "note": "Same triplet as A; notes marginally less specific about the limiter"
+  }
+ },
+ "12": {
+  "sonnet-medium-v2": {
+   "score": 8,
+   "rank": 1,
+   "note": "Classic DU/lunge/burpee triplet, ~2 min rounds, honest pacing notes"
+  },
+  "sonnet-low-v2": {
+   "score": 5,
+   "rank": 3,
+   "note": "All lower body: lunge, broad jump, double-under; no upper work at all"
+  },
+  "sonnet-low-v1": {
+   "score": 6,
+   "rank": 2,
+   "note": "Five stations, heavy jumping volume, scattered stimulus, no notes"
+  }
+ },
+ "13": {
+  "sonnet-low-v1": {
+   "score": 6,
+   "rank": 3,
+   "note": "Front squat plus push press is a split thruster; 20 sit-ups filler; no notes"
+  },
+  "sonnet-low-v2": {
+   "score": 7,
+   "rank": 2,
+   "note": "Thruster/burpee engine with sit-up breather; ~80 thrusters at 35 kg is stout"
+  },
+  "sonnet-medium-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "Same triplet, 30 kg more sustainable over ~10 rounds; concrete pacing note"
+  }
+ },
+ "14": {
+  "sonnet-medium-v2": {
+   "score": 6,
+   "rank": 2,
+   "note": "Cindy-like grip triplet; 10 pull-ups/round harsh; 'steady sprint' note contradictory"
+  },
+  "sonnet-low-v1": {
+   "score": 5,
+   "rank": 3,
+   "note": "Pull-ups plus toes-to-bar plus swings: redundant hanging, grip dies; no notes"
+  },
+  "sonnet-low-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "Clean triplet, ~1:30 rounds, sensible break strategy; 10 swings slightly short"
+  }
+ },
+ "15": {
+  "sonnet-low-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "Burpee box jump-over makes a real triplet; thruster plus air squat redundant"
+  },
+  "sonnet-medium-v2": {
+   "score": 6,
+   "rank": 2,
+   "note": "Four stations, 20 air squats filler; 'keep dumbbells light' note moot, step-over tip useful"
+  },
+  "sonnet-low-v1": {
+   "score": 5,
+   "rank": 3,
+   "note": "Same four-station shape as B without notes; thruster/air squat redundancy"
+  }
+ },
+ "16": {
+  "sonnet-low-v1": {
+   "score": 6,
+   "rank": 3,
+   "note": "Solid grinder but sit-ups token and no notes for a 30-minute effort"
+  },
+  "sonnet-medium-v2": {
+   "score": 7,
+   "rank": 2,
+   "note": "Well balanced hinge/squat/pull/push, ~2:40 rounds; notes adequate"
+  },
+  "sonnet-low-v2": {
+   "score": 8,
+   "rank": 1,
+   "note": "Classic 30-min grinder; row pace and round target given, clear stimulus"
+  }
+ },
+ "17": {
+  "sonnet-low-v2": {
+   "score": 5,
+   "rank": 3,
+   "note": "Turkish get-ups in an AMRAP: slow, technical, ~4 min rounds, muddy stimulus"
+  },
+  "sonnet-low-v1": {
+   "score": 6,
+   "rank": 1,
+   "note": "Balanced hinge/squat/press/lunge, ~2 min rounds; push press sides unclear, no notes"
+  },
+  "sonnet-medium-v2": {
+   "score": 5,
+   "rank": 2,
+   "note": "Same get-up anchor as A; clearer 3/side notation but still poor metcon fit"
+  }
+ },
+ "18": {
+  "sonnet-low-v1": {
+   "score": 6,
+   "rank": 1,
+   "note": "Has an upper push, consistent 22.5 kg dumbbells; clean/deadlift overlap, no notes"
+  },
+  "sonnet-low-v2": {
+   "score": 6,
+   "rank": 3,
+   "note": "Three floor pulls plus sit-ups, 2x15 carry token; grip note fine, 'bell' stray"
+  },
+  "sonnet-medium-v2": {
+   "score": 6,
+   "rank": 2,
+   "note": "Same as B; note adds round target and shake-out tip"
+  }
+ },
+ "19": {
+  "sonnet-medium-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "Simple triplet, ~7 min for 8 target, cap fits; 'never stand still' apt"
+  },
+  "sonnet-low-v1": {
+   "score": 6,
+   "rank": 3,
+   "note": "Lunge plus air squat redundant, odd 10 unilateral reps, no notes"
+  },
+  "sonnet-low-v2": {
+   "score": 7,
+   "rank": 2,
+   "note": "Same as A; advising breaks on 10 goblet squats at 20 kg is off"
+  }
+ },
+ "20": {
+  "sonnet-medium-v2": {
+   "score": 5,
+   "rank": 1,
+   "note": "Press/pull/squat complex flows well; finishes ~8 min against 12 target"
+  },
+  "sonnet-low-v2": {
+   "score": 4,
+   "rank": 3,
+   "note": "Best timing, but bar-facing burpees are bodyweight work the athlete did not list"
+  },
+  "sonnet-low-v1": {
+   "score": 5,
+   "rank": 2,
+   "note": "Thruster and front-rack lunge overlap, 40 kg deadlift token; ~9 min, no notes"
+  }
+ },
+ "21": {
+  "sonnet-medium-v2": {
+   "score": 6,
+   "rank": 1,
+   "note": "~19 min, honest; good notes; grip stack of T2B plus carry is deliberate."
+  },
+  "sonnet-low-v1": {
+   "score": 4,
+   "rank": 3,
+   "note": "~16 min, undershoots; sit-ups and 50 m carry token; C2B steep; no notes."
+  },
+  "sonnet-low-v2": {
+   "score": 5,
+   "rank": 2,
+   "note": "~19 min honest; 60 T2B heavy for amateur; air squats token after thrusters."
+  }
+ },
+ "22": {
+  "sonnet-medium-v2": {
+   "score": 5,
+   "rank": 3,
+   "note": "~30 min honest, but 150 swings at 24 kg plus 90 DL: excessive hinge volume."
+  },
+  "sonnet-low-v2": {
+   "score": 6,
+   "rank": 1,
+   "note": "~27 min, classic run/hinge grind, sane volume, useful grip/hamstring note."
+  },
+  "sonnet-low-v1": {
+   "score": 6,
+   "rank": 2,
+   "note": "~27 min, best balance (hinge, squat, push); no notes; limiter less clear."
+  }
+ },
+ "23": {
+  "sonnet-low-v1": {
+   "score": 3,
+   "rank": 3,
+   "note": "~27 min for 40 target; eight-movement grab bag, token air squats, no notes."
+  },
+  "sonnet-low-v2": {
+   "score": 4,
+   "rank": 2,
+   "note": "~27 min for 40 target; cap 52 absurd; pull-up plus ring row redundant."
+  },
+  "sonnet-medium-v2": {
+   "score": 6,
+   "rank": 1,
+   "note": "~39 min, honest; 60 burpee pull-ups is a grind but coherent; good notes."
+  }
+ },
+ "24": {
+  "sonnet-low-v2": {
+   "score": 6,
+   "rank": 1,
+   "note": "~9 min honest; jump-heavy but coherent plyometric stimulus; helpful notes."
+  },
+  "sonnet-medium-v2": {
+   "score": 5,
+   "rank": 3,
+   "note": "~9 min; sit-ups token, no push or burpee; notes partly odd."
+  },
+  "sonnet-low-v1": {
+   "score": 5,
+   "rank": 2,
+   "note": "~10 min balanced but bland four-station circuit, no limiter, no notes."
+  }
+ },
+ "25": {
+  "sonnet-medium-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "~14 min, classic row/wall-ball/burpee triplet, good pacing notes."
+  },
+  "sonnet-low-v2": {
+   "score": 6,
+   "rank": 2,
+   "note": "~11 min, a bit short for 15; same solid triplet, decent notes."
+  },
+  "sonnet-low-v1": {
+   "score": 5,
+   "rank": 3,
+   "note": "~13 min; wall-ball sit-up is filler, 6 kg light; no notes."
+  }
+ },
+ "26": {
+  "sonnet-low-v1": {
+   "score": 5,
+   "rank": 3,
+   "note": "18 swings/10 burpees nears 50 s per minute late; no notes."
+  },
+  "sonnet-low-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "Sustainable 30-40 s minutes; clear odd/even and timing note."
+  },
+  "sonnet-medium-v2": {
+   "score": 7,
+   "rank": 2,
+   "note": "Identical to B; near-identical note; coin-flip rank."
+  }
+ },
+ "27": {
+  "sonnet-medium-v2": {
+   "score": 6,
+   "rank": 2,
+   "note": "Comfortable minutes, well balanced; note slightly garbled on grip."
+  },
+  "sonnet-low-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "Same triplet, 10 burpees fits better; clear 15 s-spare target."
+  },
+  "sonnet-low-v1": {
+   "score": 5,
+   "rank": 3,
+   "note": "No conditioning station; snatch and deadlift both hinge; 22.5 kg stiff; no notes."
+  }
+ },
+ "28": {
+  "sonnet-low-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "Four honest 35-50 s stations; burpee minute flagged correctly."
+  },
+  "sonnet-medium-v2": {
+   "score": 6,
+   "rank": 2,
+   "note": "Rest station cuts work to 12 min; combo stations good; notes thin."
+  },
+  "sonnet-low-v1": {
+   "score": 5,
+   "rank": 3,
+   "note": "12 burpees after row/snatch/box runs 55 s+; likely fails late; no notes."
+  }
+ },
+ "29": {
+  "sonnet-low-v1": {
+   "score": 5,
+   "rank": 2,
+   "note": "Feasible and sustainable; sit-ups token fifth station; no notes."
+  },
+  "sonnet-medium-v2": {
+   "score": 5,
+   "rank": 3,
+   "note": "10 pull-ups and 12 cal both near 55 s; note's 10-15 s spare unrealistic."
+  },
+  "sonnet-low-v2": {
+   "score": 6,
+   "rank": 1,
+   "note": "Hinge-heavy but doable; burpee pull-ups tight; honest pacing trap note."
+  }
+ },
+ "30": {
+  "sonnet-low-v1": {
+   "score": 5,
+   "rank": 3,
+   "note": "100 m run is token (~20 s); minutes uneven; no notes."
+  },
+  "sonnet-medium-v2": {
+   "score": 6,
+   "rank": 1,
+   "note": "200 m gives real cardio minute; even 40-50 s stations; sit-up focus odd."
+  },
+  "sonnet-low-v2": {
+   "score": 6,
+   "rank": 2,
+   "note": "Even minutes but 150 m is light; sit-up emphasis odd for stimulus."
+  }
+ },
+ "31": {
+  "sonnet-medium-v2": {
+   "score": 7,
+   "rank": 2,
+   "note": "Solid swing/snatch EMOM, 24 kg honest; rest estimate in note is off."
+  },
+  "sonnet-low-v1": {
+   "score": 6,
+   "rank": 3,
+   "note": "Same pairing; note merely restates, no pacing help."
+  },
+  "sonnet-low-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "Same pairing with accurate ~35 s pacing note and arm-switch options."
+  }
+ },
+ "32": {
+  "sonnet-low-v2": {
+   "score": 5,
+   "rank": 3,
+   "note": "Front squat plus air squat is redundant; all-legs, no upper body."
+  },
+  "sonnet-medium-v2": {
+   "score": 6,
+   "rank": 2,
+   "note": "Thruster adds a press, but air squat is a token leg station."
+  },
+  "sonnet-low-v1": {
+   "score": 7,
+   "rank": 1,
+   "note": "Balanced squat/bike/push/hinge rotation dividing 24; no notes."
+  }
+ },
+ "33": {
+  "sonnet-low-v1": {
+   "score": 4,
+   "rank": 2,
+   "note": "About 7-8 min of work for 15 min cap; no notes."
+  },
+  "sonnet-medium-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "Roughly 12-13 min, fills the cap; descending list, useful notes."
+  },
+  "sonnet-low-v2": {
+   "score": 3,
+   "rank": 3,
+   "note": "About 8 min of work; reps not descending (16 then 20)."
+  }
+ },
+ "34": {
+  "sonnet-low-v1": {
+   "score": 4,
+   "rank": 2,
+   "note": "Clean list but roughly 8 min for a 20 min cap; no notes."
+  },
+  "sonnet-medium-v2": {
+   "score": 6,
+   "rank": 1,
+   "note": "Fills ~18 min; chin-up duplicates pull-up, order not descending."
+  },
+  "sonnet-low-v2": {
+   "score": 3,
+   "rank": 3,
+   "note": "Four pull-up-bar movements, ~12 min of 20; C2B after 30 pull-ups harsh."
+  }
+ },
+ "35": {
+  "sonnet-low-v1": {
+   "score": 4,
+   "rank": 2,
+   "note": "About 12 min for 25; 6 kg ball light, air squat redundant, no notes."
+  },
+  "sonnet-medium-v2": {
+   "score": 8,
+   "rank": 1,
+   "note": "Genuine 25 min grind, big row opener, one barbell load, good notes."
+  },
+  "sonnet-low-v2": {
+   "score": 3,
+   "rank": 3,
+   "note": "Cap says 30 not 25; ~10 min of work."
+  }
+ },
+ "36": {
+  "sonnet-medium-v2": {
+   "score": 6,
+   "rank": 2,
+   "note": "~25 min, somewhat short; three pulling movements; good pacing notes."
+  },
+  "sonnet-low-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "~28 min, closest to cap; thruster adds squat; same pulling redundancy."
+  },
+  "sonnet-low-v1": {
+   "score": 5,
+   "rank": 3,
+   "note": "~25 min, five 50-rep blocks, three pulls, no notes."
+  }
+ },
+ "37": {
+  "sonnet-low-v2": {
+   "score": 3,
+   "rank": 3,
+   "note": "Only ~15 min of work for a 45 min cap, despite good notes."
+  },
+  "sonnet-medium-v2": {
+   "score": 6,
+   "rank": 1,
+   "note": "Fills 45 min; 120 deadlifts at 70 kg plus 150 swings is hinge overload."
+  },
+  "sonnet-low-v1": {
+   "score": 4,
+   "rank": 2,
+   "note": "~25 min for 45; descending list but no notes."
+  }
+ },
+ "38": {
+  "sonnet-low-v1": {
+   "score": 4,
+   "rank": 3,
+   "note": "~10 min for 20; sensible 20 GHD, but no notes."
+  },
+  "sonnet-medium-v2": {
+   "score": 6,
+   "rank": 1,
+   "note": "~15 min, closest to cap; 50 GHD sit-ups aggressive, 20 kg bag light."
+  },
+  "sonnet-low-v2": {
+   "score": 5,
+   "rank": 2,
+   "note": "~12 min, bit short; 50 GHD opener aggressive; notes helpful."
+  }
+ },
+ "39": {
+  "sonnet-low-v1": {
+   "score": 5,
+   "rank": 3,
+   "note": "Spans 12 min but unclear rounds per window; note restates format."
+  },
+  "sonnet-low-v2": {
+   "score": 6,
+   "rank": 2,
+   "note": "Clear sprint triplet; 20 kg KB deadlift is a token station."
+  },
+  "sonnet-medium-v2": {
+   "score": 6,
+   "rank": 1,
+   "note": "Same triplet at honest 24 kg; clear pacing; deadlift still token."
+  }
+ },
+ "40": {
+  "sonnet-low-v2": {
+   "score": 8,
+   "rank": 1,
+   "note": "Classic row/thruster/burpee, ~2:45 per 3 min window checks out."
+  },
+  "sonnet-medium-v2": {
+   "score": 6,
+   "rank": 2,
+   "note": "Two rounds take ~3:00 not 3:40; push press at 30 kg light."
+  },
+  "sonnet-low-v1": {
+   "score": 5,
+   "rank": 3,
+   "note": "One pass ~2:30 of 4 min, structure vague; note restates format."
+  }
+ },
+ "41": {
+  "sonnet-low-v1": {
+   "score": 5,
+   "rank": 3,
+   "note": "One ~1:45 round leaves 3-min window half idle; notes restate format."
+  },
+  "sonnet-low-v2": {
+   "score": 6,
+   "rank": 2,
+   "note": "Math roughly holds; 2x17.5 deadlift is a token load; decent notes."
+  },
+  "sonnet-medium-v2": {
+   "score": 8,
+   "rank": 1,
+   "note": "Honest ~2:30 round in 3 min; snatch beats deadlift; clear engine stimulus."
+  }
+ },
+ "42": {
+  "sonnet-low-v1": {
+   "score": 6,
+   "rank": 3,
+   "note": "8 pull-ups x repeats is heavy for amateur; notes mostly restate format."
+  },
+  "sonnet-medium-v2": {
+   "score": 7,
+   "rank": 2,
+   "note": "Round nearer 2:25 than 1:50, but sound structure; good pull-up breaking advice."
+  },
+  "sonnet-low-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "Same workout as B; slightly optimistic round time; cleanest coaching note."
+  }
+ },
+ "43": {
+  "sonnet-low-v2": {
+   "score": 5,
+   "rank": 2,
+   "note": "Claims 3 rounds with a 1-min bike: impossible. Air squat redundant after wall balls."
+  },
+  "sonnet-medium-v2": {
+   "score": 6,
+   "rank": 1,
+   "note": "Pacing math plausible; still a redundant air squat station; light but fine."
+  },
+  "sonnet-low-v1": {
+   "score": 5,
+   "rank": 3,
+   "note": "Four stations, sit-ups token; unclear whether to repeat; note restates format."
+  }
+ },
+ "44": {
+  "sonnet-low-v1": {
+   "score": 4,
+   "rank": 3,
+   "note": "Devil press loads a deep bend from the floor; two barbell pulls; no notes."
+  },
+  "sonnet-low-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "Hinge-only, knee-friendly triplet; note addresses the knee and burpee pacing."
+  },
+  "sonnet-medium-v2": {
+   "score": 7,
+   "rank": 2,
+   "note": "Identical to B; good hinge-not-squat cue; marginally less specific pacing."
+  }
+ },
+ "45": {
+  "sonnet-medium-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "Balanced rounds, volume lands near 12 min at recovery pace; helpful note."
+  },
+  "sonnet-low-v1": {
+   "score": 5,
+   "rank": 3,
+   "note": "Heavier bell, ~8 min of work, no pacing note despite recovery request."
+  },
+  "sonnet-low-v2": {
+   "score": 6,
+   "rank": 2,
+   "note": "Good recovery note, but lighter volume runs short of 12 min."
+  }
+ },
+ "46": {
+  "sonnet-medium-v2": {
+   "score": 6,
+   "rank": 2,
+   "note": "Devil press + burpee + snatch overlap heavily; minutes feasible; useful notes."
+  },
+  "sonnet-low-v1": {
+   "score": 5,
+   "rank": 3,
+   "note": "Lunges add balance, but 6 devil presses at 2x15 fills the minute; no notes."
+  },
+  "sonnet-low-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "Realistic minute density with rest target; same redundancy as A; good notes."
+  }
+ },
+ "47": {
+  "sonnet-low-v1": {
+   "score": 4,
+   "rank": 3,
+   "note": "Roughly 12 min of work for a 25-min chipper; chin-up redundant; no notes."
+  },
+  "sonnet-low-v2": {
+   "score": 5,
+   "rank": 2,
+   "note": "About 17 min; air squat after goblet squat and chin-up redundant."
+  },
+  "sonnet-medium-v2": {
+   "score": 6,
+   "rank": 1,
+   "note": "Volume fits the cap, but 100 bar reps is brutal for an amateur."
+  }
+ },
+ "48": {
+  "sonnet-low-v2": {
+   "score": 6,
+   "rank": 2,
+   "note": "Repeat-the-round is clear; underestimates rounds; legs-heavy with one push."
+  },
+  "sonnet-low-v1": {
+   "score": 5,
+   "rank": 3,
+   "note": "One ~2-min round per 5-min window leaves most time idle; notes restate format."
+  },
+  "sonnet-medium-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "Explicit work/rest totals 18 min; honest round time; soft-landing cue fits request."
+  }
+ },
+ "49": {
+  "sonnet-medium-v2": {
+   "score": 5,
+   "rank": 1,
+   "note": "Honours avoid list; 16 kg deadlift is a token station; legs-heavy."
+  },
+  "sonnet-low-v2": {
+   "score": 4,
+   "rank": 2,
+   "note": "Hand-release push-up is a push-up variant: avoid list breached. Notes decent."
+  },
+  "sonnet-low-v1": {
+   "score": 4,
+   "rank": 3,
+   "note": "Same breach as B via hand-release push-up; no notes."
+  }
+ },
+ "50": {
+  "sonnet-low-v2": {
+   "score": 7,
+   "rank": 1,
+   "note": "Sensible T2B volume, good notes; work runs ~10 min, a bit under target."
+  },
+  "sonnet-medium-v2": {
+   "score": 6,
+   "rank": 2,
+   "note": "Closer to 15 min but 60 T2B is heavy for an amateur."
+  },
+  "sonnet-low-v1": {
+   "score": 6,
+   "rank": 3,
+   "note": "Push press adds balance and tighter cap, but no notes."
+  }
+ }
+}

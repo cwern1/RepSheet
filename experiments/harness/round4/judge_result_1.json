@@ -1,0 +1,52 @@
+{
+  "1": {
+    "A": {"score": 6, "rank": 2, "note": "EMOM 6 for 7 requested; sit-ups filler; no notes but balanced stations."},
+    "B": {"score": 7, "rank": 1, "note": "Clean burpee/squat couplet, times fit the minute, useful pacing note."},
+    "C": {"score": 5, "rank": 3, "note": "Burpee plus bear crawl both shoulder-loaded; one-sided for bodyweight EMOM."}
+  },
+  "2": {
+    "A": {"score": 7, "rank": 2, "note": "Honest 28-minute rotation, cal targets about 40 s, accurate note."},
+    "B": {"score": 8, "rank": 1, "note": "Rest station lands exactly 30 min and allows harder machine efforts."},
+    "C": {"score": 6, "rank": 3, "note": "Same as A but 10-cal row runs long and no notes."}
+  },
+  "3": {
+    "A": {"score": 7, "rank": 1, "note": "Big honest 30-minute chipper; 75 bar-gymnastic reps heavy for amateur."},
+    "B": {"score": 3, "rank": 3, "note": "Finishes around 20 min; SDHP, sit-ups, 12 goblet squats are token stations."},
+    "C": {"score": 4, "rank": 2, "note": "Finishes around 20 min of a 30 cap; 30 air squats token."}
+  },
+  "4": {
+    "A": {"score": 5, "rank": 3, "note": "Five movements, snatch and devil press redundant, muddled stimulus, no notes."},
+    "B": {"score": 6, "rank": 2, "note": "Classic triplet, but round is 2 min not 4; note misleads pacing."},
+    "C": {"score": 7, "rank": 1, "note": "Balanced four-movement round about 2:30-3:00; note roughly right."}
+  },
+  "5": {
+    "A": {"score": 5, "rank": 3, "note": "Five movements, two bar-gymnastics, finishes near 20 min, no notes."},
+    "B": {"score": 6, "rank": 2, "note": "Honest 25-28 min; 84 pull-ups and 112 loaded lunges brutal volume."},
+    "C": {"score": 7, "rank": 1, "note": "Clean four-movement rounds, about 22-25 min; 90 kg deadlift heavy side."}
+  },
+  "6": {
+    "A": {"score": 7, "rank": 1, "note": "Seven items, elegant burpee box jump-over, 4-4.5 min rounds, good notes."},
+    "B": {"score": 6, "rank": 2, "note": "Same workout split into seven stations; slightly cluttered, decent notes."},
+    "C": {"score": 6, "rank": 3, "note": "Seven items, more variety (step-ups, double-unders), but no notes."}
+  },
+  "7": {
+    "A": {"score": 8, "rank": 1, "note": "Honest 13-15 min triplet, no overhead honoured, limiter named in note."},
+    "B": {"score": 7, "rank": 2, "note": "Near-identical triplet, honest timing, execution cues useful."},
+    "C": {"score": 4, "rank": 3, "note": "Finishes around 9-10 min; DB deadlift and lunges are token stations."}
+  },
+  "8": {
+    "A": {"score": 5, "rank": 3, "note": "Five movements, two bar-gymnastics, 24 kg KB deadlift token, no notes."},
+    "B": {"score": 6, "rank": 2, "note": "KB deadlift and clean redundant hinges; note honours no-overhead explicitly."},
+    "C": {"score": 7, "rank": 1, "note": "Balanced pull/hinge/squat/burpee, round about 2 min, helpful pacing note."}
+  },
+  "9": {
+    "A": {"score": 5, "rank": 3, "note": "Work about 1:30 leaves slack; push-ups and sit-ups light; generic note."},
+    "B": {"score": 6, "rank": 2, "note": "Work about 1:40 fits window; detailed note; 150 m run short."},
+    "C": {"score": 7, "rank": 1, "note": "Work fills the 2-minute window nicely; clear pacing guidance."}
+  },
+  "10": {
+    "A": {"score": 5, "rank": 3, "note": "DB deadlift redundant with swings and light; no notes."},
+    "B": {"score": 7, "rank": 1, "note": "Clean hinge-pull-burpee triplet, about 10 rounds, clear limiter."},
+    "C": {"score": 6, "rank": 2, "note": "Devil press plus 12 burpees is redundant burpee volume; note fine."}
+  }
+}

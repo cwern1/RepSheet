@@ -1,0 +1,52 @@
+{
+  "21": {
+    "A": {"score": 6, "rank": 1, "note": "~19 min, honest; good notes; grip stack of T2B plus carry is deliberate."},
+    "B": {"score": 4, "rank": 3, "note": "~16 min, undershoots; sit-ups and 50 m carry token; C2B steep; no notes."},
+    "C": {"score": 5, "rank": 2, "note": "~19 min honest; 60 T2B heavy for amateur; air squats token after thrusters."}
+  },
+  "22": {
+    "A": {"score": 5, "rank": 3, "note": "~30 min honest, but 150 swings at 24 kg plus 90 DL: excessive hinge volume."},
+    "B": {"score": 6, "rank": 1, "note": "~27 min, classic run/hinge grind, sane volume, useful grip/hamstring note."},
+    "C": {"score": 6, "rank": 2, "note": "~27 min, best balance (hinge, squat, push); no notes; limiter less clear."}
+  },
+  "23": {
+    "A": {"score": 3, "rank": 3, "note": "~27 min for 40 target; eight-movement grab bag, token air squats, no notes."},
+    "B": {"score": 4, "rank": 2, "note": "~27 min for 40 target; cap 52 absurd; pull-up plus ring row redundant."},
+    "C": {"score": 6, "rank": 1, "note": "~39 min, honest; 60 burpee pull-ups is a grind but coherent; good notes."}
+  },
+  "24": {
+    "A": {"score": 6, "rank": 1, "note": "~9 min honest; jump-heavy but coherent plyometric stimulus; helpful notes."},
+    "B": {"score": 5, "rank": 3, "note": "~9 min; sit-ups token, no push or burpee; notes partly odd."},
+    "C": {"score": 5, "rank": 2, "note": "~10 min balanced but bland four-station circuit, no limiter, no notes."}
+  },
+  "25": {
+    "A": {"score": 7, "rank": 1, "note": "~14 min, classic row/wall-ball/burpee triplet, good pacing notes."},
+    "B": {"score": 6, "rank": 2, "note": "~11 min, a bit short for 15; same solid triplet, decent notes."},
+    "C": {"score": 5, "rank": 3, "note": "~13 min; wall-ball sit-up is filler, 6 kg light; no notes."}
+  },
+  "26": {
+    "A": {"score": 5, "rank": 3, "note": "18 swings/10 burpees nears 50 s per minute late; no notes."},
+    "B": {"score": 7, "rank": 1, "note": "Sustainable 30-40 s minutes; clear odd/even and timing note."},
+    "C": {"score": 7, "rank": 2, "note": "Identical to B; near-identical note; coin-flip rank."}
+  },
+  "27": {
+    "A": {"score": 6, "rank": 2, "note": "Comfortable minutes, well balanced; note slightly garbled on grip."},
+    "B": {"score": 7, "rank": 1, "note": "Same triplet, 10 burpees fits better; clear 15 s-spare target."},
+    "C": {"score": 5, "rank": 3, "note": "No conditioning station; snatch and deadlift both hinge; 22.5 kg stiff; no notes."}
+  },
+  "28": {
+    "A": {"score": 7, "rank": 1, "note": "Four honest 35-50 s stations; burpee minute flagged correctly."},
+    "B": {"score": 6, "rank": 2, "note": "Rest station cuts work to 12 min; combo stations good; notes thin."},
+    "C": {"score": 5, "rank": 3, "note": "12 burpees after row/snatch/box runs 55 s+; likely fails late; no notes."}
+  },
+  "29": {
+    "A": {"score": 5, "rank": 2, "note": "Feasible and sustainable; sit-ups token fifth station; no notes."},
+    "B": {"score": 5, "rank": 3, "note": "10 pull-ups and 12 cal both near 55 s; note's 10-15 s spare unrealistic."},
+    "C": {"score": 6, "rank": 1, "note": "Hinge-heavy but doable; burpee pull-ups tight; honest pacing trap note."}
+  },
+  "30": {
+    "A": {"score": 5, "rank": 3, "note": "100 m run is token (~20 s); minutes uneven; no notes."},
+    "B": {"score": 6, "rank": 1, "note": "200 m gives real cardio minute; even 40-50 s stations; sit-up focus odd."},
+    "C": {"score": 6, "rank": 2, "note": "Even minutes but 150 m is light; sit-up emphasis odd for stimulus."}
+  }
+}

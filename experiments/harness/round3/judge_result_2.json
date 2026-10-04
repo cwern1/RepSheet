@@ -1,0 +1,42 @@
+{
+  "11": {
+    "A": {"score": 7, "rank": 1, "note": "Balanced round ~3 min; clear push, lunge, jump, squat; clean format"},
+    "B": {"score": 6, "rank": 2, "note": "No dedicated upper movement; lunge reps missing /leg suffix"}
+  },
+  "12": {
+    "A": {"score": 7, "rank": 1, "note": "Tight ~2.5 min round, DU plus burpee, lunge, core; compliant"},
+    "B": {"score": 3, "rank": 2, "note": "Two lunge variants adjacent, squat pattern 3x, no upper body, Bear Crawl 50 m"}
+  },
+  "13": {
+    "A": {"score": 4, "rank": 2, "note": "No upper-body movement; lunge and front squat adjacent; ~4 min round"},
+    "B": {"score": 8, "rank": 1, "note": "Squat, press, burpee, core; one 40 kg load; honest ~3 min round"}
+  },
+  "14": {
+    "A": {"score": 8, "rank": 1, "note": "Classic hinge/pull/burpee/squat couplet-plus; ~3 min round, 24 kg sensible"},
+    "B": {"score": 7, "rank": 2, "note": "Varied but two bar pulls plus two core moves; round nearer 4 min"}
+  },
+  "15": {
+    "A": {"score": 7, "rank": 1, "note": "Balanced ~3 min round; 2x10 kg thrusters light but legal"},
+    "B": {"score": 5, "rank": 2, "note": "Squat/lunge pattern 3x, air squat adjacent to lunge; leg-only, ~4 min round"}
+  },
+  "16": {
+    "A": {"score": 6, "rank": 2, "note": "Wall ball and air squat adjacent squat pattern; otherwise solid 3 min round"},
+    "B": {"score": 7, "rank": 1, "note": "Row, hinge, wall ball, push-up covers body; ~2.5 min round"}
+  },
+  "17": {
+    "A": {"score": 7, "rank": 1, "note": "TGU within cap, 16 kg compromise load fits TGU; ~3 min round"},
+    "B": {"score": 3, "rank": 2, "note": "TGU 5/arm breaks 3/arm hard cap; 24 kg TGU x10 makes 6+ min round"}
+  },
+  "18": {
+    "A": {"score": 5, "rank": 2, "note": "Two carries adjacent, no squat; 24 DB snatches push round to ~4 min"},
+    "B": {"score": 7, "rank": 1, "note": "Carry, clean, push-up, snatch; grip-heavy, balanced, ~3.5 min round"}
+  },
+  "19": {
+    "A": {"score": 4, "rank": 2, "note": "220 reps, half grunt, ~13 min for 8 min target; beyond cap"},
+    "B": {"score": 7, "rank": 1, "note": "168 reps lands ~8 min; balanced; lunge missing /leg suffix"}
+  },
+  "20": {
+    "A": {"score": 6, "rank": 1, "note": "One 40 kg load honours overhead ceiling; ~8 min, a bit short"},
+    "B": {"score": 3, "rank": 2, "note": "Push press 60 kg breaks 40 kg overhead ceiling; likely over cap"}
+  }
+}

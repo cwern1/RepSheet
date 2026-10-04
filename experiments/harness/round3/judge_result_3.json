@@ -1,0 +1,42 @@
+{
+  "21": {
+    "A": {"score": 5, "rank": 2, "note": "Thruster + Push Press same family, adjacent presses; ~14 min, short of 20"},
+    "B": {"score": 7, "rank": 1, "note": "Clean balance, one DB load; ~15-16 min, slightly short but legal"}
+  },
+  "22": {
+    "A": {"score": 5, "rank": 2, "note": "Honest 5-rounder but ~21 min of 30; swing->HPC adjacent hinge, no press"},
+    "B": {"score": 6, "rank": 1, "note": "Fuller body coverage and budget; three hinges, swing->deadlift adjacent, snatch load heavy"}
+  },
+  "23": {
+    "A": {"score": 4, "rank": 2, "note": "3 rounds ~20 min for a 40-min target; patterns well spaced"},
+    "B": {"score": 6, "rank": 1, "note": "~28 min, closer to target; C2B->Ring Row and swing->HPC adjacent"}
+  },
+  "24": {
+    "A": {"score": 6, "rank": 2, "note": "Fits 10 min; lunge missing /leg, burpee only upper work"},
+    "B": {"score": 7, "rank": 1, "note": "Balanced with push-up and /leg lunges; ~11 min; 15 DU a small set"}
+  },
+  "25": {
+    "A": {"score": 7, "rank": 1, "note": "Clean triplet-plus, patterns distinct; ~12 min, low edge of window"},
+    "B": {"score": 6, "rank": 2, "note": "Time fits well but Wall Ball->Air Squat adjacent squat pattern"}
+  },
+  "26": {
+    "A": {"score": 7, "rank": 1, "note": "Varied five-station rotation, minutes fill; KB push press light and no /arm"},
+    "B": {"score": 6, "rank": 2, "note": "Honest swing/burpee alternation; 16 kg light, uses little of the vocabulary"}
+  },
+  "27": {
+    "A": {"score": 6, "rank": 1, "note": "Minutes fill; snatch->deadlift adjacent hinge, no squat, snatch lacks /arm"},
+    "B": {"score": 5, "rank": 2, "note": "20 kg dumbbell off the standard set; adjacent hinges; 8-rep minutes light"}
+  },
+  "28": {
+    "A": {"score": 0, "rank": 2, "note": "Generation failed"},
+    "B": {"score": 4, "rank": 1, "note": "12/leg front-rack lunge at 45 kg overflows minute and lunge load ceiling"}
+  },
+  "29": {
+    "A": {"score": 5, "rank": 2, "note": "75 m row and 12 air squats far too little per minute; adjacent hinges"},
+    "B": {"score": 7, "rank": 1, "note": "Every minute fills 35-45 s; swing->HPC adjacent hinge only flaw"}
+  },
+  "30": {
+    "A": {"score": 4, "rank": 2, "note": "No upper-body movement; 30 air squats overflow the minute"},
+    "B": {"score": 7, "rank": 1, "note": "Run/sit-up/burpee fills minutes and covers body; simple and sound"}
+  }
+}

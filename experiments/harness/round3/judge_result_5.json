@@ -1,0 +1,42 @@
+{
+  "41": {
+    "A": {"score": 6, "rank": 2, "note": "Tight 3-min fit, but 12 cal Ski breaks shared-window cap; 20 kg DB nonstandard"},
+    "B": {"score": 7, "rank": 1, "note": "Fuller body coverage, valid loads; slightly under 3/4 fill, notes restate rest"}
+  },
+  "42": {
+    "A": {"score": 4, "rank": 2, "note": "~285 s work overflows 4-min window; squat and lunge adjacent"},
+    "B": {"score": 7, "rank": 1, "note": "Fits window with margin, patterns spaced; a little underfilled"}
+  },
+  "43": {
+    "A": {"score": 7, "rank": 1, "note": "Honest 3-min fit, bike within 8 cal; wall ball and lunge adjacent"},
+    "B": {"score": 3, "rank": 2, "note": "25 cal Assault Bike alone exceeds window; squat pair adjacent, no pull"}
+  },
+  "44": {
+    "A": {"score": 6, "rank": 1, "note": "Knee-safe selection; push-up and push press adjacent, DB load format ambiguous"},
+    "B": {"score": 5, "rank": 2, "note": "Clean structure, but burpees are a poor call for a bad knee"}
+  },
+  "45": {
+    "A": {"score": 6, "rank": 2, "note": "Rep budget fine, but 24 kg bell is not a recovery-day load"},
+    "B": {"score": 7, "rank": 1, "note": "Lighter bell, balanced squat/press/hinge/core, honest 12-min fit"}
+  },
+  "46": {
+    "A": {"score": 5, "rank": 2, "note": "Devil press included, but several stations well under 35 s of work"},
+    "B": {"score": 7, "rank": 1, "note": "Clean 3x4 rotation, minutes properly filled; lunge station a bit light"}
+  },
+  "47": {
+    "A": {"score": 4, "rank": 2, "note": "TGU 6/arm breaks hard cap and is not last; order rises 12 to 15"},
+    "B": {"score": 5, "rank": 1, "note": "Pull-up plus Chin-up duplicates pull; finishes well under cap"}
+  },
+  "48": {
+    "A": {"score": 5, "rank": 2, "note": "Work under 3/4 of window; notes turn interval into mini-AMRAP"},
+    "B": {"score": 6, "rank": 1, "note": "Fills window honestly, no jumping; squat and lunge adjacent"}
+  },
+  "49": {
+    "A": {"score": 6, "rank": 2, "note": "Hand-Release Push-up skirts avoided push-up; round time fine"},
+    "B": {"score": 7, "rank": 1, "note": "Fully honours avoid list, varied KB work, 2.75-min round; 24 kg heavy"}
+  },
+  "50": {
+    "A": {"score": 7, "rank": 1, "note": "Avoid list honoured, balanced triplet-plus, lands around 13 min"},
+    "B": {"score": 5, "rank": 2, "note": "Front squat and front-rack lunge adjacent; C2B skirts avoided pull-up"}
+  }
+}

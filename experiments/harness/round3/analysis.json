@@ -1,0 +1,572 @@
+{
+ "@cf/openai/gpt-oss-120b": {
+  "n": 50,
+  "ok": 49,
+  "failed": [
+   {
+    "case": 1,
+    "seconds": 12.9,
+    "detail": "The model kept using equipment the athlete does not have: Pull-up"
+   }
+  ],
+  "quota_blocked": 0,
+  "time_median": 12.4,
+  "time_mean": 14.9,
+  "time_p90": 27.5,
+  "time_min": 3.8,
+  "time_max": 42.1,
+  "clean": 35,
+  "total_violations": 18,
+  "details": [
+   {
+    "case": 2,
+    "seconds": 16.2,
+    "violations": []
+   },
+   {
+    "case": 3,
+    "seconds": 29.7,
+    "violations": [
+     "two barbell loads: [40.0, 80.0]",
+     "chipper row over 1000 m: 2000 m",
+     "chipper reps over ceiling: 55 Deadlift"
+    ]
+   },
+   {
+    "case": 4,
+    "seconds": 19.0,
+    "violations": []
+   },
+   {
+    "case": 5,
+    "seconds": 17.5,
+    "violations": []
+   },
+   {
+    "case": 6,
+    "seconds": 11.2,
+    "violations": []
+   },
+   {
+    "case": 7,
+    "seconds": 22.1,
+    "violations": []
+   },
+   {
+    "case": 8,
+    "seconds": 3.8,
+    "violations": []
+   },
+   {
+    "case": 9,
+    "seconds": 8.4,
+    "violations": []
+   },
+   {
+    "case": 10,
+    "seconds": 5.1,
+    "violations": []
+   },
+   {
+    "case": 11,
+    "seconds": 7.8,
+    "violations": []
+   },
+   {
+    "case": 12,
+    "seconds": 12.0,
+    "violations": [
+     "repeated base lift (lunge): Reverse Lunge + Walking Lunge"
+    ]
+   },
+   {
+    "case": 13,
+    "seconds": 13.3,
+    "violations": []
+   },
+   {
+    "case": 14,
+    "seconds": 4.9,
+    "violations": []
+   },
+   {
+    "case": 15,
+    "seconds": 6.7,
+    "violations": []
+   },
+   {
+    "case": 16,
+    "seconds": 5.7,
+    "violations": []
+   },
+   {
+    "case": 17,
+    "seconds": 8.4,
+    "violations": []
+   },
+   {
+    "case": 18,
+    "seconds": 7.0,
+    "violations": []
+   },
+   {
+    "case": 19,
+    "seconds": 4.8,
+    "violations": []
+   },
+   {
+    "case": 20,
+    "seconds": 4.3,
+    "violations": []
+   },
+   {
+    "case": 21,
+    "seconds": 13.7,
+    "violations": []
+   },
+   {
+    "case": 22,
+    "seconds": 23.7,
+    "violations": []
+   },
+   {
+    "case": 23,
+    "seconds": 26.7,
+    "violations": [
+     "for-time ~20 min vs target 40 (too little)"
+    ]
+   },
+   {
+    "case": 24,
+    "seconds": 18.3,
+    "violations": []
+   },
+   {
+    "case": 25,
+    "seconds": 8.8,
+    "violations": []
+   },
+   {
+    "case": 26,
+    "seconds": 8.8,
+    "violations": []
+   },
+   {
+    "case": 27,
+    "seconds": 8.2,
+    "violations": []
+   },
+   {
+    "case": 28,
+    "seconds": 18.7,
+    "violations": [
+     "EMOM minute overflows: 12/leg Dumbbell Front-Rack Lunge"
+    ]
+   },
+   {
+    "case": 29,
+    "seconds": 15.6,
+    "violations": [
+     "EMOM token minute: 75 m Row"
+    ]
+   },
+   {
+    "case": 30,
+    "seconds": 12.2,
+    "violations": [
+     "EMOM minute overflows: 30 Air Squat"
+    ]
+   },
+   {
+    "case": 31,
+    "seconds": 11.2,
+    "violations": []
+   },
+   {
+    "case": 32,
+    "seconds": 19.3,
+    "violations": [
+     "two barbell loads: [40.0, 80.0]",
+     "EMOM cal minute too big: 12 cal Assault Bike"
+    ]
+   },
+   {
+    "case": 33,
+    "seconds": 21.8,
+    "violations": [
+     "chipper reps over ceiling: 35/leg Goblet Lunge"
+    ]
+   },
+   {
+    "case": 34,
+    "seconds": 19.2,
+    "violations": [
+     "repeated base lift (pull-up): Pull-up + Burpee Pull-up",
+     "chipper reps over ceiling: 60 Air Squat"
+    ]
+   },
+   {
+    "case": 35,
+    "seconds": 22.4,
+    "violations": [
+     "chipper reps over ceiling: 45/leg Walking Lunge"
+    ]
+   },
+   {
+    "case": 36,
+    "seconds": 34.8,
+    "violations": [
+     "chipper ~15 min vs 35 target (too little)"
+    ]
+   },
+   {
+    "case": 37,
+    "seconds": 42.1,
+    "violations": []
+   },
+   {
+    "case": 38,
+    "seconds": 29.0,
+    "violations": []
+   },
+   {
+    "case": 39,
+    "seconds": 7.2,
+    "violations": []
+   },
+   {
+    "case": 40,
+    "seconds": 10.4,
+    "violations": []
+   },
+   {
+    "case": 41,
+    "seconds": 8.4,
+    "violations": []
+   },
+   {
+    "case": 42,
+    "seconds": 21.4,
+    "violations": [
+     "interval work ~5.3 min overflows 4 min window"
+    ]
+   },
+   {
+    "case": 43,
+    "seconds": 6.2,
+    "violations": [
+     "interval work ~4.9 min overflows 3 min window"
+    ]
+   },
+   {
+    "case": 44,
+    "seconds": 11.5,
+    "violations": []
+   },
+   {
+    "case": 45,
+    "seconds": 12.4,
+    "violations": []
+   },
+   {
+    "case": 46,
+    "seconds": 16.0,
+    "violations": []
+   },
+   {
+    "case": 47,
+    "seconds": 18.7,
+    "violations": []
+   },
+   {
+    "case": 48,
+    "seconds": 19.7,
+    "violations": [
+     "interval work ~5.8 min overflows 5 min window"
+    ]
+   },
+   {
+    "case": 49,
+    "seconds": 10.6,
+    "violations": []
+   },
+   {
+    "case": 50,
+    "seconds": 27.5,
+    "violations": []
+   }
+  ]
+ },
+ "anthropic/claude-sonnet-5.5": {
+  "n": 50,
+  "ok": 49,
+  "failed": [
+   {
+    "case": 28,
+    "seconds": 7.7,
+    "detail": "The model returned a malformed workout twice"
+   }
+  ],
+  "quota_blocked": 0,
+  "time_median": 2.4,
+  "time_mean": 3.9,
+  "time_p90": 7.8,
+  "time_min": 1.6,
+  "time_max": 17.5,
+  "clean": 46,
+  "total_violations": 3,
+  "details": [
+   {
+    "case": 1,
+    "seconds": 1.9,
+    "violations": []
+   },
+   {
+    "case": 2,
+    "seconds": 6.2,
+    "violations": [
+     "4 stations do not divide EMOM 30"
+    ]
+   },
+   {
+    "case": 3,
+    "seconds": 5.5,
+    "violations": []
+   },
+   {
+    "case": 4,
+    "seconds": 2.3,
+    "violations": []
+   },
+   {
+    "case": 5,
+    "seconds": 4.5,
+    "violations": []
+   },
+   {
+    "case": 6,
+    "seconds": 5.1,
+    "violations": []
+   },
+   {
+    "case": 7,
+    "seconds": 2.1,
+    "violations": []
+   },
+   {
+    "case": 8,
+    "seconds": 2.4,
+    "violations": []
+   },
+   {
+    "case": 9,
+    "seconds": 8.5,
+    "violations": []
+   },
+   {
+    "case": 10,
+    "seconds": 2.0,
+    "violations": []
+   },
+   {
+    "case": 11,
+    "seconds": 2.0,
+    "violations": []
+   },
+   {
+    "case": 12,
+    "seconds": 2.0,
+    "violations": []
+   },
+   {
+    "case": 13,
+    "seconds": 2.1,
+    "violations": []
+   },
+   {
+    "case": 14,
+    "seconds": 2.2,
+    "violations": []
+   },
+   {
+    "case": 15,
+    "seconds": 2.1,
+    "violations": []
+   },
+   {
+    "case": 16,
+    "seconds": 11.0,
+    "violations": []
+   },
+   {
+    "case": 17,
+    "seconds": 2.0,
+    "violations": []
+   },
+   {
+    "case": 18,
+    "seconds": 4.3,
+    "violations": []
+   },
+   {
+    "case": 19,
+    "seconds": 2.1,
+    "violations": []
+   },
+   {
+    "case": 20,
+    "seconds": 4.7,
+    "violations": []
+   },
+   {
+    "case": 21,
+    "seconds": 4.7,
+    "violations": []
+   },
+   {
+    "case": 22,
+    "seconds": 2.0,
+    "violations": []
+   },
+   {
+    "case": 23,
+    "seconds": 2.9,
+    "violations": []
+   },
+   {
+    "case": 24,
+    "seconds": 2.0,
+    "violations": []
+   },
+   {
+    "case": 25,
+    "seconds": 2.0,
+    "violations": []
+   },
+   {
+    "case": 26,
+    "seconds": 1.6,
+    "violations": []
+   },
+   {
+    "case": 27,
+    "seconds": 5.3,
+    "violations": []
+   },
+   {
+    "case": 29,
+    "seconds": 2.3,
+    "violations": []
+   },
+   {
+    "case": 30,
+    "seconds": 1.8,
+    "violations": []
+   },
+   {
+    "case": 31,
+    "seconds": 3.5,
+    "violations": []
+   },
+   {
+    "case": 32,
+    "seconds": 7.8,
+    "violations": [
+     "two barbell loads: [40.0, 60.0]"
+    ]
+   },
+   {
+    "case": 33,
+    "seconds": 2.4,
+    "violations": []
+   },
+   {
+    "case": 34,
+    "seconds": 5.6,
+    "violations": [
+     "chipper ~8 min vs 20 target (too little)"
+    ]
+   },
+   {
+    "case": 35,
+    "seconds": 2.9,
+    "violations": []
+   },
+   {
+    "case": 36,
+    "seconds": 12.7,
+    "violations": []
+   },
+   {
+    "case": 37,
+    "seconds": 17.5,
+    "violations": []
+   },
+   {
+    "case": 38,
+    "seconds": 2.6,
+    "violations": []
+   },
+   {
+    "case": 39,
+    "seconds": 2.4,
+    "violations": []
+   },
+   {
+    "case": 40,
+    "seconds": 2.1,
+    "violations": []
+   },
+   {
+    "case": 41,
+    "seconds": 6.3,
+    "violations": []
+   },
+   {
+    "case": 42,
+    "seconds": 2.6,
+    "violations": []
+   },
+   {
+    "case": 43,
+    "seconds": 2.1,
+    "violations": []
+   },
+   {
+    "case": 44,
+    "seconds": 5.5,
+    "violations": []
+   },
+   {
+    "case": 45,
+    "seconds": 2.0,
+    "violations": []
+   },
+   {
+    "case": 46,
+    "seconds": 3.9,
+    "violations": []
+   },
+   {
+    "case": 47,
+    "seconds": 2.7,
+    "violations": []
+   },
+   {
+    "case": 48,
+    "seconds": 2.5,
+    "violations": []
+   },
+   {
+    "case": 49,
+    "seconds": 2.3,
+    "violations": []
+   },
+   {
+    "case": 50,
+    "seconds": 2.1,
+    "violations": []
+   }
+  ]
+ }
+}

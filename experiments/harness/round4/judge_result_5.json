@@ -1,0 +1,52 @@
+{
+  "41": {
+    "A": {"score": 5, "rank": 3, "note": "One ~1:45 round leaves 3-min window half idle; notes restate format."},
+    "B": {"score": 6, "rank": 2, "note": "Math roughly holds; 2x17.5 deadlift is a token load; decent notes."},
+    "C": {"score": 8, "rank": 1, "note": "Honest ~2:30 round in 3 min; snatch beats deadlift; clear engine stimulus."}
+  },
+  "42": {
+    "A": {"score": 6, "rank": 3, "note": "8 pull-ups x repeats is heavy for amateur; notes mostly restate format."},
+    "B": {"score": 7, "rank": 2, "note": "Round nearer 2:25 than 1:50, but sound structure; good pull-up breaking advice."},
+    "C": {"score": 7, "rank": 1, "note": "Same workout as B; slightly optimistic round time; cleanest coaching note."}
+  },
+  "43": {
+    "A": {"score": 5, "rank": 2, "note": "Claims 3 rounds with a 1-min bike: impossible. Air squat redundant after wall balls."},
+    "B": {"score": 6, "rank": 1, "note": "Pacing math plausible; still a redundant air squat station; light but fine."},
+    "C": {"score": 5, "rank": 3, "note": "Four stations, sit-ups token; unclear whether to repeat; note restates format."}
+  },
+  "44": {
+    "A": {"score": 4, "rank": 3, "note": "Devil press loads a deep bend from the floor; two barbell pulls; no notes."},
+    "B": {"score": 7, "rank": 1, "note": "Hinge-only, knee-friendly triplet; note addresses the knee and burpee pacing."},
+    "C": {"score": 7, "rank": 2, "note": "Identical to B; good hinge-not-squat cue; marginally less specific pacing."}
+  },
+  "45": {
+    "A": {"score": 7, "rank": 1, "note": "Balanced rounds, volume lands near 12 min at recovery pace; helpful note."},
+    "B": {"score": 5, "rank": 3, "note": "Heavier bell, ~8 min of work, no pacing note despite recovery request."},
+    "C": {"score": 6, "rank": 2, "note": "Good recovery note, but lighter volume runs short of 12 min."}
+  },
+  "46": {
+    "A": {"score": 6, "rank": 2, "note": "Devil press + burpee + snatch overlap heavily; minutes feasible; useful notes."},
+    "B": {"score": 5, "rank": 3, "note": "Lunges add balance, but 6 devil presses at 2x15 fills the minute; no notes."},
+    "C": {"score": 7, "rank": 1, "note": "Realistic minute density with rest target; same redundancy as A; good notes."}
+  },
+  "47": {
+    "A": {"score": 4, "rank": 3, "note": "Roughly 12 min of work for a 25-min chipper; chin-up redundant; no notes."},
+    "B": {"score": 5, "rank": 2, "note": "About 17 min; air squat after goblet squat and chin-up redundant."},
+    "C": {"score": 6, "rank": 1, "note": "Volume fits the cap, but 100 bar reps is brutal for an amateur."}
+  },
+  "48": {
+    "A": {"score": 6, "rank": 2, "note": "Repeat-the-round is clear; underestimates rounds; legs-heavy with one push."},
+    "B": {"score": 5, "rank": 3, "note": "One ~2-min round per 5-min window leaves most time idle; notes restate format."},
+    "C": {"score": 7, "rank": 1, "note": "Explicit work/rest totals 18 min; honest round time; soft-landing cue fits request."}
+  },
+  "49": {
+    "A": {"score": 5, "rank": 1, "note": "Honours avoid list; 16 kg deadlift is a token station; legs-heavy."},
+    "B": {"score": 4, "rank": 2, "note": "Hand-release push-up is a push-up variant: avoid list breached. Notes decent."},
+    "C": {"score": 4, "rank": 3, "note": "Same breach as B via hand-release push-up; no notes."}
+  },
+  "50": {
+    "A": {"score": 7, "rank": 1, "note": "Sensible T2B volume, good notes; work runs ~10 min, a bit under target."},
+    "B": {"score": 6, "rank": 2, "note": "Closer to 15 min but 60 T2B is heavy for an amateur."},
+    "C": {"score": 6, "rank": 3, "note": "Push press adds balance and tighter cap, but no notes."}
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "31": {
+    "A": {"score": 7, "rank": 2, "note": "Solid swing/snatch EMOM, 24 kg honest; rest estimate in note is off."},
+    "B": {"score": 6, "rank": 3, "note": "Same pairing; note merely restates, no pacing help."},
+    "C": {"score": 7, "rank": 1, "note": "Same pairing with accurate ~35 s pacing note and arm-switch options."}
+  },
+  "32": {
+    "A": {"score": 5, "rank": 3, "note": "Front squat plus air squat is redundant; all-legs, no upper body."},
+    "B": {"score": 6, "rank": 2, "note": "Thruster adds a press, but air squat is a token leg station."},
+    "C": {"score": 7, "rank": 1, "note": "Balanced squat/bike/push/hinge rotation dividing 24; no notes."}
+  },
+  "33": {
+    "A": {"score": 4, "rank": 2, "note": "About 7-8 min of work for 15 min cap; no notes."},
+    "B": {"score": 7, "rank": 1, "note": "Roughly 12-13 min, fills the cap; descending list, useful notes."},
+    "C": {"score": 3, "rank": 3, "note": "About 8 min of work; reps not descending (16 then 20)."}
+  },
+  "34": {
+    "A": {"score": 4, "rank": 2, "note": "Clean list but roughly 8 min for a 20 min cap; no notes."},
+    "B": {"score": 6, "rank": 1, "note": "Fills ~18 min; chin-up duplicates pull-up, order not descending."},
+    "C": {"score": 3, "rank": 3, "note": "Four pull-up-bar movements, ~12 min of 20; C2B after 30 pull-ups harsh."}
+  },
+  "35": {
+    "A": {"score": 4, "rank": 2, "note": "About 12 min for 25; 6 kg ball light, air squat redundant, no notes."},
+    "B": {"score": 8, "rank": 1, "note": "Genuine 25 min grind, big row opener, one barbell load, good notes."},
+    "C": {"score": 3, "rank": 3, "note": "Cap says 30 not 25; ~10 min of work."}
+  },
+  "36": {
+    "A": {"score": 6, "rank": 2, "note": "~25 min, somewhat short; three pulling movements; good pacing notes."},
+    "B": {"score": 7, "rank": 1, "note": "~28 min, closest to cap; thruster adds squat; same pulling redundancy."},
+    "C": {"score": 5, "rank": 3, "note": "~25 min, five 50-rep blocks, three pulls, no notes."}
+  },
+  "37": {
+    "A": {"score": 3, "rank": 3, "note": "Only ~15 min of work for a 45 min cap, despite good notes."},
+    "B": {"score": 6, "rank": 1, "note": "Fills 45 min; 120 deadlifts at 70 kg plus 150 swings is hinge overload."},
+    "C": {"score": 4, "rank": 2, "note": "~25 min for 45; descending list but no notes."}
+  },
+  "38": {
+    "A": {"score": 4, "rank": 3, "note": "~10 min for 20; sensible 20 GHD, but no notes."},
+    "B": {"score": 6, "rank": 1, "note": "~15 min, closest to cap; 50 GHD sit-ups aggressive, 20 kg bag light."},
+    "C": {"score": 5, "rank": 2, "note": "~12 min, bit short; 50 GHD opener aggressive; notes helpful."}
+  },
+  "39": {
+    "A": {"score": 5, "rank": 3, "note": "Spans 12 min but unclear rounds per window; note restates format."},
+    "B": {"score": 6, "rank": 2, "note": "Clear sprint triplet; 20 kg KB deadlift is a token station."},
+    "C": {"score": 6, "rank": 1, "note": "Same triplet at honest 24 kg; clear pacing; deadlift still token."}
+  },
+  "40": {
+    "A": {"score": 8, "rank": 1, "note": "Classic row/thruster/burpee, ~2:45 per 3 min window checks out."},
+    "B": {"score": 6, "rank": 2, "note": "Two rounds take ~3:00 not 3:40; push press at 30 kg light."},
+    "C": {"score": 5, "rank": 3, "note": "One pass ~2:30 of 4 min, structure vague; note restates format."}
+  }
+}

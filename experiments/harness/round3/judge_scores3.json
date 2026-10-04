@@ -1,0 +1,602 @@
+{
+ "1": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 0,
+   "rank": 2,
+   "note": "Generation failed: used Pull-up with no bar."
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 7,
+   "rank": 1,
+   "note": "Clean EMOM 6, legal shortening, honest minute-fill, balanced; a bit thin."
+  }
+ },
+ "2": {
+  "anthropic/claude-sonnet-5.5": {
+   "score": 5,
+   "rank": 2,
+   "note": "28 min rotation plus tacked-on easy 2 min; notes restate format."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 6,
+   "rank": 1,
+   "note": "Correct Rest-station fix, divides evenly; Ski Erg in metres is illegal."
+  }
+ },
+ "3": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 3,
+   "rank": 2,
+   "note": "2000 m row and 55 DL break ceilings; three hinges; overruns cap."
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 6,
+   "rank": 1,
+   "note": "All ceilings and descent respected, balanced; finishes well under 30 min."
+  }
+ },
+ "4": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 5,
+   "rank": 2,
+   "note": "Compliant patterns but 45 kg lunge over ceiling, tiny snatch set, no /arm."
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 6,
+   "rank": 1,
+   "note": "Good round length and loads; swing then deadlift is adjacent hinge repeat."
+  }
+ },
+ "5": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 4,
+   "rank": 2,
+   "note": "60 kg lunge far over ceiling, no /leg, ~14 min for a 25 min target."
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 6,
+   "rank": 1,
+   "note": "Five distinct patterns, legal loads; still finishes ~15 min, under budget."
+  }
+ },
+ "6": {
+  "anthropic/claude-sonnet-5.5": {
+   "score": 7,
+   "rank": 1,
+   "note": "Seven items, 4 min round, distinct patterns; ring dips may exceed 40 total."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 4,
+   "rank": 2,
+   "note": "2 ring dips and 4 pull-ups are token sets; adjacent hinges, row then run."
+  }
+ },
+ "7": {
+  "anthropic/claude-sonnet-5.5": {
+   "score": 5,
+   "rank": 2,
+   "note": "Honours no-overhead, tidy quad; ~11.5 min is short for 15, no /leg."
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 6,
+   "rank": 1,
+   "note": "Fills 15 min honestly, no overhead; heavy lunge, push-up next to burpee."
+  }
+ },
+ "8": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 5,
+   "rank": 2,
+   "note": "KB deadlift straight into swings; ~1.8 min round under AMRAP minimum."
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 8,
+   "rank": 1,
+   "note": "No overhead honoured, pull/hinge/squat/press/core, ~2.75 min round."
+  }
+ },
+ "9": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 5,
+   "rank": 2,
+   "note": "Work ~1.9 min overflows 2 min window; no squat/lunge/hinge/jump."
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 6,
+   "rank": 1,
+   "note": "Fits window with margin, legal pacing note; still no lower-body pattern."
+  }
+ },
+ "10": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 5,
+   "rank": 1,
+   "note": "Covers legs well; swing-snatch and lunge-squat are adjacent pattern repeats."
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 4,
+   "rank": 2,
+   "note": "Three hinges in four movements, no squat or lunge; round fits."
+  }
+ },
+ "11": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 7,
+   "rank": 1,
+   "note": "Balanced round ~3 min; clear push, lunge, jump, squat; clean format"
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 6,
+   "rank": 2,
+   "note": "No dedicated upper movement; lunge reps missing /leg suffix"
+  }
+ },
+ "12": {
+  "anthropic/claude-sonnet-5.5": {
+   "score": 7,
+   "rank": 1,
+   "note": "Tight ~2.5 min round, DU plus burpee, lunge, core; compliant"
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 3,
+   "rank": 2,
+   "note": "Two lunge variants adjacent, squat pattern 3x, no upper body, Bear Crawl 50 m"
+  }
+ },
+ "13": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 4,
+   "rank": 2,
+   "note": "No upper-body movement; lunge and front squat adjacent; ~4 min round"
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 8,
+   "rank": 1,
+   "note": "Squat, press, burpee, core; one 40 kg load; honest ~3 min round"
+  }
+ },
+ "14": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 8,
+   "rank": 1,
+   "note": "Classic hinge/pull/burpee/squat couplet-plus; ~3 min round, 24 kg sensible"
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 7,
+   "rank": 2,
+   "note": "Varied but two bar pulls plus two core moves; round nearer 4 min"
+  }
+ },
+ "15": {
+  "anthropic/claude-sonnet-5.5": {
+   "score": 7,
+   "rank": 1,
+   "note": "Balanced ~3 min round; 2x10 kg thrusters light but legal"
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 5,
+   "rank": 2,
+   "note": "Squat/lunge pattern 3x, air squat adjacent to lunge; leg-only, ~4 min round"
+  }
+ },
+ "16": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 6,
+   "rank": 2,
+   "note": "Wall ball and air squat adjacent squat pattern; otherwise solid 3 min round"
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 7,
+   "rank": 1,
+   "note": "Row, hinge, wall ball, push-up covers body; ~2.5 min round"
+  }
+ },
+ "17": {
+  "anthropic/claude-sonnet-5.5": {
+   "score": 7,
+   "rank": 1,
+   "note": "TGU within cap, 16 kg compromise load fits TGU; ~3 min round"
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 3,
+   "rank": 2,
+   "note": "TGU 5/arm breaks 3/arm hard cap; 24 kg TGU x10 makes 6+ min round"
+  }
+ },
+ "18": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 5,
+   "rank": 2,
+   "note": "Two carries adjacent, no squat; 24 DB snatches push round to ~4 min"
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 7,
+   "rank": 1,
+   "note": "Carry, clean, push-up, snatch; grip-heavy, balanced, ~3.5 min round"
+  }
+ },
+ "19": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 4,
+   "rank": 2,
+   "note": "220 reps, half grunt, ~13 min for 8 min target; beyond cap"
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 7,
+   "rank": 1,
+   "note": "168 reps lands ~8 min; balanced; lunge missing /leg suffix"
+  }
+ },
+ "20": {
+  "anthropic/claude-sonnet-5.5": {
+   "score": 6,
+   "rank": 1,
+   "note": "One 40 kg load honours overhead ceiling; ~8 min, a bit short"
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 3,
+   "rank": 2,
+   "note": "Push press 60 kg breaks 40 kg overhead ceiling; likely over cap"
+  }
+ },
+ "21": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 5,
+   "rank": 2,
+   "note": "Thruster + Push Press same family, adjacent presses; ~14 min, short of 20"
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 7,
+   "rank": 1,
+   "note": "Clean balance, one DB load; ~15-16 min, slightly short but legal"
+  }
+ },
+ "22": {
+  "anthropic/claude-sonnet-5.5": {
+   "score": 5,
+   "rank": 2,
+   "note": "Honest 5-rounder but ~21 min of 30; swing->HPC adjacent hinge, no press"
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 6,
+   "rank": 1,
+   "note": "Fuller body coverage and budget; three hinges, swing->deadlift adjacent, snatch load heavy"
+  }
+ },
+ "23": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 4,
+   "rank": 2,
+   "note": "3 rounds ~20 min for a 40-min target; patterns well spaced"
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 6,
+   "rank": 1,
+   "note": "~28 min, closer to target; C2B->Ring Row and swing->HPC adjacent"
+  }
+ },
+ "24": {
+  "anthropic/claude-sonnet-5.5": {
+   "score": 6,
+   "rank": 2,
+   "note": "Fits 10 min; lunge missing /leg, burpee only upper work"
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 7,
+   "rank": 1,
+   "note": "Balanced with push-up and /leg lunges; ~11 min; 15 DU a small set"
+  }
+ },
+ "25": {
+  "anthropic/claude-sonnet-5.5": {
+   "score": 7,
+   "rank": 1,
+   "note": "Clean triplet-plus, patterns distinct; ~12 min, low edge of window"
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 6,
+   "rank": 2,
+   "note": "Time fits well but Wall Ball->Air Squat adjacent squat pattern"
+  }
+ },
+ "26": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 7,
+   "rank": 1,
+   "note": "Varied five-station rotation, minutes fill; KB push press light and no /arm"
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 6,
+   "rank": 2,
+   "note": "Honest swing/burpee alternation; 16 kg light, uses little of the vocabulary"
+  }
+ },
+ "27": {
+  "anthropic/claude-sonnet-5.5": {
+   "score": 6,
+   "rank": 1,
+   "note": "Minutes fill; snatch->deadlift adjacent hinge, no squat, snatch lacks /arm"
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 5,
+   "rank": 2,
+   "note": "20 kg dumbbell off the standard set; adjacent hinges; 8-rep minutes light"
+  }
+ },
+ "28": {
+  "anthropic/claude-sonnet-5.5": {
+   "score": 0,
+   "rank": 2,
+   "note": "Generation failed"
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 4,
+   "rank": 1,
+   "note": "12/leg front-rack lunge at 45 kg overflows minute and lunge load ceiling"
+  }
+ },
+ "29": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 5,
+   "rank": 2,
+   "note": "75 m row and 12 air squats far too little per minute; adjacent hinges"
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 7,
+   "rank": 1,
+   "note": "Every minute fills 35-45 s; swing->HPC adjacent hinge only flaw"
+  }
+ },
+ "30": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 4,
+   "rank": 2,
+   "note": "No upper-body movement; 30 air squats overflow the minute"
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 7,
+   "rank": 1,
+   "note": "Run/sit-up/burpee fills minutes and covers body; simple and sound"
+  }
+ },
+ "31": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 6,
+   "rank": 2,
+   "note": "Legal couplet; clean+carry both grip/hinge, no squat or press, slightly dull"
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 7,
+   "rank": 1,
+   "note": "Textbook EMOM minutes; swing+snatch both hinge but overhead adds upper"
+  }
+ },
+ "32": {
+  "anthropic/claude-sonnet-5.5": {
+   "score": 6,
+   "rank": 1,
+   "note": "Two barbell loads; 16 front squats heavy for a minute but fits"
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 4,
+   "rank": 2,
+   "note": "12 cal Assault Bike breaks EMOM cap and overflows minute; two barbell loads"
+  }
+ },
+ "33": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 3,
+   "rank": 2,
+   "note": "35/leg lunge breaks ceiling and order; three hinges; ~27 min of work"
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 6,
+   "rank": 1,
+   "note": "Clean descending chipper but ~9 min of work; push-up/push press adjacent"
+  }
+ },
+ "34": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 5,
+   "rank": 2,
+   "note": "Good time fit and variety but 60 air squats breaks ceiling; 24 snatches break order"
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 6,
+   "rank": 1,
+   "note": "Rule-clean, balanced patterns; work only ~11 min for a 20 min cap"
+  }
+ },
+ "35": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 4,
+   "rank": 2,
+   "note": "45/leg lunge breaks ceiling/order; three squat patterns, adjacent hinges, no pull"
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 6,
+   "rank": 1,
+   "note": "Descending, single barbell load, honest ~20 min; wall ball/air squat adjacent"
+  }
+ },
+ "36": {
+  "anthropic/claude-sonnet-5.5": {
+   "score": 6,
+   "rank": 1,
+   "note": "Fills 35 min within ceilings; ring row/pull-up adjacent; single-unders weak pick"
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 5,
+   "rank": 2,
+   "note": "Only ~26 min of work; three hinges, adjacent pulls, snatch missing /arm"
+  }
+ },
+ "37": {
+  "anthropic/claude-sonnet-5.5": {
+   "score": 7,
+   "rank": 1,
+   "note": "Balanced patterns, every line in ceiling, honest 45 min; lunge lacks /leg"
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 4,
+   "rank": 2,
+   "note": "Front-Rack Lunge misnamed/mistagged for dumbbells; adjacent hinges; 50 deadlifts at 80 kg"
+  }
+ },
+ "38": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 4,
+   "rank": 2,
+   "note": "Sandbag Carry has no load; ~30 min of grunt work for 20 min cap"
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 7,
+   "rank": 1,
+   "note": "Balanced, loads complete, fits ~16 min; carry breaks descending slightly"
+  }
+ },
+ "39": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 7,
+   "rank": 1,
+   "note": "Fills 2 min window properly, simple effective couplet, format exact"
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 5,
+   "rank": 2,
+   "note": "Work under 3/4 of 3 min window; notes restate rest; lunge lacks /leg"
+  }
+ },
+ "40": {
+  "anthropic/claude-sonnet-5.5": {
+   "score": 6,
+   "rank": 1,
+   "note": "Fills window borderline, balanced, one barbell load; notes restate format"
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 4,
+   "rank": 2,
+   "note": "No lower-body movement; adjacent presses; work fills only ~2/3 of window"
+  }
+ },
+ "41": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 6,
+   "rank": 2,
+   "note": "Tight 3-min fit, but 12 cal Ski breaks shared-window cap; 20 kg DB nonstandard"
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 7,
+   "rank": 1,
+   "note": "Fuller body coverage, valid loads; slightly under 3/4 fill, notes restate rest"
+  }
+ },
+ "42": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 4,
+   "rank": 2,
+   "note": "~285 s work overflows 4-min window; squat and lunge adjacent"
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 7,
+   "rank": 1,
+   "note": "Fits window with margin, patterns spaced; a little underfilled"
+  }
+ },
+ "43": {
+  "anthropic/claude-sonnet-5.5": {
+   "score": 7,
+   "rank": 1,
+   "note": "Honest 3-min fit, bike within 8 cal; wall ball and lunge adjacent"
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 3,
+   "rank": 2,
+   "note": "25 cal Assault Bike alone exceeds window; squat pair adjacent, no pull"
+  }
+ },
+ "44": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 6,
+   "rank": 1,
+   "note": "Knee-safe selection; push-up and push press adjacent, DB load format ambiguous"
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 5,
+   "rank": 2,
+   "note": "Clean structure, but burpees are a poor call for a bad knee"
+  }
+ },
+ "45": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 6,
+   "rank": 2,
+   "note": "Rep budget fine, but 24 kg bell is not a recovery-day load"
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 7,
+   "rank": 1,
+   "note": "Lighter bell, balanced squat/press/hinge/core, honest 12-min fit"
+  }
+ },
+ "46": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 5,
+   "rank": 2,
+   "note": "Devil press included, but several stations well under 35 s of work"
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 7,
+   "rank": 1,
+   "note": "Clean 3x4 rotation, minutes properly filled; lunge station a bit light"
+  }
+ },
+ "47": {
+  "@cf/openai/gpt-oss-120b": {
+   "score": 4,
+   "rank": 2,
+   "note": "TGU 6/arm breaks hard cap and is not last; order rises 12 to 15"
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "score": 5,
+   "rank": 1,
+   "note": "Pull-up plus Chin-up duplicates pull; finishes well under cap"
+  }
+ },
+ "48": {
+  "anthropic/claude-sonnet-5.5": {
+   "score": 5,
+   "rank": 2,
+   "note": "Work under 3/4 of window; notes turn interval into mini-AMRAP"
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 6,
+   "rank": 1,
+   "note": "Fills window honestly, no jumping; squat and lunge adjacent"
+  }
+ },
+ "49": {
+  "anthropic/claude-sonnet-5.5": {
+   "score": 6,
+   "rank": 2,
+   "note": "Hand-Release Push-up skirts avoided push-up; round time fine"
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 7,
+   "rank": 1,
+   "note": "Fully honours avoid list, varied KB work, 2.75-min round; 24 kg heavy"
+  }
+ },
+ "50": {
+  "anthropic/claude-sonnet-5.5": {
+   "score": 7,
+   "rank": 1,
+   "note": "Avoid list honoured, balanced triplet-plus, lands around 13 min"
+  },
+  "@cf/openai/gpt-oss-120b": {
+   "score": 5,
+   "rank": 2,
+   "note": "Front squat and front-rack lunge adjacent; C2B skirts avoided pull-up"
+  }
+ }
+}

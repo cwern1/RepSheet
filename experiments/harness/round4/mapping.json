@@ -1,0 +1,252 @@
+{
+ "1": {
+  "A": "sonnet-low-v1",
+  "B": "sonnet-low-v2",
+  "C": "sonnet-medium-v2"
+ },
+ "2": {
+  "A": "sonnet-low-v2",
+  "B": "sonnet-medium-v2",
+  "C": "sonnet-low-v1"
+ },
+ "3": {
+  "A": "sonnet-medium-v2",
+  "B": "sonnet-low-v1",
+  "C": "sonnet-low-v2"
+ },
+ "4": {
+  "A": "sonnet-low-v1",
+  "B": "sonnet-medium-v2",
+  "C": "sonnet-low-v2"
+ },
+ "5": {
+  "A": "sonnet-low-v1",
+  "B": "sonnet-low-v2",
+  "C": "sonnet-medium-v2"
+ },
+ "6": {
+  "A": "sonnet-low-v2",
+  "B": "sonnet-medium-v2",
+  "C": "sonnet-low-v1"
+ },
+ "7": {
+  "A": "sonnet-medium-v2",
+  "B": "sonnet-low-v2",
+  "C": "sonnet-low-v1"
+ },
+ "8": {
+  "A": "sonnet-low-v1",
+  "B": "sonnet-low-v2",
+  "C": "sonnet-medium-v2"
+ },
+ "9": {
+  "A": "sonnet-low-v1",
+  "B": "sonnet-medium-v2",
+  "C": "sonnet-low-v2"
+ },
+ "10": {
+  "A": "sonnet-low-v1",
+  "B": "sonnet-low-v2",
+  "C": "sonnet-medium-v2"
+ },
+ "11": {
+  "A": "sonnet-medium-v2",
+  "B": "sonnet-low-v1",
+  "C": "sonnet-low-v2"
+ },
+ "12": {
+  "A": "sonnet-medium-v2",
+  "B": "sonnet-low-v2",
+  "C": "sonnet-low-v1"
+ },
+ "13": {
+  "A": "sonnet-low-v1",
+  "B": "sonnet-low-v2",
+  "C": "sonnet-medium-v2"
+ },
+ "14": {
+  "A": "sonnet-medium-v2",
+  "B": "sonnet-low-v1",
+  "C": "sonnet-low-v2"
+ },
+ "15": {
+  "A": "sonnet-low-v2",
+  "B": "sonnet-medium-v2",
+  "C": "sonnet-low-v1"
+ },
+ "16": {
+  "A": "sonnet-low-v1",
+  "B": "sonnet-medium-v2",
+  "C": "sonnet-low-v2"
+ },
+ "17": {
+  "A": "sonnet-low-v2",
+  "B": "sonnet-low-v1",
+  "C": "sonnet-medium-v2"
+ },
+ "18": {
+  "A": "sonnet-low-v1",
+  "B": "sonnet-low-v2",
+  "C": "sonnet-medium-v2"
+ },
+ "19": {
+  "A": "sonnet-medium-v2",
+  "B": "sonnet-low-v1",
+  "C": "sonnet-low-v2"
+ },
+ "20": {
+  "A": "sonnet-medium-v2",
+  "B": "sonnet-low-v2",
+  "C": "sonnet-low-v1"
+ },
+ "21": {
+  "A": "sonnet-medium-v2",
+  "B": "sonnet-low-v1",
+  "C": "sonnet-low-v2"
+ },
+ "22": {
+  "A": "sonnet-medium-v2",
+  "B": "sonnet-low-v2",
+  "C": "sonnet-low-v1"
+ },
+ "23": {
+  "A": "sonnet-low-v1",
+  "B": "sonnet-low-v2",
+  "C": "sonnet-medium-v2"
+ },
+ "24": {
+  "A": "sonnet-low-v2",
+  "B": "sonnet-medium-v2",
+  "C": "sonnet-low-v1"
+ },
+ "25": {
+  "A": "sonnet-medium-v2",
+  "B": "sonnet-low-v2",
+  "C": "sonnet-low-v1"
+ },
+ "26": {
+  "A": "sonnet-low-v1",
+  "B": "sonnet-low-v2",
+  "C": "sonnet-medium-v2"
+ },
+ "27": {
+  "A": "sonnet-medium-v2",
+  "B": "sonnet-low-v2",
+  "C": "sonnet-low-v1"
+ },
+ "28": {
+  "A": "sonnet-low-v2",
+  "B": "sonnet-medium-v2",
+  "C": "sonnet-low-v1"
+ },
+ "29": {
+  "A": "sonnet-low-v1",
+  "B": "sonnet-medium-v2",
+  "C": "sonnet-low-v2"
+ },
+ "30": {
+  "A": "sonnet-low-v1",
+  "B": "sonnet-medium-v2",
+  "C": "sonnet-low-v2"
+ },
+ "31": {
+  "A": "sonnet-medium-v2",
+  "B": "sonnet-low-v1",
+  "C": "sonnet-low-v2"
+ },
+ "32": {
+  "A": "sonnet-low-v2",
+  "B": "sonnet-medium-v2",
+  "C": "sonnet-low-v1"
+ },
+ "33": {
+  "A": "sonnet-low-v1",
+  "B": "sonnet-medium-v2",
+  "C": "sonnet-low-v2"
+ },
+ "34": {
+  "A": "sonnet-low-v1",
+  "B": "sonnet-medium-v2",
+  "C": "sonnet-low-v2"
+ },
+ "35": {
+  "A": "sonnet-low-v1",
+  "B": "sonnet-medium-v2",
+  "C": "sonnet-low-v2"
+ },
+ "36": {
+  "A": "sonnet-medium-v2",
+  "B": "sonnet-low-v2",
+  "C": "sonnet-low-v1"
+ },
+ "37": {
+  "A": "sonnet-low-v2",
+  "B": "sonnet-medium-v2",
+  "C": "sonnet-low-v1"
+ },
+ "38": {
+  "A": "sonnet-low-v1",
+  "B": "sonnet-medium-v2",
+  "C": "sonnet-low-v2"
+ },
+ "39": {
+  "A": "sonnet-low-v1",
+  "B": "sonnet-low-v2",
+  "C": "sonnet-medium-v2"
+ },
+ "40": {
+  "A": "sonnet-low-v2",
+  "B": "sonnet-medium-v2",
+  "C": "sonnet-low-v1"
+ },
+ "41": {
+  "A": "sonnet-low-v1",
+  "B": "sonnet-low-v2",
+  "C": "sonnet-medium-v2"
+ },
+ "42": {
+  "A": "sonnet-low-v1",
+  "B": "sonnet-medium-v2",
+  "C": "sonnet-low-v2"
+ },
+ "43": {
+  "A": "sonnet-low-v2",
+  "B": "sonnet-medium-v2",
+  "C": "sonnet-low-v1"
+ },
+ "44": {
+  "A": "sonnet-low-v1",
+  "B": "sonnet-low-v2",
+  "C": "sonnet-medium-v2"
+ },
+ "45": {
+  "A": "sonnet-medium-v2",
+  "B": "sonnet-low-v1",
+  "C": "sonnet-low-v2"
+ },
+ "46": {
+  "A": "sonnet-medium-v2",
+  "B": "sonnet-low-v1",
+  "C": "sonnet-low-v2"
+ },
+ "47": {
+  "A": "sonnet-low-v1",
+  "B": "sonnet-low-v2",
+  "C": "sonnet-medium-v2"
+ },
+ "48": {
+  "A": "sonnet-low-v2",
+  "B": "sonnet-low-v1",
+  "C": "sonnet-medium-v2"
+ },
+ "49": {
+  "A": "sonnet-medium-v2",
+  "B": "sonnet-low-v2",
+  "C": "sonnet-low-v1"
+ },
+ "50": {
+  "A": "sonnet-low-v2",
+  "B": "sonnet-medium-v2",
+  "C": "sonnet-low-v1"
+ }
+}

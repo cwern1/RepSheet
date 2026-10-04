@@ -1,0 +1,42 @@
+{
+  "31": {
+    "A": {"score": 6, "rank": 2, "note": "Legal couplet; clean+carry both grip/hinge, no squat or press, slightly dull"},
+    "B": {"score": 7, "rank": 1, "note": "Textbook EMOM minutes; swing+snatch both hinge but overhead adds upper"}
+  },
+  "32": {
+    "A": {"score": 6, "rank": 1, "note": "Two barbell loads; 16 front squats heavy for a minute but fits"},
+    "B": {"score": 4, "rank": 2, "note": "12 cal Assault Bike breaks EMOM cap and overflows minute; two barbell loads"}
+  },
+  "33": {
+    "A": {"score": 3, "rank": 2, "note": "35/leg lunge breaks ceiling and order; three hinges; ~27 min of work"},
+    "B": {"score": 6, "rank": 1, "note": "Clean descending chipper but ~9 min of work; push-up/push press adjacent"}
+  },
+  "34": {
+    "A": {"score": 5, "rank": 2, "note": "Good time fit and variety but 60 air squats breaks ceiling; 24 snatches break order"},
+    "B": {"score": 6, "rank": 1, "note": "Rule-clean, balanced patterns; work only ~11 min for a 20 min cap"}
+  },
+  "35": {
+    "A": {"score": 4, "rank": 2, "note": "45/leg lunge breaks ceiling/order; three squat patterns, adjacent hinges, no pull"},
+    "B": {"score": 6, "rank": 1, "note": "Descending, single barbell load, honest ~20 min; wall ball/air squat adjacent"}
+  },
+  "36": {
+    "A": {"score": 6, "rank": 1, "note": "Fills 35 min within ceilings; ring row/pull-up adjacent; single-unders weak pick"},
+    "B": {"score": 5, "rank": 2, "note": "Only ~26 min of work; three hinges, adjacent pulls, snatch missing /arm"}
+  },
+  "37": {
+    "A": {"score": 7, "rank": 1, "note": "Balanced patterns, every line in ceiling, honest 45 min; lunge lacks /leg"},
+    "B": {"score": 4, "rank": 2, "note": "Front-Rack Lunge misnamed/mistagged for dumbbells; adjacent hinges; 50 deadlifts at 80 kg"}
+  },
+  "38": {
+    "A": {"score": 4, "rank": 2, "note": "Sandbag Carry has no load; ~30 min of grunt work for 20 min cap"},
+    "B": {"score": 7, "rank": 1, "note": "Balanced, loads complete, fits ~16 min; carry breaks descending slightly"}
+  },
+  "39": {
+    "A": {"score": 7, "rank": 1, "note": "Fills 2 min window properly, simple effective couplet, format exact"},
+    "B": {"score": 5, "rank": 2, "note": "Work under 3/4 of 3 min window; notes restate rest; lunge lacks /leg"}
+  },
+  "40": {
+    "A": {"score": 6, "rank": 1, "note": "Fills window borderline, balanced, one barbell load; notes restate format"},
+    "B": {"score": 4, "rank": 2, "note": "No lower-body movement; adjacent presses; work fills only ~2/3 of window"}
+  }
+}

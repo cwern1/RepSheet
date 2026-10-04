@@ -1,0 +1,42 @@
+{
+  "1": {
+    "A": {"score": 0, "rank": 2, "note": "Generation failed: used Pull-up with no bar."},
+    "B": {"score": 7, "rank": 1, "note": "Clean EMOM 6, legal shortening, honest minute-fill, balanced; a bit thin."}
+  },
+  "2": {
+    "A": {"score": 5, "rank": 2, "note": "28 min rotation plus tacked-on easy 2 min; notes restate format."},
+    "B": {"score": 6, "rank": 1, "note": "Correct Rest-station fix, divides evenly; Ski Erg in metres is illegal."}
+  },
+  "3": {
+    "A": {"score": 3, "rank": 2, "note": "2000 m row and 55 DL break ceilings; three hinges; overruns cap."},
+    "B": {"score": 6, "rank": 1, "note": "All ceilings and descent respected, balanced; finishes well under 30 min."}
+  },
+  "4": {
+    "A": {"score": 5, "rank": 2, "note": "Compliant patterns but 45 kg lunge over ceiling, tiny snatch set, no /arm."},
+    "B": {"score": 6, "rank": 1, "note": "Good round length and loads; swing then deadlift is adjacent hinge repeat."}
+  },
+  "5": {
+    "A": {"score": 4, "rank": 2, "note": "60 kg lunge far over ceiling, no /leg, ~14 min for a 25 min target."},
+    "B": {"score": 6, "rank": 1, "note": "Five distinct patterns, legal loads; still finishes ~15 min, under budget."}
+  },
+  "6": {
+    "A": {"score": 7, "rank": 1, "note": "Seven items, 4 min round, distinct patterns; ring dips may exceed 40 total."},
+    "B": {"score": 4, "rank": 2, "note": "2 ring dips and 4 pull-ups are token sets; adjacent hinges, row then run."}
+  },
+  "7": {
+    "A": {"score": 5, "rank": 2, "note": "Honours no-overhead, tidy quad; ~11.5 min is short for 15, no /leg."},
+    "B": {"score": 6, "rank": 1, "note": "Fills 15 min honestly, no overhead; heavy lunge, push-up next to burpee."}
+  },
+  "8": {
+    "A": {"score": 5, "rank": 2, "note": "KB deadlift straight into swings; ~1.8 min round under AMRAP minimum."},
+    "B": {"score": 8, "rank": 1, "note": "No overhead honoured, pull/hinge/squat/press/core, ~2.75 min round."}
+  },
+  "9": {
+    "A": {"score": 5, "rank": 2, "note": "Work ~1.9 min overflows 2 min window; no squat/lunge/hinge/jump."},
+    "B": {"score": 6, "rank": 1, "note": "Fits window with margin, legal pacing note; still no lower-body pattern."}
+  },
+  "10": {
+    "A": {"score": 5, "rank": 1, "note": "Covers legs well; swing-snatch and lunge-squat are adjacent pattern repeats."},
+    "B": {"score": 4, "rank": 2, "note": "Three hinges in four movements, no squat or lunge; round fits."}
+  }
+}

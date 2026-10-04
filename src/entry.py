@@ -40,6 +40,16 @@ class GenerateRequest(BaseModel):
     model: str | None = Field(None, max_length=80)
     # Experiment: reasoning effort for gpt-oss models. None → "low" (prod default).
     effort: str | None = None
+    # Experiment (sonnet-prompt-v2): "v2" = SYSTEM_PROMPT_CLAUDE + relaxed
+    # checks. None → "v1", the production prompt.
+    prompt: str | None = None
+
+    @field_validator("prompt")
+    @classmethod
+    def prompt_allowed(cls, v: str | None) -> str | None:
+        if v is not None and v not in ("v1", "v2"):
+            raise ValueError("prompt must be v1 or v2")
+        return v
 
     @field_validator("effort")
     @classmethod
@@ -61,9 +71,10 @@ async def generate(req: GenerateRequest, request: Request) -> Workout:
     env = request.scope["env"]
     # Throttle before the AI call. CF-Connecting-IP is set by Cloudflare on
     # every edge request (and by wrangler dev locally).
+    # Experiment branch: harness requests (model override) bypass the limiter.
     ip = request.headers.get("cf-connecting-ip", "unknown")
     outcome = await env.GENERATE_LIMITER.limit(to_js({"key": ip}))
-    if not outcome.success:
+    if not outcome.success and req.model is None:
         raise HTTPException(
             429, "Too many workouts in a short time — wait a minute and try again."
         )
@@ -71,6 +82,7 @@ async def generate(req: GenerateRequest, request: Request) -> Workout:
         return await generate_workout(
             env.AI, req.equipment, req.style, req.duration, req.custom,
             req.avoid, req.nonce, req.model or MODEL, req.effort or "low",
+            req.prompt or "v1",
         )
     except (UpstreamError, EquipmentNotUsed) as e:
         raise HTTPException(502, str(e))
