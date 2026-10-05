@@ -1,8 +1,9 @@
-"""Workout generation via the Workers AI binding (gpt-oss-120b, Responses API)."""
+"""Workout generation via the Workers AI binding: Claude Sonnet (default) or gpt-oss-120b."""
 
 import json
 import random
 import re
+from collections.abc import Awaitable, Callable
 
 from js import Object
 from pydantic import BaseModel, ValidationError
@@ -463,6 +464,10 @@ class Workout(BaseModel):
 
 class UpstreamError(Exception):
     pass
+
+
+class BudgetExhausted(Exception):
+    """Today's Claude call budget is spent; generate_workout falls back to gpt-oss."""
 
 
 class EquipmentNotUsed(Exception):
@@ -1014,8 +1019,13 @@ def _extract_json(text: str) -> str:
     return found[-1] if found else text
 
 
-async def _request(ai, messages: list[dict], engine: str) -> Workout:
+async def _request(
+    ai, messages: list[dict], engine: str, spend: Callable[[], Awaitable[bool]] | None
+) -> Workout:
     if engine == "sonnet":
+        # Every Claude call — retries included — draws on the daily budget.
+        if spend is not None and not await spend():
+            raise BudgetExhausted("Today's Claude budget is used up")
         # Claude speaks Anthropic Messages through the binding: system is a
         # top-level string, effort lives in output_config. Third-party models
         # must name an AI Gateway; "default" is created on first use.
@@ -1060,12 +1070,14 @@ async def _request(ai, messages: list[dict], engine: str) -> Workout:
     return Workout.model_validate(json.loads(text))
 
 
-async def _request_with_shape_retry(ai, messages: list[dict], engine: str) -> Workout:
+async def _request_with_shape_retry(
+    ai, messages: list[dict], engine: str, spend: Callable[[], Awaitable[bool]] | None
+) -> Workout:
     try:
-        return await _request(ai, messages, engine)
+        return await _request(ai, messages, engine, spend)
     except (json.JSONDecodeError, ValidationError, KeyError, TypeError, AttributeError):
         try:
-            return await _request(ai, messages, engine)
+            return await _request(ai, messages, engine, spend)
         except (json.JSONDecodeError, ValidationError, KeyError, TypeError, AttributeError):
             raise UpstreamError("The model returned a malformed workout twice")
 
@@ -1090,26 +1102,29 @@ async def generate_workout(
     avoid: list[str] | None = None,
     nonce: int | None = None,
     engine: str = "sonnet",
+    spend: Callable[[], Awaitable[bool]] | None = None,
 ) -> tuple[Workout, str]:
     """Generate one workout; returns it with the engine that actually served it.
 
     The Claude engine falls back to gpt-oss when Claude itself is unreachable:
     out of AI Gateway credits ("2021: Insufficient AI Gateway credits"), gateway
-    auth or outage errors — anything raised by the binding call. A workout the
+    auth or outage errors — anything raised by the binding call — and when
+    `spend` (the daily budget, see ClaudeBudget in entry.py) refuses a call. A workout the
     model got wrong (UpstreamError, EquipmentNotUsed) is NOT retried on the
     other engine: that's a quality failure, surfaced like before.
     """
     if engine == "sonnet":
         try:
             return await _generate(
-                ai, equipment, style, duration_min, custom, avoid, nonce, "sonnet"
+                ai, equipment, style, duration_min, custom, avoid, nonce, "sonnet",
+                spend,
             ), "sonnet"
         except (UpstreamError, EquipmentNotUsed):
             raise
         except Exception as e:
             print(f"[engine] Claude unavailable, falling back to gpt-oss: {e}")
     return await _generate(
-        ai, equipment, style, duration_min, custom, avoid, nonce, "oss"
+        ai, equipment, style, duration_min, custom, avoid, nonce, "oss", None
     ), "oss"
 
 
@@ -1122,6 +1137,7 @@ async def _generate(
     avoid: list[str] | None,
     nonce: int | None,
     engine: str,
+    spend: Callable[[], Awaitable[bool]] | None,
 ) -> Workout:
     # The Claude engine gets its own prompt and the relaxed quality checks;
     # gpt-oss keeps the strict ones its prompt was tuned against.
@@ -1153,7 +1169,7 @@ async def _generate(
         {"role": "user", "content": user_prompt},
     ]
 
-    workout = await _request_with_shape_retry(ai, messages, engine)
+    workout = await _request_with_shape_retry(ai, messages, engine, spend)
     _canonicalize_names(workout)
     report = _problem_report(workout, equipment)
     quality = _quality_problems(workout, style, duration_min, avoid or [], strict)
@@ -1176,7 +1192,7 @@ async def _generate(
             ),
         },
     ]
-    workout = await _request_with_shape_retry(ai, messages, engine)
+    workout = await _request_with_shape_retry(ai, messages, engine, spend)
     _canonicalize_names(workout)
     if impossible := _impossible_movements(workout, equipment):
         raise UpstreamError(

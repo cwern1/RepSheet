@@ -96,6 +96,14 @@ device toolbar at iPhone width (390×844), not a desktop window.
     errors), `generate_workout` regenerates on gpt-oss. Model-quality failures are not
     retried on the other engine. The `X-Repsheet-Engine` response header says which
     engine answered.
+  - **Daily Claude budget:** every Claude call (retries included) first asks the
+    `ClaudeBudget` Durable Object (`src/entry.py`) to spend one of
+    `CLAUDE_DAILY_LIMIT` for the UTC day, and one of `CLAUDE_DAILY_LIMIT_PER_IP` for
+    that client (`wrangler.jsonc` `vars`; IPs stored only as hashes); refused → gpt-oss.
+    This is the money guard — `GENERATE_LIMITER` is per-machine and leaky by design.
+    Locally the count persists in `.wrangler/state`, so once it's spent your dev server
+    serves gpt-oss for the rest of the day; test with
+    `uv run pywrangler dev --var CLAUDE_DAILY_LIMIT:2` (or `CLAUDE_DAILY_LIMIT_PER_IP:2`).
   - **Two independent retries.** `_request_with_shape_retry` retries once on malformed
     JSON; separately, `generate_workout` checks `_missing_equipment()` and does one
     *corrective* retry that tells the model exactly what it left out before raising

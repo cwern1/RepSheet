@@ -30,6 +30,23 @@
       "simple": { "limit": 6, "period": 60 }
     }
   ],
+  // Daily cap on Claude calls (retries included) across all users — the money
+  // guard GENERATE_LIMITER can't be. Over it, requests quietly use gpt-oss.
+  // ~$0.05 typical, ≤ ~$0.18 worst case per call. A number, not a secret.
+  "vars": {
+    "CLAUDE_DAILY_LIMIT": "100",
+    // Per client IP, same day: one person can't spend everyone's budget.
+    "CLAUDE_DAILY_LIMIT_PER_IP": "20"
+  },
+  // Exact counter for that cap: one SQLite-backed Durable Object (class
+  // ClaudeBudget in src/entry.py). `exports` replaces the legacy `migrations`
+  // array — and once deployed this way, the Worker can't switch back.
+  "durable_objects": {
+    "bindings": [{ "name": "CLAUDE_BUDGET", "class_name": "ClaudeBudget" }]
+  },
+  "exports": {
+    "ClaudeBudget": { "type": "durable-object", "storage": "sqlite" }
+  },
   "observability": {
     "enabled": true
   }
