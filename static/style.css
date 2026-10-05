@@ -324,6 +324,21 @@ button {
 
 .sheet-inner .hint { margin-top: -0.5rem; }
 
+/* Model choice inside the Customize sheet: a quieter, left-aligned version of
+   the config page's chip groups. */
+.sheet-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.sheet-chips { justify-content: flex-start; }
+
+.sheet-inner .sheet-section .hint { margin-top: 0.5rem; }
+
 .sheet-input {
   font: inherit;
   /* Exactly 16px: anything smaller makes iOS Safari zoom in on focus. */
@@ -523,6 +538,8 @@ button {
 }
 
 .chrome-btn svg { width: 1.15rem; height: 1.15rem; }
+/* display: inline-flex above would otherwise beat the hidden attribute. */
+.chrome-btn[hidden] { display: none; }
 
 /* Copy button: swap to an accent checkmark for a moment after copying. */
 .chrome-btn .icon-check { display: none; }
@@ -584,7 +601,7 @@ button {
   margin-top: 0.3rem;
 }
 
-.w-scheme:empty, .w-notes:empty { display: none; }
+.w-scheme:empty { display: none; }
 
 .w-movements {
   list-style: none;
@@ -628,10 +645,9 @@ button {
   margin-left: 0.5em;
 }
 
-.w-notes {
-  margin-top: clamp(1.5rem, 4vmin, 3rem);
-  font-size: clamp(1rem, 2.2vmin, 1.5rem);
-  color: var(--text-secondary);
+.sheet-notes {
+  font-size: 1.05rem;
+  line-height: 1.5;
 }
 
 /* Touch devices: Apple's 44pt minimum target size. */
@@ -656,6 +672,24 @@ button {
     font-size: calc(clamp(1.2rem, 5vw, 2.2rem) * var(--fit, 1));
   }
   .w-movements .reps { padding-right: 0.8rem; }
+}
+
+/* Phones: four round buttons plus the lockscreen pill only just fit — trim the
+   pill and the gaps (never the 44pt buttons) so the bar keeps its 1rem margin. */
+@media (max-width: 430px) {
+  .workout-chrome, .chrome-group { gap: 0.35rem; }
+  .wake-pill { font-size: 0.8rem; padding-left: 0.85rem; padding-right: 0.85rem; }
+}
+
+/* The pill's short label: only where the full one would push the bar off-screen. */
+.wake-short { display: none; }
+@media (max-width: 380px) {
+  .wake-long { display: none; }
+  .wake-short { display: inline; }
+}
+@media (max-width: 350px) {
+  .workout-chrome, .chrome-group { gap: 0.25rem; }
+  .wake-pill { padding-left: 0.7rem; padding-right: 0.7rem; }
 }
 
 /* Phones: tighter vertical rhythm so the whole form fits one viewport with

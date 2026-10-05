@@ -5,6 +5,10 @@ const EQUIPMENT = [
 ];
 const STYLES = ["AMRAP", "For Time", "EMOM", "Chipper", "Intervals"];
 const DURATIONS = [7, 10, 12, 15, 18, 20, 25, 30, 45];
+// Matches ENGINES on the server. "sonnet" falls back to "oss" server-side when
+// Claude is unavailable (e.g. out of AI Gateway credits).
+const ENGINES = ["sonnet", "oss"];
+const ENGINE_LABELS = { sonnet: "Claude Sonnet", oss: "GPT-OSS" };
 const STORAGE_KEY = "repsheet-settings";
 const CUSTOM_MAX = 500; // matches the server-side max_length
 const RECENT_WORKOUTS = 3; // how many past workouts feed the avoid-list
@@ -15,6 +19,7 @@ const state = {
   style: "AMRAP",
   duration: 15,
   custom: "",
+  engine: "sonnet",
   // Movement names from the last few workouts, newest first. Deliberately not
   // persisted: a fresh page load should behave exactly like a fresh install.
   recent: [],
@@ -35,6 +40,7 @@ function loadSettings() {
     if (STYLES.includes(saved.style)) state.style = saved.style;
     if (DURATIONS.includes(saved.duration)) state.duration = saved.duration;
     if (typeof saved.custom === "string") state.custom = saved.custom.slice(0, CUSTOM_MAX);
+    if (ENGINES.includes(saved.engine)) state.engine = saved.engine;
   } catch { /* corrupted or unavailable storage — keep defaults */ }
 }
 
@@ -46,6 +52,7 @@ function saveSettings() {
       style: state.style,
       duration: state.duration,
       custom: state.custom,
+      engine: state.engine,
     }));
   } catch { /* private mode etc. — persistence is a convenience only */ }
 }
@@ -87,13 +94,16 @@ function renderChips() {
   makeRadio($("style-chips"), STYLES, () => state.style, (v) => (state.style = v));
   makeRadio($("duration-chips"), DURATIONS, () => state.duration,
     (v) => (state.duration = v), (v) => `${v} min`);
+  makeRadio($("engine-chips"), ENGINES, () => state.engine,
+    (v) => { state.engine = v; syncCustomizeButton(); }, (v) => ENGINE_LABELS[v]);
 }
 
 // --- Customize sheet: free-text notes appended to the generation prompt ---
 
 function syncCustomizeButton() {
   const btn = $("customize-btn");
-  const set = state.custom !== "";
+  // The model choice lives in the sheet too, so a non-default engine counts.
+  const set = state.custom !== "" || state.engine !== "sonnet";
   btn.dataset.set = set;
   // Never let a saved note shape a workout invisibly — the label says it's on.
   btn.textContent = set ? "Customized ●" : "Customize";
@@ -217,6 +227,7 @@ async function generate() {
         // push away from whatever was just on screen.
         avoid: [...new Set(state.recent.flat())].slice(0, AVOID_MAX),
         nonce: Math.floor(Math.random() * 1e9),
+        engine: state.engine,
       }),
     });
     if (!res.ok) {
@@ -244,6 +255,7 @@ function showWorkout(w) {
   $("w-format").textContent = w.format_line;
   $("w-scheme").textContent = w.scheme || "";
   $("w-notes").textContent = w.notes || "";
+  $("notes-btn").hidden = !w.notes;
 
   const list = $("w-movements");
   list.replaceChildren(...w.movements.map((m) => {
@@ -328,7 +340,7 @@ function workoutAsText(w) {
     if (m.load_kg) line += ` - ${cleanForCopy(m.load_kg)}`;
     lines.push(line);
   }
-  if (w.notes) lines.push("", cleanForCopy(w.notes));
+  // The coach's note stays out: the copy is a log entry, just the workout.
   return lines.join("\n");
 }
 
@@ -441,6 +453,10 @@ $("customize-dialog").addEventListener("click", (e) => {
 $("generate-btn").addEventListener("click", generate);
 $("close-btn").addEventListener("click", closeWorkout);
 $("copy-btn").addEventListener("click", copyWorkout);
+$("notes-btn").addEventListener("click", () => $("notes-dialog").showModal());
+$("notes-dialog").addEventListener("click", (e) => {
+  if (e.target === e.currentTarget) e.currentTarget.close();
+});
 $("regen-btn").addEventListener("click", generate);
 $("overlay").addEventListener("click", () => {
   if ($("overlay").classList.contains("error")) hideOverlay();
@@ -448,7 +464,7 @@ $("overlay").addEventListener("click", () => {
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     // The sheet closes itself on Escape; don't also act on the view behind it.
-    if ($("customize-dialog").open) return;
+    if ($("customize-dialog").open || $("notes-dialog").open) return;
     if (!$("overlay").hidden && $("overlay").classList.contains("error")) {
       hideOverlay();
     } else if (!$("workout-view").hidden) {

@@ -1,9 +1,10 @@
 import asgi
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import FastAPI, HTTPException, Request, Response
 from pydantic import BaseModel, Field, field_validator
 from workers import WorkerEntrypoint
 
 from generator import (
+    ENGINES,
     STYLES,
     EquipmentNotUsed,
     UpstreamError,
@@ -34,6 +35,17 @@ class GenerateRequest(BaseModel):
     avoid: list[str] = Field(default_factory=list, max_length=40)
     # Entropy for the server's programming-angle pick; see _variation_brief.
     nonce: int | None = None
+    # Model choice from the UI: "sonnet" (Claude, default) or "oss" (gpt-oss).
+    # A fixed set, never a model id — the public endpoint must not be able to
+    # pick an arbitrary (paid) model.
+    engine: str = "sonnet"
+
+    @field_validator("engine")
+    @classmethod
+    def engine_allowed(cls, v: str) -> str:
+        if v not in ENGINES:
+            raise ValueError(f"engine must be one of: {', '.join(ENGINES)}")
+        return v
 
     @field_validator("style")
     @classmethod
@@ -44,7 +56,7 @@ class GenerateRequest(BaseModel):
 
 
 @app.post("/api/generate")
-async def generate(req: GenerateRequest, request: Request) -> Workout:
+async def generate(req: GenerateRequest, request: Request, response: Response) -> Workout:
     env = request.scope["env"]
     # Throttle before the AI call. CF-Connecting-IP is set by Cloudflare on
     # every edge request (and by wrangler dev locally).
@@ -55,9 +67,9 @@ async def generate(req: GenerateRequest, request: Request) -> Workout:
             429, "Too many workouts in a short time — wait a minute and try again."
         )
     try:
-        return await generate_workout(
+        workout, engine = await generate_workout(
             env.AI, req.equipment, req.style, req.duration, req.custom,
-            req.avoid, req.nonce,
+            req.avoid, req.nonce, req.engine,
         )
     except (UpstreamError, EquipmentNotUsed) as e:
         raise HTTPException(502, str(e))
@@ -65,3 +77,6 @@ async def generate(req: GenerateRequest, request: Request) -> Workout:
         # JS-side errors (Workers AI outages, rate limits) surface as generic
         # FFI exceptions — map anything unexpected to a readable upstream error.
         raise HTTPException(502, f"Workout generation failed: {e}")
+    # Which engine actually answered — differs from req.engine after a fallback.
+    response.headers["X-Repsheet-Engine"] = engine
+    return workout

@@ -55,8 +55,10 @@ curl -s -X POST http://localhost:8787/api/generate \
   -d '{"equipment":["Kettlebell","Bodyweight"],"style":"AMRAP","duration":12,"custom":""}'
 ```
 
-A generation takes **~14 s** and is a **real** Workers AI call — there is no local mock.
-Free tier is 10k neurons/day, so it costs pennies, but don't loop over it.
+Every generation is a **real**, paid model call — there is no local mock. Without an
+`engine` field this hits the default, **Claude** (~5 s, spends prepaid AI Gateway
+credits); add `"engine":"oss"` for gpt-oss (~14 s, Workers AI on the Workers Paid plan,
+fractions of a cent). Don't loop over either.
 
 Worth curling deliberately: an unticked-equipment case (nothing outside the list may
 appear), each of the five styles, and a `custom` string that contradicts the equipment
@@ -79,9 +81,21 @@ device toolbar at iPhone width (390×844), not a desktop window.
   is why there are **no API keys anywhere** — don't introduce `.dev.vars` or `wrangler secret`.
 - `src/entry.py` — `WorkerEntrypoint` → `asgi.fetch` → FastAPI. One route,
   `POST /api/generate`. Everything non-2xx surfaces as a 502 with a readable `detail`.
-- `src/generator.py` — the substance. Two things surprise people:
-  - The model is called with the **OpenAI Responses API** shape through the binding
-    (`input`, `reasoning: {effort}`, results in `output[]`) — *not* chat-completions.
+- `src/generator.py` — the substance. Things that surprise people:
+  - **Two engines, picked per request** (`engine` field, chips in the UI):
+    `"sonnet"` (default) = `anthropic/claude-sonnet-5.5` at effort `medium` with
+    `SYSTEM_PROMPT_CLAUDE` and relaxed quality checks; `"oss"` = `@cf/openai/gpt-oss-120b`
+    with `SYSTEM_PROMPT` and strict checks. Never edit one prompt to suit the other.
+    Benchmarks: `experiments/` on the `sonnet-prompt-v2` branch.
+  - Claude goes through the **same `env.AI` binding** but is billed via AI Gateway
+    Unified Billing (prepaid credits, `{gateway: {id: "default"}}`), in the
+    **Anthropic Messages** shape (`system`, `messages`, `output_config.effort`). gpt-oss
+    uses the **OpenAI Responses API** shape (`input`, `reasoning: {effort}`, results in
+    `output[]`). Neither is chat-completions.
+  - **Fallback:** when the Claude call itself fails (out of credits — `2021`, gateway
+    errors), `generate_workout` regenerates on gpt-oss. Model-quality failures are not
+    retried on the other engine. The `X-Repsheet-Engine` response header says which
+    engine answered.
   - **Two independent retries.** `_request_with_shape_retry` retries once on malformed
     JSON; separately, `generate_workout` checks `_missing_equipment()` and does one
     *corrective* retry that tells the model exactly what it left out before raising
@@ -106,10 +120,12 @@ These drift silently; change both sides together.
 | styles | `STYLES` in `generator.py` | `STYLES` |
 | custom-text cap | `max_length=500` on `GenerateRequest.custom` | `CUSTOM_MAX = 500` |
 | duration range | `ge=5, le=60` on `GenerateRequest.duration` | `DURATIONS` |
+| engines | `ENGINES` in `generator.py` | `ENGINES` / `ENGINE_LABELS` |
 
 ## Editing SYSTEM_PROMPT
 
-`SYSTEM_PROMPT` in `src/generator.py` is the product — nearly all the domain knowledge
+There are two prompts: `SYSTEM_PROMPT_CLAUDE` (default engine) and `SYSTEM_PROMPT`
+(gpt-oss, the fallback). `SYSTEM_PROMPT` in `src/generator.py` is the product — nearly all the domain knowledge
 lives there, and it has been tuned by hand over many iterations. Read it fully before
 changing it, and prefer adding a narrow rule over rewriting a section.
 

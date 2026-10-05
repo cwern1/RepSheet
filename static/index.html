@@ -58,8 +58,11 @@
 
   <section id="workout-view" class="workout" hidden>
     <div class="workout-chrome">
-      <button id="wake-btn" class="wake-pill" type="button" aria-pressed="true" title="Prevent the screen from locking">Prevent lockscreen</button>
+      <button id="wake-btn" class="wake-pill" type="button" aria-pressed="true" title="Prevent the screen from locking"><span class="wake-long">Prevent lockscreen</span><span class="wake-short">Keep awake</span></button>
       <div class="chrome-group">
+        <button id="notes-btn" class="chrome-btn" type="button" aria-haspopup="dialog" aria-label="Coach's notes" title="Coach's notes" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M12 11v6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="12" cy="7.4" r="1.4" fill="currentColor"/></svg>
+        </button>
         <button id="copy-btn" class="chrome-btn" type="button" aria-label="Copy workout as text" title="Copy workout as text">
           <svg class="icon-copy" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11.5" height="11.5" rx="2" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
           <svg class="icon-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 12.5l5.5 5.5L19.5 6.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -76,7 +79,6 @@
       <h2 id="w-format" class="w-format"></h2>
       <p id="w-scheme" class="w-scheme"></p>
       <ol id="w-movements" class="w-movements"></ol>
-      <p id="w-notes" class="w-notes"></p>
     </div>
   </section>
 
@@ -86,9 +88,26 @@
       <p class="hint">Injuries, intensity, movements you want in. Equipment, style and duration above always win.</p>
       <textarea id="customize-text" class="sheet-input" rows="4" maxlength="500" autofocus
         placeholder="No overhead pressing — sore left shoulder.&#10;Include double-unders."></textarea>
+      <div class="sheet-section">
+        <h3 class="sheet-label">Model</h3>
+        <div class="chips sheet-chips" id="engine-chips" role="radiogroup" aria-label="AI model"></div>
+        <p class="hint">Claude Sonnet writes the better workouts. GPT-OSS is the previous model — and the automatic fallback if Claude is unavailable.</p>
+      </div>
       <div class="sheet-actions">
         <button class="sheet-btn ghost" type="submit" value="clear">Clear</button>
         <button class="sheet-btn primary" type="submit" value="save">Done</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- The coach's note lives behind the ⓘ button so the workout itself keeps
+       its big poster type. -->
+  <dialog id="notes-dialog" class="sheet" aria-labelledby="notes-title">
+    <form method="dialog" class="sheet-inner">
+      <h2 id="notes-title" class="sheet-title">Coach's notes</h2>
+      <p id="w-notes" class="sheet-notes"></p>
+      <div class="sheet-actions">
+        <button class="sheet-btn primary" type="submit" value="close">Done</button>
       </div>
     </form>
   </dialog>
