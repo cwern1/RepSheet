@@ -210,7 +210,15 @@ FORMAT:
 - `notes`: only a rest scheme or one genuinely necessary instruction; otherwise
   null. Never restate the format or duration, and never contradict the
   structure (no pacing claims that don't match the prescribed work).
-- 2–8 movements — a hard couplet or triplet is classic programming.
+- Movement count: the request states a target — hit it, ±1 only when the
+  style arithmetic (EMOM divisibility, chipper ceilings) forces it. The count
+  is NOT the number of equipment items: the list is a pantry, not a
+  checklist, and one movement per item by reflex is the shape to avoid. When
+  the count exceeds the item count, take two or three movements from ONE
+  rich implement (Barbell, Dumbbells, Kettlebell, Bodyweight and Pull-up Bar
+  each hold a dozen), each a different pattern — Power Clean + Front Squat +
+  Push Jerk on one bar is depth; Push Press + Push Jerk is one movement
+  twice. BALANCE below still applies.
 
 BALANCE — within one workout:
 - Cover the body. Unless the athlete's request says otherwise or the workout
@@ -302,17 +310,27 @@ DESIGN PROCESS — do this in order, every time:
    medium 10–20, long 20–40+) and ONE primary limiter — breathing, local
    muscular fatigue, or load — plus at most one secondary. Three competing
    limiters make a slow, joyless workout.
-2. Few movements, chosen well. A couplet or triplet is the classic shape and
-   the default whenever the equipment list allows it. Use more movements only
-   when the coverage rule demands it or the style calls for it (chipper) —
-   and then prefer movements that use two listed items at once over bolting on
-   token stations. Cover 2 of the 3 modalities (monostructural, gymnastics,
-   weightlifting).
+2. Movement count, then depth. The request states a movement count — hit
+   it, ±1 only when the style's arithmetic forces it. The equipment list is a
+   pantry, not a checklist: the count is NOT the number of items listed, and
+   one movement per item by reflex is the shape to avoid. When the count
+   exceeds the item count, go DEEP into an implement instead of thin across
+   all of them — the Open does this constantly: 22.3 hangs three pulls off
+   one bar (pull-up, chest-to-bar, bar muscle-up), 25.3 runs deadlift →
+   clean → snatch on one barbell, 24.1 is dumbbell snatches plus burpees
+   over that dumbbell. Barbell, dumbbells, kettlebell, bodyweight and the
+   pull-up bar each hold a dozen movements: take two or three from one of
+   them, each a different pattern (a barbell hinge + a barbell squat + a
+   barbell press is depth; push press + push jerk is one movement twice).
+   Vary which implement gets the depth from workout to workout. Prefer
+   movements that use two listed items at once over token stations. Cover 2
+   of the 3 modalities (monostructural, gymnastics, weightlifting).
 3. Interference on purpose. Pairings that create pacing decisions are good
    programming: thruster + pull-up, wall ball + box jump, deadlift + burpee,
    row + toes-to-bar, dumbbell snatch + burpee. Avoid pairings that only create
    risk or misery: high-rep deadlifts straight into heavy cleans or snatches,
-   stacked grip killers, the same lift on two implements.
+   stacked grip killers, the same lift on two implements, two variants of
+   one movement (push press + push jerk, two lunge types, two burpee types).
 4. Loads for the amateur. Moderate means the athlete can cycle sets of 5–10
    with short breaks. Typical moderate loads: thruster/push press 30–40 kg,
    power clean 40–50 kg, snatch 30–35 kg, deadlift 60–80 kg, front squat
@@ -798,17 +816,25 @@ def _quality_problems(
         if low in seen:
             problems.append(f'"{name}" appears twice — a movement appears once.')
         seen[low] = name
-    suffix_seen: dict[str, str] = {}
-    for name, low in zip(names, lower):
+    # Same base lift twice. Strict: any shared last word. Relaxed (Claude):
+    # only the cross-implement case its prompt names — Dumbbell Push Press +
+    # Kettlebell Push Press — which the movement-count brief makes likelier,
+    # since depth is meant to come from one implement, not the same lift on two.
+    suffix_seen: dict[str, tuple[str, frozenset[str]]] = {}
+    for m, name, low in zip(movements, names, lower):
         tail = low.split()[-1] if low.split() else ""
-        if strict and tail in _BASE_LIFT_SUFFIXES:
-            if tail in suffix_seen and suffix_seen[tail] != low:
+        if tail not in _BASE_LIFT_SUFFIXES:
+            continue
+        items = frozenset(e.lower() for e in m.equipment)
+        if tail in suffix_seen:
+            first, first_items = suffix_seen[tail]
+            if first.lower() != low and (strict or first_items != items):
                 problems.append(
-                    f'"{suffix_seen[tail]}" and "{name}" repeat the same base '
+                    f'"{first}" and "{name}" repeat the same base '
                     f"movement ({tail}) — keep ONE and program something "
                     "different."
                 )
-            suffix_seen.setdefault(tail, name)
+        suffix_seen.setdefault(tail, (name, items))
 
     if len(movements) > 8:
         problems.append(f"{len(movements)} movements — the maximum is 8.")
@@ -1082,15 +1108,48 @@ async def _request_with_shape_retry(
             raise UpstreamError("The model returned a malformed workout twice")
 
 
-def _variation_brief(nonce: int | None) -> str:
-    """One pattern + one stimulus angle, so no two calls start from the same place.
+# Movement-count draws per style. The Open's range is 2–5 with 3 the mode;
+# the weights sit a notch above that because Repsheet athletes tick several
+# items and one-movement-per-item is the degenerate shape this exists to
+# break. Chipper mirrors its blueprint's 6–8.
+_COUNT_DRAWS = {
+    "AMRAP": (2, 3, 3, 4, 4, 4, 5, 5),
+    "For Time": (2, 3, 3, 4, 4, 4, 5, 5),
+    "Intervals": (2, 3, 3, 4, 4, 5),
+    "Chipper": (6, 7, 8),
+}
+
+
+def _movement_count(rng, style: str, n_items: int, duration_min: int) -> int:
+    """Seeded target movement count, never below what coverage demands.
+
+    Decoupled from the equipment count on purpose: without it the model fills
+    exactly one slot per listed item. EMOM counts are drawn from the station
+    counts whose rotation divides the minutes (or the minutes minus the up to
+    2 the blueprint lets the model shave).
+    """
+    floor = min(n_items, 7) or 1
+    if style == "EMOM":
+        fits = [c for c in range(2, 7) if any((duration_min - d) % c == 0 for d in (0, 1, 2))]
+        pool = [c for c in fits if c >= floor] or [max(fits)]
+        return rng.choice(pool)
+    return max(rng.choice(_COUNT_DRAWS[style]), floor)
+
+
+def _variation_brief(
+    nonce: int | None, style: str, n_items: int, duration_min: int
+) -> tuple[str, int]:
+    """One pattern + one stimulus angle and a movement count, so no two calls
+    start from the same place.
 
     Seeded from a client-supplied nonce rather than ambient entropy: Workers
     restricts randomness during global-scope evaluation, and a fixed nonce also
-    pins the angle, which makes the conflict cases testable.
+    pins the angle, which makes the conflict cases testable. The angles are
+    drawn first so a nonce keeps pinning the same angle it always did.
     """
     rng = random.Random(nonce) if nonce is not None else random
-    return f"{rng.choice(PATTERN_ANGLES)}; {rng.choice(STIMULUS_ANGLES)}"
+    brief = f"{rng.choice(PATTERN_ANGLES)}; {rng.choice(STIMULUS_ANGLES)}"
+    return brief, _movement_count(rng, style, n_items, duration_min)
 
 
 async def generate_workout(
@@ -1148,11 +1207,14 @@ async def _generate(
         if len(equipment) > 7
         else "use ALL of it"
     )
+    brief, count = _variation_brief(nonce, style, len(equipment), duration_min)
     user_prompt = (
         f"Equipment available ({coverage}): {equipment_text}\n"
         f"Style: {style}\n"
         f"Target duration: about {duration_min} minutes\n"
-        f"Programming angle for this workout: {_variation_brief(nonce)}"
+        f"Movement count for this workout: {count} — not one per item; a rich "
+        "implement may supply several\n"
+        f"Programming angle for this workout: {brief}"
     )
     if stale := [m.strip()[:60] for m in (avoid or []) if m.strip()][:24]:
         user_prompt += (

@@ -155,6 +155,18 @@ mechanisms replace it, both in the **user** message:
   ("make it a couplet"): those fight the style blueprints.
 - **Avoid-list.** `static/app.js` keeps the last 3 workouts' movement names in
   `state.recent` (in memory only — never persisted) and sends them as `avoid`.
+- **Movement count.** `_movement_count()` draws a target from the same seeded
+  rng (after the angles, so nonce pins are unchanged) and the user message
+  states it. It is deliberately decoupled from the equipment count: before it
+  existed, both prompts' "couplet or triplet" default plus the coverage rule
+  produced exactly one movement per ticked item. The count is the one
+  structural dial allowed because it is style-aware (`_COUNT_DRAWS`; EMOM picks
+  only station counts whose rotation divides the minutes, Chipper 6–8). Both
+  prompts tell the model to take depth from one rich implement (barbell,
+  dumbbells, kettlebell, bodyweight, pull-up bar) rather than spread thin —
+  the CrossFit Open is the benchmark (22.3, 25.3, 24.1). Watch for the
+  cross-implement repeat this invites (DB Push Press + KB Push Press);
+  `_quality_problems` flags it on both engines and the corrective retry fixes it.
 
 Precedence, encoded in the prompt and worth re-testing after any edit:
 **equipment rules > style blueprint > athlete request > programming angle.** The angle
